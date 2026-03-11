@@ -2,4 +2,4 @@
  * Molecules barrel export — composed UI components.
  */
 
-export {}
+export { GameBoard } from './GameBoard'

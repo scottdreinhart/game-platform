@@ -1,0 +1,48 @@
+import { useState, useCallback, useEffect } from 'react'
+import {
+  createBoard,
+  toggleCell,
+  isSolved,
+  type GameState,
+} from '@/domain'
+
+export function useGame(): GameState & {
+  handleCellClick: (row: number, col: number) => void
+  resetGame: () => void
+} {
+  const [gameState, setGameState] = useState<GameState>(() => ({
+    board: createBoard(),
+    moves: 0,
+    isSolved: false,
+  }))
+
+  // Check for win condition whenever board changes
+  useEffect(() => {
+    const solved = isSolved(gameState.board)
+    setGameState(prev => (prev.isSolved === solved ? prev : { ...prev, isSolved: solved }))
+  }, [gameState.board])
+
+  const handleCellClick = useCallback((row: number, col: number) => {
+    if (gameState.isSolved) return // Don't allow moves after solving
+
+    setGameState(prev => ({
+      ...prev,
+      board: toggleCell(prev.board, row, col),
+      moves: prev.moves + 1,
+    }))
+  }, [gameState.isSolved])
+
+  const resetGame = useCallback(() => {
+    setGameState({
+      board: createBoard(),
+      moves: 0,
+      isSolved: false,
+    })
+  }, [])
+
+  return {
+    ...gameState,
+    handleCellClick,
+    resetGame,
+  }
+}
