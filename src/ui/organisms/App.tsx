@@ -1,16 +1,45 @@
 import { useGame } from '@/app'
 import { initBoardWasm } from '@/domain'
 import { GameBoard } from '@/ui/molecules'
-import { useEffect } from 'react'
+import { useEffect, useState } from 'react'
 import './App.css'
 
 export default function App() {
   const { board, moves, isSolved, handleCellClick, resetGame } = useGame()
+  const [isLoading, setIsLoading] = useState(true)
 
   // Initialize WASM module for board optimization
   useEffect(() => {
     initBoardWasm().catch((err) => console.warn('WASM init failed:', err))
   }, [])
+
+  // Loading screen timer
+  useEffect(() => {
+    const timer = setTimeout(() => setIsLoading(false), 2500)
+    return () => clearTimeout(timer)
+  }, [])
+
+  if (isLoading) {
+    return (
+      <div className="lo-splash">
+        <div className="lo-splash__orb"></div>
+        <div className="lo-splash__grid"></div>
+        <div className="lo-splash__content">
+          <div className="lo-splash__badge">
+            <div className="lo-splash__emoji">💡</div>
+          </div>
+          <div className="lo-splash__eyebrow">Click. Toggle. Solve.</div>
+          <h1 className="lo-splash__title">Lights Out</h1>
+          <p className="lo-splash__subtitle">Turn off all lights to win!</p>
+          <div className="lo-splash__loading">
+            <span className="lo-splash__dot"></span>
+            <span className="lo-splash__dot"></span>
+            <span className="lo-splash__dot"></span>
+          </div>
+        </div>
+      </div>
+    )
+  }
 
   return (
     <div className="app">

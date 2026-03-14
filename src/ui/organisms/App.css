@@ -163,3 +163,198 @@
     height: 40px;
   }
 }
+
+/* ── Splash Screen Animations ────────────────────────────── */
+@keyframes splashFloat {
+  0% {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+  100% {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}
+
+@keyframes splashGlow {
+  0% {
+    box-shadow:
+      0 0 10px rgba(76, 175, 80, 0.4),
+      0 0 30px rgba(76, 175, 80, 0.2),
+      inset 0 0 20px rgba(76, 175, 80, 0.1);
+  }
+  50% {
+    box-shadow:
+      0 0 20px rgba(76, 175, 80, 0.8),
+      0 0 40px rgba(56, 142, 60, 0.4),
+      inset 0 0 30px rgba(76, 175, 80, 0.2);
+  }
+  100% {
+    box-shadow:
+      0 0 10px rgba(76, 175, 80, 0.4),
+      0 0 30px rgba(76, 175, 80, 0.2),
+      inset 0 0 20px rgba(76, 175, 80, 0.1);
+  }
+}
+
+@keyframes shimmerGrid {
+  0% {
+    background-position: 0% 0%;
+  }
+  100% {
+    background-position: 100% 100%;
+  }
+}
+
+@keyframes loadingDot {
+  0%,
+  20% {
+    opacity: 0.3;
+    transform: scale(0.8);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  80%,
+  100% {
+    opacity: 0.3;
+    transform: scale(0.8);
+  }
+}
+
+/* ── Splash Screen Styles ────────────────────────────────── */
+.lo-splash {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(160deg, #1b5e20 0%, #2e7d32 42%, #1b5e20 100%);
+  z-index: 9999;
+  overflow: hidden;
+}
+
+.lo-splash__orb {
+  position: absolute;
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  background: radial-gradient(circle at 30% 30%, rgba(76, 175, 80, 0.8), rgba(56, 142, 60, 0.4) 50%, transparent);
+  filter: blur(40px);
+  animation: splashGlow 3s ease-in-out infinite;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.lo-splash__grid {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-image:
+    linear-gradient(rgba(76, 175, 80, 0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(76, 175, 80, 0.05) 1px, transparent 1px);
+  background-size: 40px 40px;
+  animation: shimmerGrid 6s linear infinite alternate;
+  opacity: 0.3;
+}
+
+.lo-splash__content {
+  position: relative;
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: clamp(1rem, 3vw, 2rem);
+}
+
+.lo-splash__badge {
+  width: clamp(80px, 15vw, 120px);
+  height: clamp(80px, 15vw, 120px);
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.12);
+  backdrop-filter: blur(10px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: splashFloat 2s ease-in-out infinite;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.lo-splash__emoji {
+  font-size: clamp(40px, 8vw, 60px);
+}
+
+.lo-splash__eyebrow {
+  font-size: clamp(0.75rem, 2vw, 0.9rem);
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: rgba(76, 175, 80, 0.8);
+  font-weight: 600;
+  margin: 0;
+}
+
+.lo-splash__title {
+  font-size: clamp(2.5rem, 8vw, 4rem);
+  font-weight: 700;
+  margin: 0;
+  background: linear-gradient(180deg, #ffffff 0%, #c8e6c9 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  letter-spacing: -1px;
+}
+
+.lo-splash__subtitle {
+  font-size: clamp(0.9rem, 2vw, 1.1rem);
+  color: rgba(255, 255, 255, 0.7);
+  max-width: 300px;
+  margin: 0;
+  line-height: 1.5;
+}
+
+.lo-splash__loading {
+  display: flex;
+  gap: 0.6rem;
+  margin-top: clamp(0.5rem, 2vw, 1rem);
+}
+
+.lo-splash__dot {
+  width: clamp(6px, 1.5vw, 10px);
+  height: clamp(6px, 1.5vw, 10px);
+  border-radius: 50%;
+  background: rgba(76, 175, 80, 0.8);
+  animation: loadingDot 1.4s ease-in-out infinite;
+}
+
+.lo-splash__dot:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.lo-splash__dot:nth-child(3) {
+  animation-delay: 0.4s;
+}
+
+/* ── Reduced Motion Support ────────────────────────────── */
+@media (prefers-reduced-motion: reduce) {
+  .lo-splash__badge,
+  .lo-splash__orb {
+    animation: none;
+  }
+
+  .lo-splash__grid {
+    animation: none;
+  }
+
+  .lo-splash__dot {
+    animation: none;
+    opacity: 1;
+  }
+}
