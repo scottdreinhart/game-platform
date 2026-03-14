@@ -3,6 +3,8 @@ import tseslint from 'typescript-eslint'
 import reactPlugin from 'eslint-plugin-react'
 import reactHooksPlugin from 'eslint-plugin-react-hooks'
 import jsxA11yPlugin from 'eslint-plugin-jsx-a11y'
+import securityPlugin from 'eslint-plugin-security'
+import securityPlugin from 'eslint-plugin-security'
 import prettierConfig from 'eslint-config-prettier'
 import boundaries from 'eslint-plugin-boundaries'
 
@@ -16,6 +18,8 @@ export default [
       react: reactPlugin,
       'react-hooks': reactHooksPlugin,
       'jsx-a11y': jsxA11yPlugin,
+      security: securityPlugin,
+      security: securityPlugin,
       boundaries,
     },
     languageOptions: {
@@ -96,6 +100,16 @@ export default [
       eqeqeq: ['error', 'always'],
       curly: ['error', 'all'],
 
+      
+      // ── Security (XSS, Injection, Crypto) ──
+      'security/detect-object-injection': 'warn',
+      'security/detect-non-literal-regexp': 'warn',
+      'security/detect-unsafe-regex': 'error',
+      'security/detect-buffer-noassert': 'error',
+      'security/detect-child-process': 'warn',
+      'security/detect-no-csrf-before-method-override': 'warn',
+      'security/detect-non-literal-fs-filename': 'warn',
+      'security/detect-non-literal-require': 'warn',
       // ── CLEAN Architecture Boundaries ──
       'boundaries/element-types': [
         'error',
