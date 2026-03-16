@@ -37,7 +37,7 @@ Status legend:
 | Priority | Repo | Target Package | Status | Notes |
 |---|---|---|---|---|
 | P0 | lights-out | apps/lights-out | In Progress | Baseline app and standards source |
-| P1 | tictactoe | apps/tictactoe | Not Started | Closest gameplay pattern alignment |
+| P1 | tictactoe | apps/tictactoe | In Progress | PR blueprint drafted; readiness matrix next |
 | P1 | snake | apps/snake | Not Started | Strong keyboard/input reuse candidate |
 | P1 | minesweeper | apps/minesweeper | Not Started | Grid/domain reuse opportunity |
 | P2 | connect-four | apps/connect-four | Not Started | Board-state package reuse |
@@ -105,3 +105,9 @@ Copy this section per game when starting absorption:
 5. `reversi`
 
 These provide the best early shared-package ROI for board logic, UI patterns, and input controls.
+
+## Active Execution Focus
+
+- Current target: `tictactoe`
+- Current phase: script/reporting parity and platform build contract validation
+- Reference: `docs/monorepo/PR-BLUEPRINT-TICTACTOE.md`
