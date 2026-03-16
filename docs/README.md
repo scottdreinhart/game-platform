@@ -29,6 +29,7 @@ This folder contains active project documentation organized by topic.
 
 - [Monorepo Architecture Plan](monorepo/MONOREPO-ARCHITECTURE-PLAN.md)
 - [Monorepo Absorption Queue](monorepo/MONOREPO-ABSORPTION-QUEUE.md)
+- [TicTacToe Execution PR Blueprint](monorepo/PR-BLUEPRINT-TICTACTOE.md)
 
 ## Linting & Quality
 
