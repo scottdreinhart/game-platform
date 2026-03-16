@@ -10,7 +10,9 @@ let wasmModule: WasmModule | null = null
  * Initialize WASM module from base64-encoded binary
  */
 async function initWasm(): Promise<WasmModule> {
-  if (wasmModule) return wasmModule
+  if (wasmModule) {
+    return wasmModule
+  }
 
   const binaryString = atob(AI_WASM_BASE64)
   const bytes = new Uint8Array(binaryString.length)

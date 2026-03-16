@@ -149,6 +149,55 @@ mainWindow.webPreferences = {
 
 ---
 
+## 5. CSRF & Session Cookie Hardening (Additive)
+
+### Rule: Protect State-Changing Requests from CSRF
+
+All backend `POST`, `PUT`, `PATCH`, and `DELETE` routes must be protected against CSRF.
+
+Recommended backend controls:
+- CSRF token verification for authenticated state-changing endpoints.
+- Strict Origin/Referer validation for browser requests where applicable.
+- `SameSite` cookie strategy aligned to product requirements (`Lax`/`Strict` preferred when possible).
+
+### Rule: Use HttpOnly Cookies for Sensitive Tokens
+
+- Prefer backend-issued session/auth cookies with: `HttpOnly`, `Secure`, and `SameSite` flags.
+- Do not store long-lived auth/session tokens in `localStorage` or `sessionStorage`.
+- If short-lived browser-accessible tokens are unavoidable, keep lifetime minimal and enforce backend rotation/revocation.
+
+Example backend cookie policy (conceptual):
+```text
+Set-Cookie: session=<opaque>; HttpOnly; Secure; SameSite=Lax; Path=/
+```
+
+---
+
+## 6. CSP Hardening Addendum (Additive)
+
+Use this tighter baseline where compatible with runtime requirements:
+
+```text
+Content-Security-Policy:
+  default-src 'self';
+  script-src 'self' 'wasm-unsafe-eval';
+  style-src 'self' 'unsafe-inline';
+  img-src 'self' data:;
+  font-src 'self';
+  connect-src 'self' https://api.example.com;
+  frame-ancestors 'none';
+  object-src 'none';
+  base-uri 'self';
+  form-action 'self'
+```
+
+Operational guidance:
+- Start with report-only mode in staging to detect breaks.
+- Remove unnecessary allowances over time.
+- Keep CSP policy in version control and review alongside security changes.
+
+---
+
 ## Testing Checklist
 
 - [ ] Run `pnpm lint` — no dangerous HTML patterns
@@ -159,3 +208,6 @@ mainWindow.webPreferences = {
 - [ ] No user input in redirects without whitelist
 - [ ] localStorage/sessionStorage not storing secrets
 - [ ] All onclick/onX handlers validated
+- [ ] CSRF protection enabled for state-changing backend routes
+- [ ] Auth/session cookies use `HttpOnly`, `Secure`, and `SameSite`
+- [ ] CSP includes hardening directives (`object-src 'none'`, `base-uri 'self'`, `form-action 'self'`)

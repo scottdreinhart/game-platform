@@ -1,6 +1,6 @@
 # Performance & Web Vitals Governance
 
-> **Authority**: AGENTS.md § 4 (Performance Guardrails)
+> **Authority**: AGENTS.md § 25
 > **Scope**: Performance budgets, Web Vitals targets, bundle analysis
 
 ---
@@ -29,8 +29,8 @@
 
 ### Monitor with:
 ```bash
-# Analyze bundle
-pnpm exec vite build && npx vite-plugin-visualizer dist/stats.html
+# Build production assets
+pnpm build
 
 # Check size
 ls -lh dist/assets/

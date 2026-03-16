@@ -31,6 +31,16 @@
 
 **Default**: Bash (WSL: Ubuntu) for everything unless the task explicitly targets Windows packaging or Apple platforms.
 
+### WSL/PowerShell Native Binary Guardrail
+
+When the workspace lives on NTFS and is shared between WSL and Windows, `node_modules/` may contain incompatible native binaries (`esbuild`, `rollup`, etc.).
+
+- Check `.node-platform.md` before running commands.
+- If current shell does not match marker platform:
+	- Run `pnpm clean:node && pnpm install` in the current shell.
+	- Update marker (`platform: linux` for WSL, `platform: windows` for PowerShell).
+- If command shims are still missing, run `pnpm rebuild`.
+
 ---
 
 ## Electron Builder Configuration

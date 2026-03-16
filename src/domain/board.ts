@@ -19,7 +19,9 @@ let wasmModule: WasmModule | null = null
  * Initialize WASM module from embedded base64 binary
  */
 async function initWasm(): Promise<WasmModule | null> {
-  if (wasmModule) return wasmModule
+  if (wasmModule) {
+    return wasmModule
+  }
 
   try {
     // Dynamically import the WASM module

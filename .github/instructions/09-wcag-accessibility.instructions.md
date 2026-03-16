@@ -1,6 +1,6 @@
 # WCAG 2.1 AA Accessibility Governance
 
-> **Authority**: Subordinate to AGENTS.md § 12
+> **Authority**: Subordinate to AGENTS.md § 23
 > **Scope**: Keyboard navigation, screen readers, semantic HTML, contrast
 
 ---

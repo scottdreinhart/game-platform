@@ -115,6 +115,18 @@ Use **Android SDK** only for: Android Capacitor tasks
 
 ---
 
+## Node Platform Marker (WSL/PowerShell)
+
+When this repo is on NTFS and used from both WSL Bash and Windows PowerShell, native binaries in `node_modules/` can become incompatible across shells.
+
+- Before running commands in **Bash/WSL**, check `.node-platform.md`.
+	- If `platform: windows`, run `pnpm clean:node && pnpm install`, then set marker to `platform: linux`.
+- Before running commands in **PowerShell**, check `.node-platform.md`.
+	- If `platform: linux`, run `pnpm clean:node && pnpm install`, then set marker to `platform: windows`.
+- If `.bin` shims/symlinks are missing after reinstall, run `pnpm rebuild`.
+
+---
+
 ## Governance Authority & References
 
 All runtime decisions are subordinate to **AGENTS.md**. Refer to AGENTS.md for comprehensive governance including:
@@ -133,6 +145,11 @@ All runtime decisions are subordinate to **AGENTS.md**. Refer to AGENTS.md for c
 - **§ 20**: Build & Deployment Governance — script routing, output directories, cleanup, quality gates
 - **§ 21**: Detailed Project Structure & File Organization Governance — UI atomic design hierarchy (atoms/molecules/organisms), app layer organization, domain layer patterns, component file size, import validation, asset organization, type definitions, testing organization, checklists
 - **§ 22**: Project Build & Dependency Governance — 4 runtime deps, 34 dev deps (organized by category with official docs), 38 build scripts with shell routing, configuration file rules, linting/quality config, dependency update policy, guardrails
+- **§ 23**: Accessibility Governance (WCAG 2.1 AA) — keyboard navigation, semantics, contrast, and verification
+- **§ 24**: Security Governance — XSS prevention, input validation, secret handling, secure runtime defaults
+- **§ 25**: Performance & Web Vitals Governance — profiling-first optimization, responsiveness, and bundle awareness
+- **§ 26**: Error Handling & Recovery Governance — boundaries, call-site handling, classification, and recovery UX
+- **§ 27**: Mobile Gesture Governance — semantic-action touch patterns, thresholds, and haptic guardrails
 
 ---
 

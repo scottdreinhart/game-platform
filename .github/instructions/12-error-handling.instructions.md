@@ -1,6 +1,6 @@
 # Error Handling & Recovery Patterns
 
-> **Authority**: AGENTS.md § 3 (Error Handling & Recovery)
+> **Authority**: AGENTS.md § 26
 > **Scope**: Error boundaries, recovery UI, error classification
 
 ---

@@ -1,6 +1,6 @@
 # Mobile Gesture Patterns
 
-> **Authority**: AGENTS.md § 15 (Mobile Gestures)
+> **Authority**: AGENTS.md § 27
 > **Scope**: Swipe, long-press, haptic feedback
 
 ---

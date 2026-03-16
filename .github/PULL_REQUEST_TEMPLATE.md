@@ -3,7 +3,7 @@
 ## Input Directive Compliance
 
 - [ ] Input changes follow `.github/instructions/08-input-controls.instructions.md`.
-- [ ] Input handling remains semantic-action-driven (no raw device events in game/UI logic).
+- [ ] Input handling remains semantic-action-driven (no raw device events in app/UI logic).
 - [ ] `useKeyboardControls` is used as a keyboard adapter only (no orchestration creep).
 
 ## Context & Safety
