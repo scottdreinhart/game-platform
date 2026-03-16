@@ -14,8 +14,8 @@ Status values: `todo` | `in-progress` | `blocked` | `done`
 | T-006 | done | Add report scripts | @you | add `report:lint/typecheck/test/coverage/a11y/lighthouse/security/build` | all `report:*` scripts present |
 | T-007 | done | Create report dirs | @you | `mkdir -p apps/tictactoe/reports/{lint,typecheck,test,coverage,a11y,lighthouse,security,build}` | all folders exist |
 | T-008 | done | Validate core contract | @you | `pnpm --filter @games/tictactoe lint && pnpm --filter @games/tictactoe typecheck && pnpm --filter @games/tictactoe test && pnpm --filter @games/tictactoe validate` | all pass |
-| T-009 | todo | Validate web/desktop build paths | @you | `pnpm --filter @games/tictactoe web:build` + desktop scripts | web + linux pass locally |
-| T-010 | todo | Validate mobile contract scripts | @you | `pnpm --filter @games/tictactoe cap:sync && pnpm --filter @games/tictactoe cap:build:android` | scripts execute without contract errors |
+| T-009 | done | Validate web/desktop build paths | @you | `pnpm --filter @games/tictactoe web:build` + desktop scripts | web + linux pass locally |
+| T-010 | done | Validate mobile contract scripts | @you | `pnpm --filter @games/tictactoe cap:sync && pnpm --filter @games/tictactoe cap:build:android` | scripts execute without contract errors |
 | T-011 | todo | Add CI matrix entry for app | @you | update workflow matrix with `@games/tictactoe` | CI runs tictactoe jobs |
 | T-012 | todo | Upload report artifacts in CI | @you | workflow artifact step for `apps/tictactoe/reports/**` | reports downloadable in CI |
 | T-013 | todo | PR review + merge gate | @you | open PR with checklist | all checks green, PR approved |
