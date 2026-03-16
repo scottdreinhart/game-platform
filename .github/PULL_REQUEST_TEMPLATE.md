@@ -29,3 +29,10 @@
 - [ ] No ad-hoc per-component global key listeners were introduced.
 - [ ] Shared app hooks/services were reused where available before adding new patterns.
 - [ ] Any intentional deviation from baseline behavior is documented in repo instructions/PR notes.
+
+## Monorepo Absorption (TicTacToe)
+
+- [ ] `@games/tictactoe` contracts pass in CI (`validate` + `app-contract-matrix`).
+- [ ] Report artifacts are uploaded (`reports-tictactoe`) and downloadable from workflow run.
+- [ ] `apps/tictactoe/reports/*` scaffold remains tracked (`.gitignore` + `.gitkeep` only; no generated logs committed).
+- [ ] Script aliases remain additive wrappers (`web:build`, `cap:build:*`, `report:*`) and preserve existing script behavior.
