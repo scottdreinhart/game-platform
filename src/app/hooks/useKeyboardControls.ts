@@ -69,15 +69,50 @@ const buildEventTokens = (event: KeyboardEvent): string[] => {
   const key = event.key.toLowerCase() === ' ' ? 'space' : event.key.toLowerCase()
 
   const tokens = new Set<string>()
-  tokens.add(code)
-  if (modifiers.length > 0) {
-    tokens.add(`${modifiers.join('+')}+${code}`)
-  }
 
-  tokens.add(`key:${key}`)
-  if (modifiers.length > 0) {
-    tokens.add(`${modifiers.join('+')}+key:${key}`)
-  }
+    const addTokenVariants = (base: string) => {
+      tokens.add(base)
+      if (modifiers.length > 0) {
+        tokens.add(`${modifiers.join('+')}+${base}`)
+      }
+    }
+
+    const keyAliases = new Set<string>()
+
+    if (code.startsWith('key') && code.length === 4) {
+      keyAliases.add(code.slice(3))
+    }
+    if (code.startsWith('digit') && code.length === 6) {
+      keyAliases.add(code.slice(5))
+    }
+    if (code.startsWith('numpad') && code.length === 7) {
+      keyAliases.add(code.slice(6))
+    }
+
+    if (key === 'escape') {
+      keyAliases.add('esc')
+    }
+    if (key === 'arrowup') {
+      keyAliases.add('up')
+    }
+    if (key === 'arrowdown') {
+      keyAliases.add('down')
+    }
+    if (key === 'arrowleft') {
+      keyAliases.add('left')
+    }
+    if (key === 'arrowright') {
+      keyAliases.add('right')
+    }
+
+    addTokenVariants(code)
+    addTokenVariants(key)
+    addTokenVariants(`key:${key}`)
+
+    for (const alias of keyAliases) {
+      addTokenVariants(alias)
+      addTokenVariants(`key:${alias}`)
+    }
 
   return [...tokens]
 }

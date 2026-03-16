@@ -25,9 +25,10 @@
     "lint:scope:domain": "eslint src/domain",
     "lint:scope:ui": "eslint src/ui",
     "lint:scope:infrastructure": "eslint src/infrastructure",
+    "lint:scope:electron": "eslint src/electron",
     "lint:scope:wasm": "eslint src/wasm",
     "lint:scope:workers": "eslint src/workers",
-    "lint:scope:all": "pnpm lint:scope:app && pnpm lint:scope:domain && pnpm lint:scope:ui && pnpm lint:scope:infrastructure && pnpm lint:scope:wasm && pnpm lint:scope:workers",
+    "lint:scope:all": "pnpm lint:scope:app && pnpm lint:scope:domain && pnpm lint:scope:ui && pnpm lint:scope:infrastructure && pnpm lint:scope:electron && pnpm lint:scope:wasm && pnpm lint:scope:workers",
     "lint:type:a11y": "node scripts/lint-segmented.mjs --segment=a11y",
     "lint:type:security": "node scripts/lint-segmented.mjs --segment=security",
     "lint:type:hooks": "node scripts/lint-segmented.mjs --segment=hooks",
@@ -41,9 +42,10 @@
     "lint:filewise:domain": "node scripts/lint-filewise.mjs --scope=src/domain",
     "lint:filewise:ui": "node scripts/lint-filewise.mjs --scope=src/ui",
     "lint:filewise:infrastructure": "node scripts/lint-filewise.mjs --scope=src/infrastructure",
+    "lint:filewise:electron": "node scripts/lint-filewise.mjs --scope=src/electron",
     "lint:filewise:wasm": "node scripts/lint-filewise.mjs --scope=src/wasm",
     "lint:filewise:workers": "node scripts/lint-filewise.mjs --scope=src/workers",
-    "lint:filewise:all": "pnpm lint:filewise:app && pnpm lint:filewise:domain && pnpm lint:filewise:ui && pnpm lint:filewise:infrastructure && pnpm lint:filewise:wasm && pnpm lint:filewise:workers",
+    "lint:filewise:all": "pnpm lint:filewise:app && pnpm lint:filewise:domain && pnpm lint:filewise:ui && pnpm lint:filewise:infrastructure && pnpm lint:filewise:electron && pnpm lint:filewise:wasm && pnpm lint:filewise:workers",
     "lint:all": "pnpm lint:scope:all && pnpm lint:type:all",
     "lint:ci:fast": "pnpm lint:filewise:app && pnpm lint:filewise:ui && pnpm typecheck",
     "lint:ci:full": "node scripts/run-quality-gates.mjs --full",
@@ -124,6 +126,10 @@
     "wait-on": "9.0.4"
   },
   "pnpm": {
+    "overrides": {
+      "lodash": "4.17.23",
+      "tmp": "0.2.4"
+    },
     "onlyBuiltDependencies": [
       "electron",
       "electron-winstaller",

@@ -1,6 +1,6 @@
 .cell {
-  width: 50px;
-  height: 50px;
+  width: var(--cell-size, 50px);
+  height: var(--cell-size, 50px);
   border: 2px solid #667eea;
   border-radius: 4px;
   cursor: pointer;
@@ -38,4 +38,9 @@
 .cell.unlit {
   background: linear-gradient(135deg, #2a2a4e, #1a1a2e);
   opacity: 0.6;
+}
+
+.cell.selected {
+  outline: 3px solid var(--theme-accent, #667eea);
+  outline-offset: 2px;
 }
