@@ -427,22 +427,36 @@ This project enforces nine complementary design principles:
 - [ ] **Game UI implementation** — build the complete game interface with animations and effects
 - [ ] **Theme system** — multiple color themes with light/dark/system mode + colorblind presets
 - [ ] **Sound effects** — Web Audio API synthesized SFX + background music
+- [ ] **Responsive design refinements** — ensure all 25 games display optimally across mobile, tablet, desktop, widescreen, and ultrawide viewports
+- [ ] **Accessibility compliance** — full WCAG AA testing across all games and platforms
 
-### Code Quality
+### Performance & Optimization
 
-```bash
-# Individual tools
-pnpm lint           # ESLint — check for issues
-pnpm lint:fix       # ESLint — auto-fix issues
-pnpm format         # Prettier — format all source files
-pnpm format:check   # Prettier — check formatting without writing
-pnpm typecheck      # TypeScript type check (tsc --noEmit)
+- [ ] **WASM AI optimization** — benchmark AI decision times and optimize minimax search depth for each game complexity level
+- [ ] **Bundle analysis** — profile and reduce JavaScript bundle size using `pnpm run build:analyze`
+- [ ] **Worker thread optimization** — ensure CPU-intensive AI runs off-main-thread where beneficial
+- [ ] **Lazy-loading themes** — implement dynamic theme chunk loading to reduce initial bundle size
 
-# Chains
-pnpm check          # lint + format:check + typecheck in one pass (quality gate)
-pnpm fix            # lint:fix + format in one pass (auto-fix everything)
-pnpm validate       # check + build — full pre-push validation
-```
+### Testing & Quality Assurance
+
+- [ ] **Unit test coverage** — achieve >80% coverage across domain logic, hooks, and utilities
+- [ ] **Integration tests** — cross-game hook compatibility testing (e.g., `useStats`, `useTheme` work everywhere)
+- [ ] **E2E tests** — Playwright tests for core gameplay flows and mobile gestures
+- [ ] **Accessibility testing** — automated WCAG validation + manual keyboard/screen reader tests
+
+### Platform Builds
+
+- [ ] **Electron packaging** — test Windows `.exe`, Linux `.AppImage`, macOS `.dmg` installers
+- [ ] **Capacitor mobile** — build and submit Android `.apk` to Google Play Store
+- [ ] **iOS Capacitor** — build and submit iOS app to Apple App Store
+- [ ] **PWA optimization** — service worker, offline support, installable badge
+
+### Monorepo Consolidation
+
+- [ ] **All 25 games migrated** — verify all games follow CLEAN Architecture and import shared packages
+- [ ] **Shared package exports** — ensure all `packages/*/index.ts` exports are properly defined
+- [ ] **Pnpm workspace validation** — test builds and monorepo scripts across all game combinations
+- [ ] **CI/CD pipeline** — set up GitHub Actions for lint, test, build gates on every PR
 ## Future Improvements
 
 The following monetization and sustainability strategies are under consideration. Each model is designed to preserve the free-to-play core experience while introducing optional revenue streams that fund ongoing development, server infrastructure, and cross-platform maintenance.
