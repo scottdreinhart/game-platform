@@ -1,11 +1,14 @@
 /**
  * useStats — win/loss/streak tracking persisted to localStorage.
+ * Standard logic uses shared helpers; PvP logic is game-specific.
  */
 
 import { useCallback, useState } from 'react'
 
-import { DEFAULT_STATS } from '@/domain'
+import { nextLossStats, nextWinStats } from '@games/stats-utils'
+
 import type { GameStats } from '@/domain'
+import { DEFAULT_STATS } from '@/domain'
 
 import { storageService } from '../services/storageService'
 
@@ -20,31 +23,17 @@ export const useStats = () => {
   }, [])
 
   const recordWin = useCallback(() => {
-    const nextWins = stats.wins + 1
-    const nextStreak = stats.streak + 1
-
-    persist({
-      ...stats,
-      wins: nextWins,
-      streak: nextStreak,
-      bestStreak: Math.max(stats.bestStreak, nextStreak),
-    })
+    persist(nextWinStats(stats))
   }, [stats, persist])
 
   const recordLoss = useCallback(() => {
-    persist({
-      ...stats,
-      losses: stats.losses + 1,
-      streak: 0,
-    })
+    persist(nextLossStats(stats))
   }, [stats, persist])
 
   const recordPvpWin = useCallback(
     (winner: 'player1' | 'player2') => {
-      const nextStreakWinner =
-        stats.streakWinner === winner ? stats.streakWinner : winner
-      const nextStreakCount =
-        stats.streakWinner === winner ? stats.streakCount + 1 : 1
+      const nextStreakWinner = stats.streakWinner === winner ? stats.streakWinner : winner
+      const nextStreakCount = stats.streakWinner === winner ? stats.streakCount + 1 : 1
 
       const shouldUpdateBest = nextStreakCount > stats.bestStreakCount
 
