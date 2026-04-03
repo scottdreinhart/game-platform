@@ -1,0 +1,80 @@
+{
+  "compilerOptions": {
+    "target": "ES2020",
+    "lib": [
+      "ES2020",
+      "DOM",
+      "DOM.Iterable"
+    ],
+    "module": "ESNext",
+    "moduleResolution": "bundler",
+    "jsx": "react-jsx",
+    "strict": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "noFallthroughCasesInSwitch": true,
+    "skipLibCheck": true,
+    "esModuleInterop": true,
+    "allowImportingTsExtensions": true,
+    "noEmit": true,
+    "isolatedModules": true,
+    "resolveJsonModule": true,
+    "forceConsistentCasingInFileNames": true,
+    "types": [
+      "vite/client"
+    ],
+    "paths": {
+      "@/*": [
+        "./src/*"
+      ],
+      "@/domain/*": [
+        "./src/domain/*"
+      ],
+      "@/app/*": [
+        "./src/app/*"
+      ],
+      "@/ui/*": [
+        "./src/ui/*"
+      ],
+      "@games/bingo-ui-components": [
+        "../../packages/bingo-ui-components/src"
+      ],
+      "@games/bingo-ui-components/*": [
+        "../../packages/bingo-ui-components/src/*"
+      ],
+      "@games/bingo-core": [
+        "../../packages/bingo-core/src"
+      ],
+      "@games/bingo-domain": [
+        "../../packages/bingo-domain/src"
+      ],
+      "@games/bingo-game-hooks": [
+        "../../packages/bingo-game-hooks/src"
+      ],
+      "@games/app-hook-utils": [
+        "../../packages/app-hook-utils/src"
+      ],
+      "@games/ui-board-core": [
+        "../../packages/ui-board-core/src"
+      ],
+      "@games/shared-hooks": [
+        "../../packages/shared-hooks/src"
+      ],
+      "@games/theme-context": [
+        "../../packages/theme-context/src"
+      ],
+      "@games/theme-contract": [
+        "../../packages/theme-contract/src"
+      ],
+      "@bingo-core/domain": [
+        "../../packages/bingo-core/src/index.ts"
+      ],
+      "@bingo-core/ui": [
+        "../../packages/bingo-core/src/ui/index.ts"
+      ]
+    }
+  },
+  "include": [
+    "src"
+  ]
+}
