@@ -9,11 +9,11 @@
  * Move representation: column index (0-6)
  */
 
-import { minimax } from '@games/ai-framework'
 import type { GameAI } from '@games/ai-framework'
+import { minimax } from '@games/ai-framework'
 import { dropDisc, getCell, getPlayableColumns, otherPlayer } from './board'
 import { AI_DEPTH, COLS, ROWS, WIN_LENGTH } from './constants'
-import { checkWinAt, isBoardFull } from './rules'
+import { checkWinAt } from './rules'
 import type { Board, Difficulty, Player } from './types'
 
 /** Scoring constants for the evaluation function */
@@ -156,7 +156,7 @@ class ConnectFourAI implements GameAI<Board, number, Player> {
       for (let row = 0; row < ROWS; row++) {
         const cell = getCell(board, col, row)
         if (cell !== 0) {
-          if ((checkWinAt(board, col, row, cell as Player)) !== null) {
+          if (checkWinAt(board, col, row, cell as Player) !== null) {
             return cell as Player
           }
         }
@@ -201,7 +201,9 @@ export function selectMove(board: Board, player: Player, difficulty: Difficulty)
   }
 
   const depth = AI_DEPTH[difficulty] ?? 4
-  const ordered = playable.slice().sort((a, b) => Math.abs(a - Math.floor(COLS / 2)) - Math.abs(b - Math.floor(COLS / 2)))
+  const ordered = playable
+    .slice()
+    .sort((a, b) => Math.abs(a - Math.floor(COLS / 2)) - Math.abs(b - Math.floor(COLS / 2)))
 
   // Check for immediate winning move
   for (const col of ordered) {
@@ -225,5 +227,5 @@ export function selectMove(board: Board, player: Player, difficulty: Difficulty)
     moveOrdering: true,
   })
 
-  return result.move ?? (ordered[0] as number)
+  return (result.move as number) ?? (ordered[0] as number)
 }

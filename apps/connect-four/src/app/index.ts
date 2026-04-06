@@ -7,30 +7,30 @@
 
 // Shared infrastructure
 export {
-  useKeyboardControls,
-  useMediaQuery,
-  useWindowSize,
-  useResponsiveState,
-  useDeviceInfo,
-  useAppScreens,
-  useServiceLoader,
-  useOnlineStatus,
-  useLongPress,
-  usePerformanceMetrics,
   logWebVitals,
+  useAppScreens,
+  useDeviceInfo,
+  useKeyboardControls,
+  useLongPress,
+  useMediaQuery,
+  useOnlineStatus,
+  usePerformanceMetrics,
+  useResponsiveState,
+  useServiceLoader,
+  useWindowSize,
   type DeviceInfo,
   type DeviceType,
   type WindowSize,
 } from '@games/app-hook-utils'
 
 // Local services
+export { SoundProvider, useSoundContext } from '@games/sound-context'
 export * from './connectFourAiService'
-export * from './haptics'
 export * from './crashLogger'
+export * from './haptics'
 export * from './storageService'
-export { SoundProvider, useSoundContext } from './SoundContext'
 export { ThemeProvider, useThemeContext } from './ThemeContext'
 
 // App-specific hooks
-export { useStats } from './useStats'
 export { useSwipe } from '@games/app-hook-utils'
+export { useStats } from './useStats'

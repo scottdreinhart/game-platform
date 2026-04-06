@@ -1,2 +1,9 @@
-export { CrossclimbBoard } from './CrossclimbBoard'
-export { CrossclimbGame } from './CrossclimbGame'
+/**
+ * UI layer barrel export.
+ * Re-exports atoms, molecules, organisms, and utilities.
+ *
+ * Usage: import { App, SplashScreen } from '@/ui'
+ */
+
+export * from './atoms'
+export { App } from './organisms/App'

@@ -1,5 +1,5 @@
 import React from 'react'
-import { BoardGrid as SharedBoardGrid, Tile } from '@games/ui-board-core'
+import { BoardGrid as SharedBoardGrid } from '@games/ui-board-core'
 import { useResponsiveState } from '@games/common'
 import styles from './BoardGrid.module.css'
 
@@ -7,9 +7,8 @@ export interface BoardGridProps {
   rows: number
   cols: number
   cells: (string | null)[][]
-  onCellClick: (row: number, col: number) => void
-  selectedPosition?: { row: number; col: number } | null
-  validMoves?: { row: number; col: number }[]
+  onCellClick: (col: number) => void
+  selectedColumn?: number | null
   disableInteraction?: boolean
 }
 
@@ -18,49 +17,60 @@ export const BoardGrid: React.FC<BoardGridProps> = ({
   cols,
   cells,
   onCellClick,
-  selectedPosition,
-  validMoves = [],
+  selectedColumn,
   disableInteraction = false,
 }) => {
   const responsive = useResponsiveState()
 
-  // Map Connect-Four cell state to visual properties
-  const getTileContent = (value: string | null, row: number, col: number) => {
-    if (!value) return null
+  const getTileContent = (cellIdx: number) => {
+    const col = cellIdx % cols
+    const row = Math.floor(cellIdx / cols)
+    const value = cells[row]?.[col]
 
-    const isSelected = selectedPosition?.row === row && selectedPosition?.col === col
-    const isValidMove = validMoves.some((m) => m.row === row && m.col === col)
+    let iconName: string | undefined
+    if (value === 'R') {
+      iconName = 'red-disc'
+    } else if (value === 'Y') {
+      iconName = 'yellow-disc'
+    } else {
+      iconName = undefined
+    }
 
     return {
-      icon: value === 'R' ? '🔴' : value === 'Y' ? '🟡' : undefined,
-      state: isSelected ? 'selected' : isValidMove ? 'highlighted' : 'default',
+      type: 'icon' as const,
+      iconName,
     }
   }
 
   return (
-    <SharedBoardGrid
-      rows={rows}
-      cols={cols}
-      className={styles.connectFourBoard}
-      responsive={responsive}
-      onCellClick={(row, col) => {
-        if (!disableInteraction) {
-          onCellClick(row, col)
-        }
-      }}
-    >
-      {cells.map((row, rowIdx) =>
-        row.map((cellValue, colIdx) => (
-          <Tile
-            key={`${rowIdx}-${colIdx}`}
-            row={rowIdx}
-            col={colIdx}
-            content={getTileContent(cellValue, rowIdx, colIdx)}
-            disabled={disableInteraction}
-          />
-        )),
+    <div>
+      {/* Column selection indicator */}
+      {selectedColumn !== null && selectedColumn !== undefined && (
+        <div
+          className={styles.columnIndicator}
+          style={{
+            '--indicator-position': `calc((100% / ${cols}) * ${selectedColumn} + (100% / ${cols}) / 2)`,
+          } as React.CSSProperties}
+          aria-label={`Column ${selectedColumn + 1} selected`}
+        />
       )}
-    </SharedBoardGrid>
+
+      <SharedBoardGrid
+        rows={rows}
+        cols={cols}
+        cells={Array.from({ length: rows * cols }, (_, idx) => ({
+          position: { row: Math.floor(idx / cols), col: idx % cols },
+          content: getTileContent(idx),
+        }))}
+        className={styles.connectFourBoard}
+        responsive={responsive}
+        onCellClick={(position) => {
+          if (!disableInteraction) {
+            onCellClick(position.col)
+          }
+        }}
+      />
+    </div>
   )
 }
 

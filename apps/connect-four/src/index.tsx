@@ -7,19 +7,21 @@ import { SoundProvider, ThemeProvider } from '@/app'
 import { ErrorBoundary } from '@/ui/atoms'
 import { App } from '@/ui/organisms'
 
-const root = document.getElementById('root')
-if (!root) {
-  throw new Error('Root element not found')
-}
+if (typeof document !== 'undefined') {
+  const root = document.getElementById('root')
+  if (!root) {
+    throw new Error('Root element not found')
+  }
 
-ReactDOM.createRoot(root).render(
-  <React.StrictMode>
-    <ThemeProvider>
-      <SoundProvider>
-        <ErrorBoundary>
-          <App />
-        </ErrorBoundary>
-      </SoundProvider>
-    </ThemeProvider>
-  </React.StrictMode>,
-)
+  ReactDOM.createRoot(root).render(
+    <React.StrictMode>
+      <ThemeProvider>
+        <SoundProvider>
+          <ErrorBoundary>
+            <App />
+          </ErrorBoundary>
+        </SoundProvider>
+      </ThemeProvider>
+    </React.StrictMode>,
+  )
+}

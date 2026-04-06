@@ -1,12 +1,19 @@
-import { vibrate } from '@/app'
+import { vibrate, useSoundContext } from '@/app'
+import { BoardGrid, HamburgerMenu } from '@/ui/molecules'
 import { useKeyboardControls } from '@games/app-hook-utils'
 import { useCallback, useEffect, useMemo, useRef, useState } from 'react'
-import { BoardGrid } from '@/ui/molecules'
 
-import { applyMove, createInitialState, getCell, isColumnPlayable } from '@/domain'
-import { COLS, CPU_DELAY_MS, ROWS } from '@/domain'
-import { checkGameResult } from '@/domain'
 import type { Column, Difficulty, GameMode, GameState, Player } from '@/domain'
+import {
+  applyMove,
+  checkGameResult,
+  COLS,
+  CPU_DELAY_MS,
+  createInitialState,
+  getCell,
+  isColumnPlayable,
+  ROWS,
+} from '@/domain'
 
 /** Map player number to display label */
 const PLAYER_LABEL: Record<Player, string> = { 1: 'Red', 2: 'Yellow' }
@@ -20,10 +27,9 @@ const DIFFICULTY_LABEL: Record<Difficulty, string> = {
 
 export default function App() {
   const [game, setGame] = useState<GameState>(() => createInitialState('pvc', 'medium'))
-  const [hoveredCol, setHoveredCol] = useState<number | null>(null)
   const [activeCol, setActiveCol] = useState(0)
   const [isThinking, setIsThinking] = useState(false)
-  const [animatingCell, setAnimatingCell] = useState<{ col: number; row: number } | null>(null)
+  const { soundEnabled, toggleSound } = useSoundContext()
   const thinkingRef = useRef(false)
   const workerRef = useRef<Worker | null>(null)
 
@@ -62,8 +68,6 @@ export default function App() {
       // Find the row where the disc landed
       for (let row = 0; row < ROWS; row++) {
         if (getCell(next.board, col, row) !== getCell(game.board, col, row)) {
-          setAnimatingCell({ col, row })
-          setTimeout(() => setAnimatingCell(null), 350)
           break
         }
       }
@@ -75,13 +79,18 @@ export default function App() {
 
   const findNextPlayableColumn = useCallback(
     (startCol: number, direction: -1 | 1) => {
-      for (let step = 1; step <= COLS; step++) {
-        const candidate = (startCol + direction * step + COLS) % COLS
+      // Move in direction until we find a playable column or hit the boundary
+      let candidate = startCol
+      while (true) {
+        candidate += direction
+        // Stop at boundaries (columns 0 to COLS-1)
+        if (candidate < 0 || candidate >= COLS) {
+          return startCol // Return current column if we hit a boundary
+        }
         if (isColumnPlayable(game.board, candidate)) {
           return candidate
         }
       }
-      return startCol
     },
     [game.board],
   )
@@ -90,7 +99,6 @@ export default function App() {
     (direction: -1 | 1) => {
       const nextCol = findNextPlayableColumn(activeCol, direction)
       setActiveCol(nextCol)
-      setHoveredCol(nextCol)
     },
     [activeCol, findNextPlayableColumn],
   )
@@ -125,13 +133,6 @@ export default function App() {
         }
         const next = applyMove(game, col as Column, checkGameResult)
         if (next) {
-          for (let row = 0; row < ROWS; row++) {
-            if (getCell(next.board, col, row) !== getCell(game.board, col, row)) {
-              setAnimatingCell({ col, row })
-              setTimeout(() => setAnimatingCell(null), 350)
-              break
-            }
-          }
           setGame(next)
         }
         setIsThinking(false)
@@ -157,7 +158,6 @@ export default function App() {
     setGame(createInitialState(game.mode, game.difficulty))
     setIsThinking(false)
     thinkingRef.current = false
-    setAnimatingCell(null)
   }, [game.mode, game.difficulty])
 
   // ── Mode / Difficulty changes ────────────────────────
@@ -218,7 +218,7 @@ export default function App() {
       },
       {
         action: 'drop',
-        keys: ['ArrowDown', 'Enter', 'Space'],
+        keys: ['ArrowDown', 'KeyS', 'Enter', 'Space'],
         onTrigger: dropAtActiveColumn,
         enabled: !isGameOver,
       },
@@ -234,7 +234,15 @@ export default function App() {
         enabled: game.moveHistory.length > 0 && !isThinking,
       },
     ],
-    [isGameOver, moveActiveColumn, dropAtActiveColumn, handleNewGame, handleUndo, game.moveHistory.length, isThinking],
+    [
+      isGameOver,
+      moveActiveColumn,
+      dropAtActiveColumn,
+      handleNewGame,
+      handleUndo,
+      game.moveHistory.length,
+      isThinking,
+    ],
   )
 
   useKeyboardControls(keyboardBindings)
@@ -255,20 +263,14 @@ export default function App() {
     return `${current}'s turn`
   })()
 
-  // ── Win line cells for highlighting ──────────────────
-  const winCells = new Set<string>()
-  if (game.result.status === 'win') {
-    for (const pos of game.result.line) {
-      winCells.add(`${pos.col},${pos.row}`)
-    }
-  }
-
-  const previewCol = hoveredCol ?? activeCol
-
   // ── Render ───────────────────────────────────────────
   return (
     <div className="app">
-      <h1>Connect Four</h1>
+      <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '1rem' }}>
+        <HamburgerMenu onExit={() => {}} onToggleSound={toggleSound} soundEnabled={soundEnabled} />
+        <h1 style={{ flex: 1, textAlign: 'center', margin: 0 }}>Connect Four</h1>
+        <div style={{ width: '44px' }} />
+      </div>
 
       {/* Controls */}
       <div className="controls">
@@ -305,7 +307,12 @@ export default function App() {
       </div>
 
       {/* Status */}
-      <div className={`status ${isGameOver ? 'game-over' : ''}`}>
+      <div
+        className={`status ${isGameOver ? 'game-over' : ''}`}
+        aria-live="polite"
+        aria-atomic="true"
+        role="status"
+      >
         <span className={`status-indicator player-${game.currentPlayer}`} />
         {statusText}
       </div>
@@ -321,19 +328,8 @@ export default function App() {
               return value === 1 ? 'R' : value === 2 ? 'Y' : null
             }),
           )}
-          onCellClick={(row, col) => handleColumnClick(col)}
-          selectedPosition={
-            hoveredCol !== null && !isGameOver && !isThinking && !isCpuTurn
-              ? { row: ROWS - 1, col: hoveredCol }
-              : null
-          }
-          validMoves={
-            !isGameOver && !isThinking && !isCpuTurn
-              ? Array.from({ length: COLS }, (_, col) =>
-                  isColumnPlayable(game.board, col) ? { row: ROWS - 1, col } : null,
-                ).filter((m) => m !== null) as Array<{ row: number; col: number }>
-              : []
-          }
+          onCellClick={(col) => handleColumnClick(col)}
+          selectedColumn={!isGameOver && !isThinking && !isCpuTurn ? activeCol : null}
           disableInteraction={isGameOver || isThinking || isCpuTurn}
         />
       </div>

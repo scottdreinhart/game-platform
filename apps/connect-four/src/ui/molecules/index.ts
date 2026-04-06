@@ -4,3 +4,4 @@
 
 export { BoardGrid } from './BoardGrid/BoardGrid'
 export type { BoardGridProps } from './BoardGrid/BoardGrid'
+export { HamburgerMenu, type HamburgerMenuProps } from './HamburgerMenu'

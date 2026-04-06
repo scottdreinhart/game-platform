@@ -1,5 +1,42 @@
 /* Connect-Four Board Grid Styles */
 
+/* Column selection indicator */
+.columnIndicator {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 0.5rem;
+  height: 32px;
+  position: relative;
+}
+
+.columnIndicator::after {
+  content: '▼';
+  color: #00ff88;
+  font-size: 28px;
+  position: absolute;
+  left: var(--indicator-position);
+  transform: translateX(-50%);
+  animation: pulse-drop 0.6s ease-in-out infinite;
+}
+
+@keyframes pulse-drop {
+  0%, 100% {
+    transform: translateX(-50%) translateY(0);
+    opacity: 1;
+  }
+  50% {
+    transform: translateX(-50%) translateY(-4px);
+    opacity: 0.7;
+  }
+}
+
+/* Reduce motion support */
+@media (prefers-reduced-motion: reduce) {
+  .columnIndicator::after {
+    animation: none;
+  }
+}
+
 .connectFourBoard {
   display: grid;
   grid-template-columns: repeat(7, 1fr);
@@ -8,6 +45,7 @@
   background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
   border-radius: 12px;
   box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
+  position: relative;
 }
 
 /* Mobile: <600px */
