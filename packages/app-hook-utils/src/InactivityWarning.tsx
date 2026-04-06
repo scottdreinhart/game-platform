@@ -30,7 +30,6 @@ export function InactivityWarning({
   isVisible,
   secondsRemaining = 30,
   onDismiss,
-  onTimeout,
 }: InactivityWarningProps) {
   if (!isVisible) return null
 

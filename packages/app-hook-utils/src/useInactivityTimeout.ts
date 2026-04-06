@@ -72,8 +72,8 @@ export function useInactivityTimeout(config: InactivityConfig) {
     isPaused = false,
   } = config
 
-  const timeoutRef = useRef<NodeJS.Timeout | null>(null)
-  const gracePeriodRef = useRef<NodeJS.Timeout | null>(null)
+  const timeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null)
+  const gracePeriodRef = useRef<ReturnType<typeof setTimeout> | null>(null)
   const [isWarningVisible, setIsWarningVisible] = useState(false)
 
   // Clear all timers

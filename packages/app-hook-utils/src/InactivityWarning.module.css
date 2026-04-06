@@ -173,28 +173,6 @@
     color: var(--color-text-tertiary-dark, #999);
   }
 }
-  .overlay {
-    background: rgba(0, 0, 0, 0.85);
-  }
-
-  .modal {
-    background: var(--color-surface-dark, #1e1e1e);
-    color: var(--color-text-dark, #fff);
-  }
-
-  .title {
-    color: #fff;
-  }
-
-  .message {
-    color: #ccc;
-  }
-
-  .subtext,
-  .footer {
-    color: #999;
-  }
-}
 
 /* Reduced motion */
 @media (prefers-reduced-motion: reduce) {

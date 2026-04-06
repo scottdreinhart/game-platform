@@ -9,8 +9,11 @@
       "types": "./src/index.ts"
     }
   },
-  "files": ["src"],
+  "files": [
+    "src"
+  ],
   "dependencies": {
+    "@games/battleship-wasm": "workspace:*",
     "@games/display-contract": "workspace:*",
     "@games/stats-utils": "workspace:*"
   },

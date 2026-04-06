@@ -21,12 +21,37 @@ export interface KeyboardActionBinding {
 	allowRepeat?: boolean
 	allowInInputs?: boolean
 	phase?: KeyboardPhase
+	/**
+	 * If true, this binding is blocked and will not trigger.
+	 * Useful for game-specific exceptions to global blockedKeys.
+	 * Default: false
+	 */
+	blocked?: boolean
 }
 
 export interface UseKeyboardControlsOptions {
 	enabled?: Enabled
 	ignoreInputs?: boolean
 	target?: Document | HTMLElement
+	/**
+	 * Keys that should be blocked globally (preventDefault + skip all bindings).
+	 * Useful for cross-game standardization: games define once, ignore everywhere.
+	 *
+	 * Examples:
+	 * - ['Tab'] — block browser focus trap
+	 * - ['F1', 'F11'] — block browser help/fullscreen
+	 * - ['Alt+Tab'] — block OS window switcher on Windows
+	 *
+	 * Supports same token format as binding keys:
+	 * - 'KeyW' or 'w' for letter keys
+	 * - 'ArrowUp' or 'up' for arrow keys
+	 * - 'Enter', 'Space', 'Tab', 'Escape', etc.
+	 * - 'ctrl+s', 'alt+f4' for modifier combos
+	 *
+	 * Per-binding override: set binding.blocked = true to skip it despite not being in blockedKeys.
+	 * Inverse control: to allow a key despite it being blocked globally, set allowRepeat or enabled to false as escape hatch.
+	 */
+	blockedKeys?: string[]
 }
 
 const FORM_TAGS = new Set(['INPUT', 'TEXTAREA', 'SELECT'])
@@ -117,9 +142,21 @@ const buildEventTokens = (event: KeyboardEvent): string[] => {
 	return [...tokens]
 }
 
+/**
+ * Check if a key token is in the blockedKeys set.
+ * Normalizes tokens for comparison.
+ */
+const isKeyBlocked = (token: string, blockedKeys?: string[]): boolean => {
+	if (!blockedKeys || blockedKeys.length === 0) {
+		return false
+	}
+	const normalized = normalizeToken(token)
+	return blockedKeys.some((blocked) => normalizeToken(blocked) === normalized)
+}
+
 export function useKeyboardControls(
 	bindings: KeyboardActionBinding[],
-	{ enabled = true, ignoreInputs = true, target }: UseKeyboardControlsOptions = {},
+	{ enabled = true, ignoreInputs = true, target, blockedKeys }: UseKeyboardControlsOptions = {},
 ): void {
 	const host = target ?? document
 
@@ -152,12 +189,27 @@ export function useKeyboardControls(
 			}
 
 			const event = rawEvent
+			const eventTokens = buildEventTokens(event)
+
+			// Check if any token is globally blocked
+			if (blockedKeys && blockedKeys.length > 0) {
+				for (const token of eventTokens) {
+					if (isKeyBlocked(token, blockedKeys)) {
+						event.preventDefault()
+						return
+					}
+				}
+			}
+
 			if (ignoreInputs && isFormElement(event.target)) {
-				const candidateBindings = buildEventTokens(event)
+				const candidateBindings = eventTokens
 					.flatMap((token) => bindingMap.get(token) ?? [])
 					.filter((binding) => binding.allowInInputs)
 
 				for (const binding of candidateBindings) {
+					if (binding.blocked) {
+						continue
+					}
 					if ((binding.phase ?? 'keydown') !== phase) {
 						continue
 					}
@@ -177,15 +229,16 @@ export function useKeyboardControls(
 				return
 			}
 
-			const candidates = buildEventTokens(event)
-
-			for (const token of candidates) {
+			for (const token of eventTokens) {
 				const matches = bindingMap.get(token)
 				if (!matches) {
 					continue
 				}
 
 				for (const binding of matches) {
+					if (binding.blocked) {
+						continue
+					}
 					if ((binding.phase ?? 'keydown') !== phase) {
 						continue
 					}
@@ -220,5 +273,5 @@ export function useKeyboardControls(
 			host.removeEventListener('keydown', onKeyDown)
 			host.removeEventListener('keyup', onKeyUp)
 		}
-	}, [bindingMap, enabled, host, ignoreInputs])
+	}, [bindingMap, enabled, host, ignoreInputs, blockedKeys])
 }

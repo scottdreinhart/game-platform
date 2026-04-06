@@ -21,6 +21,7 @@ interface CreateUseThemeConfig<TThemeSettings extends ThemeSettingsShape> {
 	layerStackToCssVars: (stack: Record<string, number>) => Record<string, string>
 	getBackgroundCssValue: (colorTheme: string) => string
 	preloadAllSprites: () => void
+	gameboardCssVars?: Record<string, string>
 }
 
 export interface UseThemeResult<TThemeSettings extends ThemeSettingsShape> {
@@ -42,6 +43,7 @@ export const createUseThemeHook = <TThemeSettings extends ThemeSettingsShape>({
 	layerStackToCssVars,
 	getBackgroundCssValue,
 	preloadAllSprites,
+	gameboardCssVars,
 }: CreateUseThemeConfig<TThemeSettings>): (() => UseThemeResult<TThemeSettings>) => {
 	const colorThemeIds = colorThemes.map((theme) => (typeof theme === 'string' ? theme : theme.id))
 	const themeLoaders = createThemeLoaders()
@@ -133,6 +135,12 @@ export const createUseThemeHook = <TThemeSettings extends ThemeSettingsShape>({
 		const colors = themeColors[settings.colorTheme] ?? themeColors.classic
 		for (const [prop, value] of Object.entries(colors)) {
 			root.style.setProperty(prop, value)
+		}
+
+		if (gameboardCssVars) {
+			for (const [prop, value] of Object.entries(gameboardCssVars)) {
+				root.style.setProperty(prop, value)
+			}
 		}
 	}
 
