@@ -1,0 +1,394 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "Game Platform App Status Schema",
+    "description": "Machine-readable app status for 38-app platform maturity tracking",
+    "type": "object",
+    "properties": {
+        "metadata": {
+            "type": "object",
+            "properties": {
+                "version": {
+                    "type": "string",
+                    "description": "Schema version (e.g., 1.0.0)",
+                    "example": "1.0.0"
+                },
+                "generatedAt": {
+                    "type": "string",
+                    "format": "date-time",
+                    "description": "Timestamp of last generation"
+                },
+                "totalApps": {
+                    "type": "integer",
+                    "description": "Total number of apps in database"
+                },
+                "auditedApps": {
+                    "type": "integer",
+                    "description": "Number of apps audited in this run"
+                }
+            },
+            "required": [
+                "version",
+                "generatedAt",
+                "totalApps",
+                "auditedApps"
+            ]
+        },
+        "apps": {
+            "type": "array",
+            "items": {
+                "type": "object",
+                "properties": {
+                    "id": {
+                        "type": "string",
+                        "description": "Unique app identifier (folder name)",
+                        "example": "sudoku"
+                    },
+                    "name": {
+                        "type": "string",
+                        "description": "Display name",
+                        "example": "Sudoku"
+                    },
+                    "path": {
+                        "type": "string",
+                        "description": "Path relative to workspace root",
+                        "example": "apps/sudoku"
+                    },
+                    "maturityTier": {
+                        "type": "string",
+                        "enum": [
+                            "template",
+                            "web-complete",
+                            "platform-complete",
+                            "production-ready"
+                        ],
+                        "description": "Current maturity tier",
+                        "default": "template"
+                    },
+                    "security": {
+                        "type": "object",
+                        "properties": {
+                            "hasValidators": {
+                                "type": "boolean",
+                                "description": "App imports from shared validators module"
+                            },
+                            "hasSanitizers": {
+                                "type": "boolean",
+                                "description": "App imports from shared sanitizers module"
+                            },
+                            "hasConfig": {
+                                "type": "boolean",
+                                "description": "App imports from shared config/env module"
+                            },
+                            "hasApiClient": {
+                                "type": "boolean",
+                                "description": "App imports from shared API client"
+                            },
+                            "hasLogger": {
+                                "type": "boolean",
+                                "description": "App imports from shared logger"
+                            },
+                            "strictTypeScript": {
+                                "type": "boolean",
+                                "description": "tsconfig.json has strict: true"
+                            },
+                            "noAnyEscapes": {
+                                "type": "boolean",
+                                "description": "No @ts-ignore or // @ts-expect-error comments in src/"
+                            },
+                            "hasSecurityTests": {
+                                "type": "boolean",
+                                "description": "Has validation, sanitization, or env safety tests"
+                            },
+                            "auditClean": {
+                                "type": "boolean",
+                                "description": "pnpm audit returns no vulnerabilities"
+                            },
+                            "overallScore": {
+                                "type": "integer",
+                                "minimum": 0,
+                                "maximum": 100,
+                                "description": "Composite security score"
+                            }
+                        },
+                        "required": [
+                            "overallScore"
+                        ]
+                    },
+                    "testing": {
+                        "type": "object",
+                        "properties": {
+                            "hasSetupFile": {
+                                "type": "boolean",
+                                "description": "src/__tests__/setup.ts exists"
+                            },
+                            "hasVitestConfig": {
+                                "type": "boolean",
+                                "description": "vitest.config.ts exists"
+                            },
+                            "unitTestCount": {
+                                "type": "integer",
+                                "description": "Number of .unit.test.ts files",
+                                "default": 0
+                            },
+                            "integrationTestCount": {
+                                "type": "integer",
+                                "description": "Number of .integration.test.ts files",
+                                "default": 0
+                            },
+                            "componentTestCount": {
+                                "type": "integer",
+                                "description": "Number of .component.test.tsx files",
+                                "default": 0
+                            },
+                            "e2eTestCount": {
+                                "type": "integer",
+                                "description": "Number of .e2e.spec.ts files",
+                                "default": 0
+                            },
+                            "a11yTestCount": {
+                                "type": "integer",
+                                "description": "Number of .a11y.spec.ts files",
+                                "default": 0
+                            },
+                            "testNamingCompliant": {
+                                "type": "boolean",
+                                "description": "All tests follow <feature>.<type>.test.ts pattern"
+                            },
+                            "totalTests": {
+                                "type": "integer",
+                                "description": "Total test count across all types"
+                            },
+                            "hasPlaywright": {
+                                "type": "boolean",
+                                "description": "playwright.config.ts or Playwright dependency"
+                            }
+                        },
+                        "required": [
+                            "totalTests"
+                        ]
+                    },
+                    "infrastructure": {
+                        "type": "object",
+                        "properties": {
+                            "hasTsconfig": {
+                                "type": "boolean",
+                                "description": "tsconfig.json exists"
+                            },
+                            "hasViteConfig": {
+                                "type": "boolean",
+                                "description": "vite.config.js exists"
+                            },
+                            "hasIndexHtml": {
+                                "type": "boolean",
+                                "description": "index.html exists"
+                            },
+                            "hasPublicFolder": {
+                                "type": "boolean",
+                                "description": "public/ folder exists"
+                            },
+                            "hasPackageJson": {
+                                "type": "boolean",
+                                "description": "package.json exists"
+                            },
+                            "hasEslintrc": {
+                                "type": "boolean",
+                                "description": ".eslintrc or eslint config exists"
+                            },
+                            "hasHusky": {
+                                "type": "boolean",
+                                "description": ".husky/ pre-commit hooks configured"
+                            },
+                            "hasValidateScript": {
+                                "type": "boolean",
+                                "description": "'validate' script in package.json"
+                            },
+                            "canBuild": {
+                                "type": "boolean",
+                                "description": "pnpm build succeeds"
+                            }
+                        }
+                    },
+                    "promotionCriteria": {
+                        "type": "object",
+                        "properties": {
+                            "securityBaselineImplemented": {
+                                "type": "boolean",
+                                "description": "All 5 security modules adopted + tests present"
+                            },
+                            "testingSetupComplete": {
+                                "type": "boolean",
+                                "description": "setup.ts exists + tests follow naming convention"
+                            },
+                            "sharedModulesAdopted": {
+                                "type": "boolean",
+                                "description": "No custom security implementations duplicating shared modules"
+                            },
+                            "qualityGatesPassing": {
+                                "type": "boolean",
+                                "description": "pnpm validate passes + pnpm test passes"
+                            },
+                            "securityAuditPassing": {
+                                "type": "boolean",
+                                "description": "pnpm audit clean (no vulnerabilities)"
+                            }
+                        }
+                    },
+                    "readyForPromotion": {
+                        "type": "boolean",
+                        "description": "All 5 promotion criteria met (green-light for tier upgrade)"
+                    },
+                    "issues": {
+                        "type": "array",
+                        "items": {
+                            "type": "object",
+                            "properties": {
+                                "severity": {
+                                    "type": "string",
+                                    "enum": [
+                                        "critical",
+                                        "high",
+                                        "medium",
+                                        "low"
+                                    ],
+                                    "description": "Issue severity level"
+                                },
+                                "category": {
+                                    "type": "string",
+                                    "enum": [
+                                        "security",
+                                        "testing",
+                                        "infrastructure",
+                                        "governance"
+                                    ],
+                                    "description": "Issue category"
+                                },
+                                "message": {
+                                    "type": "string",
+                                    "description": "Human-readable issue description"
+                                },
+                                "location": {
+                                    "type": "string",
+                                    "description": "File or location affected"
+                                }
+                            }
+                        },
+                        "description": "List of identified issues or gaps"
+                    },
+                    "notes": {
+                        "type": "string",
+                        "description": "Free-form notes about app status or special considerations"
+                    },
+                    "lastAuditedAt": {
+                        "type": "string",
+                        "format": "date-time",
+                        "description": "Timestamp of last audit of this app"
+                    }
+                },
+                "required": [
+                    "id",
+                    "name",
+                    "path",
+                    "maturityTier"
+                ]
+            }
+        },
+        "summary": {
+            "type": "object",
+            "properties": {
+                "byTier": {
+                    "type": "object",
+                    "properties": {
+                        "template": {
+                            "type": "integer",
+                            "description": "Apps in template tier"
+                        },
+                        "webComplete": {
+                            "type": "integer",
+                            "description": "Apps in web-complete tier"
+                        },
+                        "platformComplete": {
+                            "type": "integer",
+                            "description": "Apps in platform-complete tier"
+                        },
+                        "productionReady": {
+                            "type": "integer",
+                            "description": "Apps in production-ready tier"
+                        }
+                    }
+                },
+                "securityScore": {
+                    "type": "object",
+                    "properties": {
+                        "average": {
+                            "type": "number",
+                            "minimum": 0,
+                            "maximum": 100
+                        },
+                        "min": {
+                            "type": "number",
+                            "minimum": 0,
+                            "maximum": 100
+                        },
+                        "max": {
+                            "type": "number",
+                            "minimum": 0,
+                            "maximum": 100
+                        },
+                        "criticalIssues": {
+                            "type": "integer",
+                            "description": "Number of critical security issues across all apps"
+                        }
+                    }
+                },
+                "testingCoverage": {
+                    "type": "object",
+                    "properties": {
+                        "appsWithSetupFile": {
+                            "type": "integer"
+                        },
+                        "appsWithTests": {
+                            "type": "integer"
+                        },
+                        "appsWithSecurityTests": {
+                            "type": "integer"
+                        },
+                        "appsWithE2E": {
+                            "type": "integer"
+                        },
+                        "testNamingCompliance": {
+                            "type": "number",
+                            "description": "Percentage of apps following naming convention",
+                            "minimum": 0,
+                            "maximum": 100
+                        }
+                    }
+                },
+                "promotionReadiness": {
+                    "type": "object",
+                    "properties": {
+                        "readyForPromotion": {
+                            "type": "integer",
+                            "description": "Number of apps meeting all promotion criteria"
+                        },
+                        "readyByTier": {
+                            "type": "object",
+                            "properties": {
+                                "webComplete": {
+                                    "type": "integer"
+                                },
+                                "platformComplete": {
+                                    "type": "integer"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "required": [
+        "metadata",
+        "apps",
+        "summary"
+    ]
+}

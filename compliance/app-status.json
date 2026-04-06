@@ -1,0 +1,94 @@
+{
+  "metadata": {
+    "version": "1.0.0",
+    "generatedAt": "2026-04-05T11:16:33.454Z",
+    "totalApps": 1,
+    "auditedApps": 1
+  },
+  "apps": [
+    {
+      "id": "blackjack",
+      "name": "Blackjack",
+      "path": "apps/blackjack",
+      "maturityTier": "web-complete",
+      "security": {
+        "validators": false,
+        "sanitizers": false,
+        "config": false,
+        "apiClient": false,
+        "logger": false,
+        "strictTypeScript": true,
+        "noAnyEscapes": true,
+        "hasSecurityTests": true,
+        "auditClean": true,
+        "overallScore": 45
+      },
+      "testing": {
+        "hasSetupFile": true,
+        "hasVitestConfig": true,
+        "unitTestCount": 2,
+        "integrationTestCount": 0,
+        "componentTestCount": 0,
+        "e2eTestCount": 0,
+        "a11yTestCount": 0,
+        "testNamingCompliant": true,
+        "totalTests": 2,
+        "hasPlaywright": false
+      },
+      "infrastructure": {
+        "hasTsconfig": true,
+        "hasViteConfig": true,
+        "hasIndexHtml": true,
+        "hasPublicFolder": true,
+        "hasPackageJson": true,
+        "hasEslintrc": false,
+        "hasHusky": false,
+        "hasValidateScript": true
+      },
+      "promotionCriteria": {
+        "securityBaselineImplemented": false,
+        "testingSetupComplete": true,
+        "sharedModulesAdopted": false,
+        "qualityGatesPassing": true,
+        "securityAuditPassing": true
+      },
+      "readyForPromotion": false,
+      "issues": [
+        {
+          "severity": "critical",
+          "category": "security",
+          "message": "Low security score: 45/100"
+        }
+      ],
+      "lastAuditedAt": "2026-04-05T11:16:33.453Z"
+    }
+  ],
+  "summary": {
+    "byTier": {
+      "template": 0,
+      "webComplete": 1,
+      "platformComplete": 0,
+      "productionReady": 0
+    },
+    "securityScore": {
+      "average": 45,
+      "min": 45,
+      "max": 45,
+      "criticalIssues": 1
+    },
+    "testingCoverage": {
+      "appsWithSetupFile": 1,
+      "appsWithTests": 1,
+      "appsWithSecurityTests": 1,
+      "appsWithE2E": 0,
+      "testNamingCompliance": 100
+    },
+    "promotionReadiness": {
+      "readyForPromotion": 0,
+      "readyByTier": {
+        "webComplete": 0,
+        "platformComplete": 0
+      }
+    }
+  }
+}

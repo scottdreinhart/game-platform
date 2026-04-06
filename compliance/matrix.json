@@ -1,348 +1,4834 @@
 {
-  "lastUpdated": "2026-04-01T21:45:00Z",
-  "summary": {
-    "total": 38,
-    "passed": 5,
-    "fixed": 27,
-    "pending": 6,
-    "failed": 0
+  "metadata": {
+    "version": "1.0.0",
+    "generatedAt": "2026-04-02T19:26:21.012Z",
+    "description": "Platform × Game Coverage Matrix - tracks deployment across 10 platforms and 39 games",
+    "totalCells": 390,
+    "games": 39,
+    "platforms": 10,
+    "completionPercentage": 0
   },
-  "apps": {
+  "games": [
+    "battleship",
+    "bingo",
+    "blackjack",
+    "bunco",
+    "cee-lo",
+    "checkers",
+    "chicago",
+    "cho-han",
+    "connect-four",
+    "crossclimb",
+    "dominoes",
+    "farkle",
+    "go-fish",
+    "hangman",
+    "liars-dice",
+    "lights-out",
+    "mancala",
+    "memory-game",
+    "mexico",
+    "minesweeper",
+    "mini-sudoku",
+    "monchola",
+    "nim",
+    "pig",
+    "pinpoint",
+    "queens",
+    "reversi",
+    "rock-paper-scissors",
+    "ship-captain-crew",
+    "shut-the-box",
+    "simon-says",
+    "snake",
+    "snakes-and-ladders",
+    "sudoku",
+    "tango",
+    "tictactoe",
+    "ui",
+    "war",
+    "zip"
+  ],
+  "platforms": [
+    "web",
+    "meta",
+    "ios",
+    "android",
+    "electron",
+    "itch",
+    "crazygames",
+    "discord",
+    "telegram",
+    "steam"
+  ],
+  "matrix": {
     "battleship": {
-      "status": "fixed",
-      "timestamp": "2026-04-01T20:45:00Z",
-      "notes": "Package standardized"
+      "web": {
+        "status": "not-started",
+        "appExists": false,
+        "rulesVerified": false,
+        "platformAdapter": false,
+        "performanceCompliance": false,
+        "uiCompliance": false,
+        "blockersFree": false,
+        "completionPercentage": 0,
+        "notes": "Pending implementation"
+      },
+      "meta": {
+        "status": "not-started",
+        "appExists": false,
+        "rulesVerified": false,
+        "platformAdapter": false,
+        "performanceCompliance": false,
+        "uiCompliance": false,
+        "blockersFree": false,
+        "completionPercentage": 0,
+        "notes": "Pending implementation"
+      },
+      "ios": {
+        "status": "not-started",
+        "appExists": false,
+        "rulesVerified": false,
+        "platformAdapter": false,
+        "performanceCompliance": false,
+        "uiCompliance": false,
+        "blockersFree": false,
+        "completionPercentage": 0,
+        "notes": "Pending implementation"
+      },
+      "android": {
+        "status": "not-started",
+        "appExists": false,
+        "rulesVerified": false,
+        "platformAdapter": false,
+        "performanceCompliance": false,
+        "uiCompliance": false,
+        "blockersFree": false,
+        "completionPercentage": 0,
+        "notes": "Pending implementation"
+      },
+      "electron": {
+        "status": "not-started",
+        "appExists": false,
+        "rulesVerified": false,
+        "platformAdapter": false,
+        "performanceCompliance": false,
+        "uiCompliance": false,
+        "blockersFree": false,
+        "completionPercentage": 0,
+        "notes": "Pending implementation"
+      },
+      "itch": {
+        "status": "not-started",
+        "appExists": false,
+        "rulesVerified": false,
+        "platformAdapter": false,
+        "performanceCompliance": false,
+        "uiCompliance": false,
+        "blockersFree": false,
+        "completionPercentage": 0,
+        "notes": "Pending implementation"
+      },
+      "crazygames": {
+        "status": "not-started",
+        "appExists": false,
+        "rulesVerified": false,
+        "platformAdapter": false,
+        "performanceCompliance": false,
+        "uiCompliance": false,
+        "blockersFree": false,
+        "completionPercentage": 0,
+        "notes": "Pending implementation"
+      },
+      "discord": {
+        "status": "not-started",
+        "appExists": false,
+        "rulesVerified": false,
+        "platformAdapter": false,
+        "performanceCompliance": false,
+        "uiCompliance": false,
+        "blockersFree": false,
+        "completionPercentage": 0,
+        "notes": "Pending implementation"
+      },
+      "telegram": {
+        "status": "not-started",
+        "appExists": false,
+        "rulesVerified": false,
+        "platformAdapter": false,
+        "performanceCompliance": false,
+        "uiCompliance": false,
+        "blockersFree": false,
+        "completionPercentage": 0,
+        "notes": "Pending implementation"
+      },
+      "steam": {
+        "status": "not-started",
+        "appExists": false,
+        "rulesVerified": false,
+        "platformAdapter": false,
+        "performanceCompliance": false,
+        "uiCompliance": false,
+        "blockersFree": false,
+        "completionPercentage": 0,
+        "notes": "Pending implementation"
+      }
     },
     "bingo": {
-      "status": "pending",
-      "timestamp": "2026-04-02T00:00:00Z",
-      "notes": "Missing from initial matrix - needs evaluation"
+      "web": {
+        "status": "not-started",
+        "appExists": false,
+        "rulesVerified": false,
+        "platformAdapter": false,
+        "performanceCompliance": false,
+        "uiCompliance": false,
+        "blockersFree": false,
+        "completionPercentage": 0,
+        "notes": "Pending implementation"
+      },
+      "meta": {
+        "status": "not-started",
+        "appExists": false,
+        "rulesVerified": false,
+        "platformAdapter": false,
+        "performanceCompliance": false,
+        "uiCompliance": false,
+        "blockersFree": false,
+        "completionPercentage": 0,
+        "notes": "Pending implementation"
+      },
+      "ios": {
+        "status": "not-started",
+        "appExists": false,
+        "rulesVerified": false,
+        "platformAdapter": false,
+        "performanceCompliance": false,
+        "uiCompliance": false,
+        "blockersFree": false,
+        "completionPercentage": 0,
+        "notes": "Pending implementation"
+      },
+      "android": {
+        "status": "not-started",
+        "appExists": false,
+        "rulesVerified": false,
+        "platformAdapter": false,
+        "performanceCompliance": false,
+        "uiCompliance": false,
+        "blockersFree": false,
+        "completionPercentage": 0,
+        "notes": "Pending implementation"
+      },
+      "electron": {
+        "status": "not-started",
+        "appExists": false,
+        "rulesVerified": false,
+        "platformAdapter": false,
+        "performanceCompliance": false,
+        "uiCompliance": false,
+        "blockersFree": false,
+        "completionPercentage": 0,
+        "notes": "Pending implementation"
+      },
+      "itch": {
+        "status": "not-started",
+        "appExists": false,
+        "rulesVerified": false,
+        "platformAdapter": false,
+        "performanceCompliance": false,
+        "uiCompliance": false,
+        "blockersFree": false,
+        "completionPercentage": 0,
+        "notes": "Pending implementation"
+      },
+      "crazygames": {
+        "status": "not-started",
+        "appExists": false,
+        "rulesVerified": false,
+        "platformAdapter": false,
+        "performanceCompliance": false,
+        "uiCompliance": false,
+        "blockersFree": false,
+        "completionPercentage": 0,
+        "notes": "Pending implementation"
+      },
+      "discord": {
+        "status": "not-started",
+        "appExists": false,
+        "rulesVerified": false,
+        "platformAdapter": false,
+        "performanceCompliance": false,
+        "uiCompliance": false,
+        "blockersFree": false,
+        "completionPercentage": 0,
+        "notes": "Pending implementation"
+      },
+      "telegram": {
+        "status": "not-started",
+        "appExists": false,
+        "rulesVerified": false,
+        "platformAdapter": false,
+        "performanceCompliance": false,
+        "uiCompliance": false,
+        "blockersFree": false,
+        "completionPercentage": 0,
+        "notes": "Pending implementation"
+      },
+      "steam": {
+        "status": "not-started",
+        "appExists": false,
+        "rulesVerified": false,
+        "platformAdapter": false,
+        "performanceCompliance": false,
+        "uiCompliance": false,
+        "blockersFree": false,
+        "completionPercentage": 0,
+        "notes": "Pending implementation"
+      }
     },
     "blackjack": {
-      "status": "pending",
-      "timestamp": "2026-04-02T00:00:00Z",
-      "notes": "Missing from initial matrix - needs evaluation"
+      "web": {
+        "status": "not-started",
+        "appExists": false,
+        "rulesVerified": false,
+        "platformAdapter": false,
+        "performanceCompliance": false,
+        "uiCompliance": false,
+        "blockersFree": false,
+        "completionPercentage": 0,
+        "notes": "Pending implementation"
+      },
+      "meta": {
+        "status": "not-started",
+        "appExists": false,
+        "rulesVerified": false,
+        "platformAdapter": false,
+        "performanceCompliance": false,
+        "uiCompliance": false,
+        "blockersFree": false,
+        "completionPercentage": 0,
+        "notes": "Pending implementation"
+      },
+      "ios": {
+        "status": "not-started",
+        "appExists": false,
+        "rulesVerified": false,
+        "platformAdapter": false,
+        "performanceCompliance": false,
+        "uiCompliance": false,
+        "blockersFree": false,
+        "completionPercentage": 0,
+        "notes": "Pending implementation"
+      },
+      "android": {
+        "status": "not-started",
+        "appExists": false,
+        "rulesVerified": false,
+        "platformAdapter": false,
+        "performanceCompliance": false,
+        "uiCompliance": false,
+        "blockersFree": false,
+        "completionPercentage": 0,
+        "notes": "Pending implementation"
+      },
+      "electron": {
+        "status": "not-started",
+        "appExists": false,
+        "rulesVerified": false,
+        "platformAdapter": false,
+        "performanceCompliance": false,
+        "uiCompliance": false,
+        "blockersFree": false,
+        "completionPercentage": 0,
+        "notes": "Pending implementation"
+      },
+      "itch": {
+        "status": "not-started",
+        "appExists": false,
+        "rulesVerified": false,
+        "platformAdapter": false,
+        "performanceCompliance": false,
+        "uiCompliance": false,
+        "blockersFree": false,
+        "completionPercentage": 0,
+        "notes": "Pending implementation"
+      },
+      "crazygames": {
+        "status": "not-started",
+        "appExists": false,
+        "rulesVerified": false,
+        "platformAdapter": false,
+        "performanceCompliance": false,
+        "uiCompliance": false,
+        "blockersFree": false,
+        "completionPercentage": 0,
+        "notes": "Pending implementation"
+      },
+      "discord": {
+        "status": "not-started",
+        "appExists": false,
+        "rulesVerified": false,
+        "platformAdapter": false,
+        "performanceCompliance": false,
+        "uiCompliance": false,
+        "blockersFree": false,
+        "completionPercentage": 0,
+        "notes": "Pending implementation"
+      },
+      "telegram": {
+        "status": "not-started",
+        "appExists": false,
+        "rulesVerified": false,
+        "platformAdapter": false,
+        "performanceCompliance": false,
+        "uiCompliance": false,
+        "blockersFree": false,
+        "completionPercentage": 0,
+        "notes": "Pending implementation"
+      },
+      "steam": {
+        "status": "not-started",
+        "appExists": false,
+        "rulesVerified": false,
+        "platformAdapter": false,
+        "performanceCompliance": false,
+        "uiCompliance": false,
+        "blockersFree": false,
+        "completionPercentage": 0,
+        "notes": "Pending implementation"
+      }
     },
     "bunco": {
-      "status": "fixed",
-      "timestamp": "2026-04-01T20:45:00Z",
-      "notes": "tsconfig: +@games/domain-shared alias"
+      "web": {
+        "status": "not-started",
+        "appExists": false,
+        "rulesVerified": false,
+        "platformAdapter": false,
+        "performanceCompliance": false,
+        "uiCompliance": false,
+        "blockersFree": false,
+        "completionPercentage": 0,
+        "notes": "Pending implementation"
+      },
+      "meta": {
+        "status": "not-started",
+        "appExists": false,
+        "rulesVerified": false,
+        "platformAdapter": false,
+        "performanceCompliance": false,
+        "uiCompliance": false,
+        "blockersFree": false,
+        "completionPercentage": 0,
+        "notes": "Pending implementation"
+      },
+      "ios": {
+        "status": "not-started",
+        "appExists": false,
+        "rulesVerified": false,
+        "platformAdapter": false,
+        "performanceCompliance": false,
+        "uiCompliance": false,
+        "blockersFree": false,
+        "completionPercentage": 0,
+        "notes": "Pending implementation"
+      },
+      "android": {
+        "status": "not-started",
+        "appExists": false,
+        "rulesVerified": false,
+        "platformAdapter": false,
+        "performanceCompliance": false,
+        "uiCompliance": false,
+        "blockersFree": false,
+        "completionPercentage": 0,
+        "notes": "Pending implementation"
+      },
+      "electron": {
+        "status": "not-started",
+        "appExists": false,
+        "rulesVerified": false,
+        "platformAdapter": false,
+        "performanceCompliance": false,
+        "uiCompliance": false,
+        "blockersFree": false,
+        "completionPercentage": 0,
+        "notes": "Pending implementation"
+      },
+      "itch": {
+        "status": "not-started",
+        "appExists": false,
+        "rulesVerified": false,
+        "platformAdapter": false,
+        "performanceCompliance": false,
+        "uiCompliance": false,
+        "blockersFree": false,
+        "completionPercentage": 0,
+        "notes": "Pending implementation"
+      },
+      "crazygames": {
+        "status": "not-started",
+        "appExists": false,
+        "rulesVerified": false,
+        "platformAdapter": false,
+        "performanceCompliance": false,
+        "uiCompliance": false,
+        "blockersFree": false,
+        "completionPercentage": 0,
+        "notes": "Pending implementation"
+      },
+      "discord": {
+        "status": "not-started",
+        "appExists": false,
+        "rulesVerified": false,
+        "platformAdapter": false,
+        "performanceCompliance": false,
+        "uiCompliance": false,
+        "blockersFree": false,
+        "completionPercentage": 0,
+        "notes": "Pending implementation"
+      },
+      "telegram": {
+        "status": "not-started",
+        "appExists": false,
+        "rulesVerified": false,
+        "platformAdapter": false,
+        "performanceCompliance": false,
+        "uiCompliance": false,
+        "blockersFree": false,
+        "completionPercentage": 0,
+        "notes": "Pending implementation"
+      },
+      "steam": {
+        "status": "not-started",
+        "appExists": false,
+        "rulesVerified": false,
+        "platformAdapter": false,
+        "performanceCompliance": false,
+        "uiCompliance": false,
+        "blockersFree": false,
+        "completionPercentage": 0,
+        "notes": "Pending implementation"
+      }
     },
     "cee-lo": {
-      "status": "fixed",
-      "timestamp": "2026-04-01T20:45:00Z",
-      "notes": "Package standardized"
+      "web": {
+        "status": "not-started",
+        "appExists": false,
+        "rulesVerified": false,
+        "platformAdapter": false,
+        "performanceCompliance": false,
+        "uiCompliance": false,
+        "blockersFree": false,
+        "completionPercentage": 0,
+        "notes": "Pending implementation"
+      },
+      "meta": {
+        "status": "not-started",
+        "appExists": false,
+        "rulesVerified": false,
+        "platformAdapter": false,
+        "performanceCompliance": false,
+        "uiCompliance": false,
+        "blockersFree": false,
+        "completionPercentage": 0,
+        "notes": "Pending implementation"
+      },
+      "ios": {
+        "status": "not-started",
+        "appExists": false,
+        "rulesVerified": false,
+        "platformAdapter": false,
+        "performanceCompliance": false,
+        "uiCompliance": false,
+        "blockersFree": false,
+        "completionPercentage": 0,
+        "notes": "Pending implementation"
+      },
+      "android": {
+        "status": "not-started",
+        "appExists": false,
+        "rulesVerified": false,
+        "platformAdapter": false,
+        "performanceCompliance": false,
+        "uiCompliance": false,
+        "blockersFree": false,
+        "completionPercentage": 0,
+        "notes": "Pending implementation"
+      },
+      "electron": {
+        "status": "not-started",
+        "appExists": false,
+        "rulesVerified": false,
+        "platformAdapter": false,
+        "performanceCompliance": false,
+        "uiCompliance": false,
+        "blockersFree": false,
+        "completionPercentage": 0,
+        "notes": "Pending implementation"
+      },
+      "itch": {
+        "status": "not-started",
+        "appExists": false,
+        "rulesVerified": false,
+        "platformAdapter": false,
+        "performanceCompliance": false,
+        "uiCompliance": false,
+        "blockersFree": false,
+        "completionPercentage": 0,
+        "notes": "Pending implementation"
+      },
+      "crazygames": {
+        "status": "not-started",
+        "appExists": false,
+        "rulesVerified": false,
+        "platformAdapter": false,
+        "performanceCompliance": false,
+        "uiCompliance": false,
+        "blockersFree": false,
+        "completionPercentage": 0,
+        "notes": "Pending implementation"
+      },
+      "discord": {
+        "status": "not-started",
+        "appExists": false,
+        "rulesVerified": false,
+        "platformAdapter": false,
+        "performanceCompliance": false,
+        "uiCompliance": false,
+        "blockersFree": false,
+        "completionPercentage": 0,
+        "notes": "Pending implementation"
+      },
+      "telegram": {
+        "status": "not-started",
+        "appExists": false,
+        "rulesVerified": false,
+        "platformAdapter": false,
+        "performanceCompliance": false,
+        "uiCompliance": false,
+        "blockersFree": false,
+        "completionPercentage": 0,
+        "notes": "Pending implementation"
+      },
+      "steam": {
+        "status": "not-started",
+        "appExists": false,
+        "rulesVerified": false,
+        "platformAdapter": false,
+        "performanceCompliance": false,
+        "uiCompliance": false,
+        "blockersFree": false,
+        "completionPercentage": 0,
+        "notes": "Pending implementation"
+      }
     },
     "checkers": {
-      "status": "passed",
-      "timestamp": "2026-04-01T21:15:00Z",
-      "notes": "✅ AI Framework integration complete - added ai-framework dependency"
+      "web": {
+        "status": "not-started",
+        "appExists": false,
+        "rulesVerified": false,
+        "platformAdapter": false,
+        "performanceCompliance": false,
+        "uiCompliance": false,
+        "blockersFree": false,
+        "completionPercentage": 0,
+        "notes": "Pending implementation"
+      },
+      "meta": {
+        "status": "not-started",
+        "appExists": false,
+        "rulesVerified": false,
+        "platformAdapter": false,
+        "performanceCompliance": false,
+        "uiCompliance": false,
+        "blockersFree": false,
+        "completionPercentage": 0,
+        "notes": "Pending implementation"
+      },
+      "ios": {
+        "status": "not-started",
+        "appExists": false,
+        "rulesVerified": false,
+        "platformAdapter": false,
+        "performanceCompliance": false,
+        "uiCompliance": false,
+        "blockersFree": false,
+        "completionPercentage": 0,
+        "notes": "Pending implementation"
+      },
+      "android": {
+        "status": "not-started",
+        "appExists": false,
+        "rulesVerified": false,
+        "platformAdapter": false,
+        "performanceCompliance": false,
+        "uiCompliance": false,
+        "blockersFree": false,
+        "completionPercentage": 0,
+        "notes": "Pending implementation"
+      },
+      "electron": {
+        "status": "not-started",
+        "appExists": false,
+        "rulesVerified": false,
+        "platformAdapter": false,
+        "performanceCompliance": false,
+        "uiCompliance": false,
+        "blockersFree": false,
+        "completionPercentage": 0,
+        "notes": "Pending implementation"
+      },
+      "itch": {
+        "status": "not-started",
+        "appExists": false,
+        "rulesVerified": false,
+        "platformAdapter": false,
+        "performanceCompliance": false,
+        "uiCompliance": false,
+        "blockersFree": false,
+        "completionPercentage": 0,
+        "notes": "Pending implementation"
+      },
+      "crazygames": {
+        "status": "not-started",
+        "appExists": false,
+        "rulesVerified": false,
+        "platformAdapter": false,
+        "performanceCompliance": false,
+        "uiCompliance": false,
+        "blockersFree": false,
+        "completionPercentage": 0,
+        "notes": "Pending implementation"
+      },
+      "discord": {
+        "status": "not-started",
+        "appExists": false,
+        "rulesVerified": false,
+        "platformAdapter": false,
+        "performanceCompliance": false,
+        "uiCompliance": false,
+        "blockersFree": false,
+        "completionPercentage": 0,
+        "notes": "Pending implementation"
+      },
+      "telegram": {
+        "status": "not-started",
+        "appExists": false,
+        "rulesVerified": false,
+        "platformAdapter": false,
+        "performanceCompliance": false,
+        "uiCompliance": false,
+        "blockersFree": false,
+        "completionPercentage": 0,
+        "notes": "Pending implementation"
+      },
+      "steam": {
+        "status": "not-started",
+        "appExists": false,
+        "rulesVerified": false,
+        "platformAdapter": false,
+        "performanceCompliance": false,
+        "uiCompliance": false,
+        "blockersFree": false,
+        "completionPercentage": 0,
+        "notes": "Pending implementation"
+      }
     },
     "chicago": {
-      "status": "fixed",
-      "timestamp": "2026-04-01T20:45:00Z",
-      "notes": "Package standardized"
+      "web": {
+        "status": "not-started",
+        "appExists": false,
+        "rulesVerified": false,
+        "platformAdapter": false,
+        "performanceCompliance": false,
+        "uiCompliance": false,
+        "blockersFree": false,
+        "completionPercentage": 0,
+        "notes": "Pending implementation"
+      },
+      "meta": {
+        "status": "not-started",
+        "appExists": false,
+        "rulesVerified": false,
+        "platformAdapter": false,
+        "performanceCompliance": false,
+        "uiCompliance": false,
+        "blockersFree": false,
+        "completionPercentage": 0,
+        "notes": "Pending implementation"
+      },
+      "ios": {
+        "status": "not-started",
+        "appExists": false,
+        "rulesVerified": false,
+        "platformAdapter": false,
+        "performanceCompliance": false,
+        "uiCompliance": false,
+        "blockersFree": false,
+        "completionPercentage": 0,
+        "notes": "Pending implementation"
+      },
+      "android": {
+        "status": "not-started",
+        "appExists": false,
+        "rulesVerified": false,
+        "platformAdapter": false,
+        "performanceCompliance": false,
+        "uiCompliance": false,
+        "blockersFree": false,
+        "completionPercentage": 0,
+        "notes": "Pending implementation"
+      },
+      "electron": {
+        "status": "not-started",
+        "appExists": false,
+        "rulesVerified": false,
+        "platformAdapter": false,
+        "performanceCompliance": false,
+        "uiCompliance": false,
+        "blockersFree": false,
+        "completionPercentage": 0,
+        "notes": "Pending implementation"
+      },
+      "itch": {
+        "status": "not-started",
+        "appExists": false,
+        "rulesVerified": false,
+        "platformAdapter": false,
+        "performanceCompliance": false,
+        "uiCompliance": false,
+        "blockersFree": false,
+        "completionPercentage": 0,
+        "notes": "Pending implementation"
+      },
+      "crazygames": {
+        "status": "not-started",
+        "appExists": false,
+        "rulesVerified": false,
+        "platformAdapter": false,
+        "performanceCompliance": false,
+        "uiCompliance": false,
+        "blockersFree": false,
+        "completionPercentage": 0,
+        "notes": "Pending implementation"
+      },
+      "discord": {
+        "status": "not-started",
+        "appExists": false,
+        "rulesVerified": false,
+        "platformAdapter": false,
+        "performanceCompliance": false,
+        "uiCompliance": false,
+        "blockersFree": false,
+        "completionPercentage": 0,
+        "notes": "Pending implementation"
+      },
+      "telegram": {
+        "status": "not-started",
+        "appExists": false,
+        "rulesVerified": false,
+        "platformAdapter": false,
+        "performanceCompliance": false,
+        "uiCompliance": false,
+        "blockersFree": false,
+        "completionPercentage": 0,
+        "notes": "Pending implementation"
+      },
+      "steam": {
+        "status": "not-started",
+        "appExists": false,
+        "rulesVerified": false,
+        "platformAdapter": false,
+        "performanceCompliance": false,
+        "uiCompliance": false,
+        "blockersFree": false,
+        "completionPercentage": 0,
+        "notes": "Pending implementation"
+      }
     },
     "cho-han": {
-      "status": "fixed",
-      "timestamp": "2026-04-01T20:45:00Z",
-      "notes": "Package standardized"
+      "web": {
+        "status": "not-started",
+        "appExists": false,
+        "rulesVerified": false,
+        "platformAdapter": false,
+        "performanceCompliance": false,
+        "uiCompliance": false,
+        "blockersFree": false,
+        "completionPercentage": 0,
+        "notes": "Pending implementation"
+      },
+      "meta": {
+        "status": "not-started",
+        "appExists": false,
+        "rulesVerified": false,
+        "platformAdapter": false,
+        "performanceCompliance": false,
+        "uiCompliance": false,
+        "blockersFree": false,
+        "completionPercentage": 0,
+        "notes": "Pending implementation"
+      },
+      "ios": {
+        "status": "not-started",
+        "appExists": false,
+        "rulesVerified": false,
+        "platformAdapter": false,
+        "performanceCompliance": false,
+        "uiCompliance": false,
+        "blockersFree": false,
+        "completionPercentage": 0,
+        "notes": "Pending implementation"
+      },
+      "android": {
+        "status": "not-started",
+        "appExists": false,
+        "rulesVerified": false,
+        "platformAdapter": false,
+        "performanceCompliance": false,
+        "uiCompliance": false,
+        "blockersFree": false,
+        "completionPercentage": 0,
+        "notes": "Pending implementation"
+      },
+      "electron": {
+        "status": "not-started",
+        "appExists": false,
+        "rulesVerified": false,
+        "platformAdapter": false,
+        "performanceCompliance": false,
+        "uiCompliance": false,
+        "blockersFree": false,
+        "completionPercentage": 0,
+        "notes": "Pending implementation"
+      },
+      "itch": {
+        "status": "not-started",
+        "appExists": false,
+        "rulesVerified": false,
+        "platformAdapter": false,
+        "performanceCompliance": false,
+        "uiCompliance": false,
+        "blockersFree": false,
+        "completionPercentage": 0,
+        "notes": "Pending implementation"
+      },
+      "crazygames": {
+        "status": "not-started",
+        "appExists": false,
+        "rulesVerified": false,
+        "platformAdapter": false,
+        "performanceCompliance": false,
+        "uiCompliance": false,
+        "blockersFree": false,
+        "completionPercentage": 0,
+        "notes": "Pending implementation"
+      },
+      "discord": {
+        "status": "not-started",
+        "appExists": false,
+        "rulesVerified": false,
+        "platformAdapter": false,
+        "performanceCompliance": false,
+        "uiCompliance": false,
+        "blockersFree": false,
+        "completionPercentage": 0,
+        "notes": "Pending implementation"
+      },
+      "telegram": {
+        "status": "not-started",
+        "appExists": false,
+        "rulesVerified": false,
+        "platformAdapter": false,
+        "performanceCompliance": false,
+        "uiCompliance": false,
+        "blockersFree": false,
+        "completionPercentage": 0,
+        "notes": "Pending implementation"
+      },
+      "steam": {
+        "status": "not-started",
+        "appExists": false,
+        "rulesVerified": false,
+        "platformAdapter": false,
+        "performanceCompliance": false,
+        "uiCompliance": false,
+        "blockersFree": false,
+        "completionPercentage": 0,
+        "notes": "Pending implementation"
+      }
     },
     "connect-four": {
-      "status": "passed",
-      "timestamp": "2026-04-01T21:15:00Z",
-      "notes": "✅ AI Framework integration complete - added ai-framework dependency and tsconfig paths"
+      "web": {
+        "status": "not-started",
+        "appExists": false,
+        "rulesVerified": false,
+        "platformAdapter": false,
+        "performanceCompliance": false,
+        "uiCompliance": false,
+        "blockersFree": false,
+        "completionPercentage": 0,
+        "notes": "Pending implementation"
+      },
+      "meta": {
+        "status": "not-started",
+        "appExists": false,
+        "rulesVerified": false,
+        "platformAdapter": false,
+        "performanceCompliance": false,
+        "uiCompliance": false,
+        "blockersFree": false,
+        "completionPercentage": 0,
+        "notes": "Pending implementation"
+      },
+      "ios": {
+        "status": "not-started",
+        "appExists": false,
+        "rulesVerified": false,
+        "platformAdapter": false,
+        "performanceCompliance": false,
+        "uiCompliance": false,
+        "blockersFree": false,
+        "completionPercentage": 0,
+        "notes": "Pending implementation"
+      },
+      "android": {
+        "status": "not-started",
+        "appExists": false,
+        "rulesVerified": false,
+        "platformAdapter": false,
+        "performanceCompliance": false,
+        "uiCompliance": false,
+        "blockersFree": false,
+        "completionPercentage": 0,
+        "notes": "Pending implementation"
+      },
+      "electron": {
+        "status": "not-started",
+        "appExists": false,
+        "rulesVerified": false,
+        "platformAdapter": false,
+        "performanceCompliance": false,
+        "uiCompliance": false,
+        "blockersFree": false,
+        "completionPercentage": 0,
+        "notes": "Pending implementation"
+      },
+      "itch": {
+        "status": "not-started",
+        "appExists": false,
+        "rulesVerified": false,
+        "platformAdapter": false,
+        "performanceCompliance": false,
+        "uiCompliance": false,
+        "blockersFree": false,
+        "completionPercentage": 0,
+        "notes": "Pending implementation"
+      },
+      "crazygames": {
+        "status": "not-started",
+        "appExists": false,
+        "rulesVerified": false,
+        "platformAdapter": false,
+        "performanceCompliance": false,
+        "uiCompliance": false,
+        "blockersFree": false,
+        "completionPercentage": 0,
+        "notes": "Pending implementation"
+      },
+      "discord": {
+        "status": "not-started",
+        "appExists": false,
+        "rulesVerified": false,
+        "platformAdapter": false,
+        "performanceCompliance": false,
+        "uiCompliance": false,
+        "blockersFree": false,
+        "completionPercentage": 0,
+        "notes": "Pending implementation"
+      },
+      "telegram": {
+        "status": "not-started",
+        "appExists": false,
+        "rulesVerified": false,
+        "platformAdapter": false,
+        "performanceCompliance": false,
+        "uiCompliance": false,
+        "blockersFree": false,
+        "completionPercentage": 0,
+        "notes": "Pending implementation"
+      },
+      "steam": {
+        "status": "not-started",
+        "appExists": false,
+        "rulesVerified": false,
+        "platformAdapter": false,
+        "performanceCompliance": false,
+        "uiCompliance": false,
+        "blockersFree": false,
+        "completionPercentage": 0,
+        "notes": "Pending implementation"
+      }
     },
     "crossclimb": {
-      "status": "fixed",
-      "timestamp": "2026-04-01T20:45:00Z",
-      "notes": "Package standardized"
+      "web": {
+        "status": "not-started",
+        "appExists": false,
+        "rulesVerified": false,
+        "platformAdapter": false,
+        "performanceCompliance": false,
+        "uiCompliance": false,
+        "blockersFree": false,
+        "completionPercentage": 0,
+        "notes": "Pending implementation"
+      },
+      "meta": {
+        "status": "not-started",
+        "appExists": false,
+        "rulesVerified": false,
+        "platformAdapter": false,
+        "performanceCompliance": false,
+        "uiCompliance": false,
+        "blockersFree": false,
+        "completionPercentage": 0,
+        "notes": "Pending implementation"
+      },
+      "ios": {
+        "status": "not-started",
+        "appExists": false,
+        "rulesVerified": false,
+        "platformAdapter": false,
+        "performanceCompliance": false,
+        "uiCompliance": false,
+        "blockersFree": false,
+        "completionPercentage": 0,
+        "notes": "Pending implementation"
+      },
+      "android": {
+        "status": "not-started",
+        "appExists": false,
+        "rulesVerified": false,
+        "platformAdapter": false,
+        "performanceCompliance": false,
+        "uiCompliance": false,
+        "blockersFree": false,
+        "completionPercentage": 0,
+        "notes": "Pending implementation"
+      },
+      "electron": {
+        "status": "not-started",
+        "appExists": false,
+        "rulesVerified": false,
+        "platformAdapter": false,
+        "performanceCompliance": false,
+        "uiCompliance": false,
+        "blockersFree": false,
+        "completionPercentage": 0,
+        "notes": "Pending implementation"
+      },
+      "itch": {
+        "status": "not-started",
+        "appExists": false,
+        "rulesVerified": false,
+        "platformAdapter": false,
+        "performanceCompliance": false,
+        "uiCompliance": false,
+        "blockersFree": false,
+        "completionPercentage": 0,
+        "notes": "Pending implementation"
+      },
+      "crazygames": {
+        "status": "not-started",
+        "appExists": false,
+        "rulesVerified": false,
+        "platformAdapter": false,
+        "performanceCompliance": false,
+        "uiCompliance": false,
+        "blockersFree": false,
+        "completionPercentage": 0,
+        "notes": "Pending implementation"
+      },
+      "discord": {
+        "status": "not-started",
+        "appExists": false,
+        "rulesVerified": false,
+        "platformAdapter": false,
+        "performanceCompliance": false,
+        "uiCompliance": false,
+        "blockersFree": false,
+        "completionPercentage": 0,
+        "notes": "Pending implementation"
+      },
+      "telegram": {
+        "status": "not-started",
+        "appExists": false,
+        "rulesVerified": false,
+        "platformAdapter": false,
+        "performanceCompliance": false,
+        "uiCompliance": false,
+        "blockersFree": false,
+        "completionPercentage": 0,
+        "notes": "Pending implementation"
+      },
+      "steam": {
+        "status": "not-started",
+        "appExists": false,
+        "rulesVerified": false,
+        "platformAdapter": false,
+        "performanceCompliance": false,
+        "uiCompliance": false,
+        "blockersFree": false,
+        "completionPercentage": 0,
+        "notes": "Pending implementation"
+      }
     },
     "dominoes": {
-      "status": "pending",
-      "timestamp": "2026-04-02T00:00:00Z",
-      "notes": "Missing from initial matrix - needs evaluation"
+      "web": {
+        "status": "not-started",
+        "appExists": false,
+        "rulesVerified": false,
+        "platformAdapter": false,
+        "performanceCompliance": false,
+        "uiCompliance": false,
+        "blockersFree": false,
+        "completionPercentage": 0,
+        "notes": "Pending implementation"
+      },
+      "meta": {
+        "status": "not-started",
+        "appExists": false,
+        "rulesVerified": false,
+        "platformAdapter": false,
+        "performanceCompliance": false,
+        "uiCompliance": false,
+        "blockersFree": false,
+        "completionPercentage": 0,
+        "notes": "Pending implementation"
+      },
+      "ios": {
+        "status": "not-started",
+        "appExists": false,
+        "rulesVerified": false,
+        "platformAdapter": false,
+        "performanceCompliance": false,
+        "uiCompliance": false,
+        "blockersFree": false,
+        "completionPercentage": 0,
+        "notes": "Pending implementation"
+      },
+      "android": {
+        "status": "not-started",
+        "appExists": false,
+        "rulesVerified": false,
+        "platformAdapter": false,
+        "performanceCompliance": false,
+        "uiCompliance": false,
+        "blockersFree": false,
+        "completionPercentage": 0,
+        "notes": "Pending implementation"
+      },
+      "electron": {
+        "status": "not-started",
+        "appExists": false,
+        "rulesVerified": false,
+        "platformAdapter": false,
+        "performanceCompliance": false,
+        "uiCompliance": false,
+        "blockersFree": false,
+        "completionPercentage": 0,
+        "notes": "Pending implementation"
+      },
+      "itch": {
+        "status": "not-started",
+        "appExists": false,
+        "rulesVerified": false,
+        "platformAdapter": false,
+        "performanceCompliance": false,
+        "uiCompliance": false,
+        "blockersFree": false,
+        "completionPercentage": 0,
+        "notes": "Pending implementation"
+      },
+      "crazygames": {
+        "status": "not-started",
+        "appExists": false,
+        "rulesVerified": false,
+        "platformAdapter": false,
+        "performanceCompliance": false,
+        "uiCompliance": false,
+        "blockersFree": false,
+        "completionPercentage": 0,
+        "notes": "Pending implementation"
+      },
+      "discord": {
+        "status": "not-started",
+        "appExists": false,
+        "rulesVerified": false,
+        "platformAdapter": false,
+        "performanceCompliance": false,
+        "uiCompliance": false,
+        "blockersFree": false,
+        "completionPercentage": 0,
+        "notes": "Pending implementation"
+      },
+      "telegram": {
+        "status": "not-started",
+        "appExists": false,
+        "rulesVerified": false,
+        "platformAdapter": false,
+        "performanceCompliance": false,
+        "uiCompliance": false,
+        "blockersFree": false,
+        "completionPercentage": 0,
+        "notes": "Pending implementation"
+      },
+      "steam": {
+        "status": "not-started",
+        "appExists": false,
+        "rulesVerified": false,
+        "platformAdapter": false,
+        "performanceCompliance": false,
+        "uiCompliance": false,
+        "blockersFree": false,
+        "completionPercentage": 0,
+        "notes": "Pending implementation"
+      }
     },
     "farkle": {
-      "status": "fixed",
-      "timestamp": "2026-04-01T20:45:00Z",
-      "notes": "Package standardized"
-    },
-    "hangman": {
-      "status": "fixed",
-      "timestamp": "2026-04-01T20:45:00Z",
-      "notes": "Package standardized"
+      "web": {
+        "status": "not-started",
+        "appExists": false,
+        "rulesVerified": false,
+        "platformAdapter": false,
+        "performanceCompliance": false,
+        "uiCompliance": false,
+        "blockersFree": false,
+        "completionPercentage": 0,
+        "notes": "Pending implementation"
+      },
+      "meta": {
+        "status": "not-started",
+        "appExists": false,
+        "rulesVerified": false,
+        "platformAdapter": false,
+        "performanceCompliance": false,
+        "uiCompliance": false,
+        "blockersFree": false,
+        "completionPercentage": 0,
+        "notes": "Pending implementation"
+      },
+      "ios": {
+        "status": "not-started",
+        "appExists": false,
+        "rulesVerified": false,
+        "platformAdapter": false,
+        "performanceCompliance": false,
+        "uiCompliance": false,
+        "blockersFree": false,
+        "completionPercentage": 0,
+        "notes": "Pending implementation"
+      },
+      "android": {
+        "status": "not-started",
+        "appExists": false,
+        "rulesVerified": false,
+        "platformAdapter": false,
+        "performanceCompliance": false,
+        "uiCompliance": false,
+        "blockersFree": false,
+        "completionPercentage": 0,
+        "notes": "Pending implementation"
+      },
+      "electron": {
+        "status": "not-started",
+        "appExists": false,
+        "rulesVerified": false,
+        "platformAdapter": false,
+        "performanceCompliance": false,
+        "uiCompliance": false,
+        "blockersFree": false,
+        "completionPercentage": 0,
+        "notes": "Pending implementation"
+      },
+      "itch": {
+        "status": "not-started",
+        "appExists": false,
+        "rulesVerified": false,
+        "platformAdapter": false,
+        "performanceCompliance": false,
+        "uiCompliance": false,
+        "blockersFree": false,
+        "completionPercentage": 0,
+        "notes": "Pending implementation"
+      },
+      "crazygames": {
+        "status": "not-started",
+        "appExists": false,
+        "rulesVerified": false,
+        "platformAdapter": false,
+        "performanceCompliance": false,
+        "uiCompliance": false,
+        "blockersFree": false,
+        "completionPercentage": 0,
+        "notes": "Pending implementation"
+      },
+      "discord": {
+        "status": "not-started",
+        "appExists": false,
+        "rulesVerified": false,
+        "platformAdapter": false,
+        "performanceCompliance": false,
+        "uiCompliance": false,
+        "blockersFree": false,
+        "completionPercentage": 0,
+        "notes": "Pending implementation"
+      },
+      "telegram": {
+        "status": "not-started",
+        "appExists": false,
+        "rulesVerified": false,
+        "platformAdapter": false,
+        "performanceCompliance": false,
+        "uiCompliance": false,
+        "blockersFree": false,
+        "completionPercentage": 0,
+        "notes": "Pending implementation"
+      },
+      "steam": {
+        "status": "not-started",
+        "appExists": false,
+        "rulesVerified": false,
+        "platformAdapter": false,
+        "performanceCompliance": false,
+        "uiCompliance": false,
+        "blockersFree": false,
+        "completionPercentage": 0,
+        "notes": "Pending implementation"
+      }
     },
     "go-fish": {
-      "status": "pending",
-      "timestamp": "2026-04-02T00:00:00Z",
-      "notes": "Missing from initial matrix - needs evaluation"
-    },
-    "liars-dice": {
-      "status": "fixed",
-      "timestamp": "2026-04-01T20:45:00Z",
-      "notes": "Package standardized"
-    },
-    "lights-out": {
-      "status": "fixed",
-      "timestamp": "2026-04-01T20:45:00Z",
-      "notes": "Package standardized"
-    },
-    "mancala": {
-      "status": "fixed",
-      "timestamp": "2026-04-01T20:45:00Z",
-      "notes": "Package standardized"
-    },
-    "memory-game": {
-      "status": "fixed",
-      "timestamp": "2026-04-01T20:45:00Z",
-      "notes": "Package standardized"
-    },
-    "mexico": {
-      "status": "fixed",
-      "timestamp": "2026-04-01T20:45:00Z",
-      "notes": "Package standardized"
-    },
-    "minesweeper": {
-      "status": "fixed",
-      "timestamp": "2026-04-01T20:45:00Z",
-      "notes": "Package standardized"
-    },
-    "mini-sudoku": {
-      "status": "fixed",
-      "timestamp": "2026-04-01T20:45:00Z",
-      "notes": "Package standardized"
-    },
-    "monchola": {
-      "status": "passed",
-      "timestamp": "2026-04-01T20:45:00Z",
-      "notes": "✅ Full validation passing"
-    },
-    "nim": {
-      "status": "fixed",
-      "timestamp": "2026-04-01T20:45:00Z",
-      "notes": "Package standardized"
-    },
-    "pig": {
-      "status": "fixed",
-      "timestamp": "2026-04-01T20:45:00Z",
-      "notes": "Package standardized"
-    },
-    "pinpoint": {
-      "status": "fixed",
-      "timestamp": "2026-04-01T20:45:00Z",
-      "notes": "Package standardized"
-    },
-    "queens": {
-      "status": "fixed",
-      "timestamp": "2026-04-01T20:45:00Z",
-      "notes": "Package standardized"
-    },
-    "reversi": {
-      "status": "passed",
-      "timestamp": "2026-04-01T21:45:00Z",
-      "notes": "✅ AI Framework integration complete - added ai-framework dependency and tsconfig paths"
-    },
-    "rock-paper-scissors": {
-      "status": "fixed",
-      "timestamp": "2026-04-01T20:45:00Z",
-      "notes": "Package standardized"
-    },
-    "ship-captain-crew": {
-      "status": "fixed",
-      "timestamp": "2026-04-01T20:45:00Z",
-      "notes": "Package standardized"
-    },
-    "shut-the-box": {
-      "status": "fixed",
-      "timestamp": "2026-04-01T20:45:00Z",
-      "notes": "Package standardized"
-    },
-    "snakes-and-ladders": {
-      "status": "pending",
-      "timestamp": "2026-04-02T00:00:00Z",
-      "notes": "Missing from initial matrix - needs evaluation"
-    },
-    "simon-says": {
-      "status": "fixed",
-      "timestamp": "2026-04-01T20:45:00Z",
-      "notes": "Package standardized"
-    },
-    "snake": {
-      "status": "fixed",
-      "timestamp": "2026-04-01T20:45:00Z",
-      "notes": "tsconfig: +@games/domain-shared alias"
-    },
-    "sudoku": {
-      "status": "fixed",
-      "timestamp": "2026-04-01T20:45:00Z",
-      "notes": "Package standardized"
-    },
-    "tango": {
-      "status": "fixed",
-      "timestamp": "2026-04-01T20:45:00Z",
-      "notes": "Package standardized"
-    },
-    "tictactoe": {
-      "status": "passed",
-      "timestamp": "2026-04-01T20:45:00Z",
-      "notes": "✅ Full validation passing"
-    },
-    "zip": {
-      "status": "fixed",
-      "timestamp": "2026-04-01T20:45:00Z",
-      "notes": "Package standardized"
-    },
-    "war": {
-      "status": "pending",
-      "timestamp": "2026-04-02T00:00:00Z",
-      "notes": "Missing from initial matrix - needs evaluation"
-    }
-  },
-  "governance": {
-    "packageManager": "pnpm@10.31.0",
-    "nodeVersion": "24.14.0",
-    "lastComplianceRun": "2026-04-01T22:15:00Z",
-    "lastProfileringSetup": "2026-04-01T22:15:00Z",
-    "standardsApplied": [
-      "Pinned versions: React 19.2.4, Vite 7.3.1, TypeScript 5.9.3",
-      "No app-level pnpm config overrides",
-      "Shared path aliases: @games/ai-framework, @games/domain-shared, @games/common, ui-utils, theme-contract",
-      "AI Framework with error recovery: safeMinimax function for fallback strategies",
-      "ESLint + Prettier compliance",
-      "Standard build scripts: lint, format, typecheck, build",
-      "Performance targets: <50ms easy, <200ms medium, <1000ms hard difficulty",
-      "WASM available for TicTacToe (10x speedup baseline - 80ms to 8ms)",
-      "Profiling infrastructure: Checkers, Connect-Four, Reversi benchmark tests staged",
-      "WASM decision criteria: If hard difficulty > 200ms, implement game-specific WASM adapter",
-      "Compliance audit: Full lint/typecheck/build validation passing"
-    ]
-  },
-  "wasm": {
-    "battleship": {
-      "status": "passing",
-      "hardTimeMs": 0.2,
-      "timestamp": "2026-04-02T00:45:37.102Z"
-    },
-    "bunco": {
-      "status": "passing",
-      "hardTimeMs": 0.005,
-      "timestamp": "2026-04-02T00:45:37.102Z"
-    },
-    "cee-lo": {
-      "status": "passing",
-      "hardTimeMs": 0.005,
-      "timestamp": "2026-04-02T00:45:37.102Z"
-    },
-    "checkers": {
-      "status": "passing",
-      "hardTimeMs": 3.17,
-      "timestamp": "2026-04-02T00:45:37.102Z"
-    },
-    "chicago": {
-      "status": "passing",
-      "hardTimeMs": 0.005,
-      "timestamp": "2026-04-02T00:45:37.102Z"
-    },
-    "cho-han": {
-      "status": "passing",
-      "hardTimeMs": 0.005,
-      "timestamp": "2026-04-02T00:45:37.102Z"
-    },
-    "connect-four": {
-      "status": "passing",
-      "hardTimeMs": 7.19,
-      "timestamp": "2026-04-02T00:45:37.102Z"
-    },
-    "farkle": {
-      "status": "passing",
-      "hardTimeMs": 0.005,
-      "timestamp": "2026-04-02T00:45:37.102Z"
+      "web": {
+        "status": "not-started",
+        "appExists": false,
+        "rulesVerified": false,
+        "platformAdapter": false,
+        "performanceCompliance": false,
+        "uiCompliance": false,
+        "blockersFree": false,
+        "completionPercentage": 0,
+        "notes": "Pending implementation"
+      },
+      "meta": {
+        "status": "not-started",
+        "appExists": false,
+        "rulesVerified": false,
+        "platformAdapter": false,
+        "performanceCompliance": false,
+        "uiCompliance": false,
+        "blockersFree": false,
+        "completionPercentage": 0,
+        "notes": "Pending implementation"
+      },
+      "ios": {
+        "status": "not-started",
+        "appExists": false,
+        "rulesVerified": false,
+        "platformAdapter": false,
+        "performanceCompliance": false,
+        "uiCompliance": false,
+        "blockersFree": false,
+        "completionPercentage": 0,
+        "notes": "Pending implementation"
+      },
+      "android": {
+        "status": "not-started",
+        "appExists": false,
+        "rulesVerified": false,
+        "platformAdapter": false,
+        "performanceCompliance": false,
+        "uiCompliance": false,
+        "blockersFree": false,
+        "completionPercentage": 0,
+        "notes": "Pending implementation"
+      },
+      "electron": {
+        "status": "not-started",
+        "appExists": false,
+        "rulesVerified": false,
+        "platformAdapter": false,
+        "performanceCompliance": false,
+        "uiCompliance": false,
+        "blockersFree": false,
+        "completionPercentage": 0,
+        "notes": "Pending implementation"
+      },
+      "itch": {
+        "status": "not-started",
+        "appExists": false,
+        "rulesVerified": false,
+        "platformAdapter": false,
+        "performanceCompliance": false,
+        "uiCompliance": false,
+        "blockersFree": false,
+        "completionPercentage": 0,
+        "notes": "Pending implementation"
+      },
+      "crazygames": {
+        "status": "not-started",
+        "appExists": false,
+        "rulesVerified": false,
+        "platformAdapter": false,
+        "performanceCompliance": false,
+        "uiCompliance": false,
+        "blockersFree": false,
+        "completionPercentage": 0,
+        "notes": "Pending implementation"
+      },
+      "discord": {
+        "status": "not-started",
+        "appExists": false,
+        "rulesVerified": false,
+        "platformAdapter": false,
+        "performanceCompliance": false,
+        "uiCompliance": false,
+        "blockersFree": false,
+        "completionPercentage": 0,
+        "notes": "Pending implementation"
+      },
+      "telegram": {
+        "status": "not-started",
+        "appExists": false,
+        "rulesVerified": false,
+        "platformAdapter": false,
+        "performanceCompliance": false,
+        "uiCompliance": false,
+        "blockersFree": false,
+        "completionPercentage": 0,
+        "notes": "Pending implementation"
+      },
+      "steam": {
+        "status": "not-started",
+        "appExists": false,
+        "rulesVerified": false,
+        "platformAdapter": false,
+        "performanceCompliance": false,
+        "uiCompliance": false,
+        "blockersFree": false,
+        "completionPercentage": 0,
+        "notes": "Pending implementation"
+      }
     },
     "hangman": {
-      "status": "passing",
-      "hardTimeMs": 0.005,
-      "timestamp": "2026-04-02T00:45:37.102Z"
+      "web": {
+        "status": "not-started",
+        "appExists": false,
+        "rulesVerified": false,
+        "platformAdapter": false,
+        "performanceCompliance": false,
+        "uiCompliance": false,
+        "blockersFree": false,
+        "completionPercentage": 0,
+        "notes": "Pending implementation"
+      },
+      "meta": {
+        "status": "not-started",
+        "appExists": false,
+        "rulesVerified": false,
+        "platformAdapter": false,
+        "performanceCompliance": false,
+        "uiCompliance": false,
+        "blockersFree": false,
+        "completionPercentage": 0,
+        "notes": "Pending implementation"
+      },
+      "ios": {
+        "status": "not-started",
+        "appExists": false,
+        "rulesVerified": false,
+        "platformAdapter": false,
+        "performanceCompliance": false,
+        "uiCompliance": false,
+        "blockersFree": false,
+        "completionPercentage": 0,
+        "notes": "Pending implementation"
+      },
+      "android": {
+        "status": "not-started",
+        "appExists": false,
+        "rulesVerified": false,
+        "platformAdapter": false,
+        "performanceCompliance": false,
+        "uiCompliance": false,
+        "blockersFree": false,
+        "completionPercentage": 0,
+        "notes": "Pending implementation"
+      },
+      "electron": {
+        "status": "not-started",
+        "appExists": false,
+        "rulesVerified": false,
+        "platformAdapter": false,
+        "performanceCompliance": false,
+        "uiCompliance": false,
+        "blockersFree": false,
+        "completionPercentage": 0,
+        "notes": "Pending implementation"
+      },
+      "itch": {
+        "status": "not-started",
+        "appExists": false,
+        "rulesVerified": false,
+        "platformAdapter": false,
+        "performanceCompliance": false,
+        "uiCompliance": false,
+        "blockersFree": false,
+        "completionPercentage": 0,
+        "notes": "Pending implementation"
+      },
+      "crazygames": {
+        "status": "not-started",
+        "appExists": false,
+        "rulesVerified": false,
+        "platformAdapter": false,
+        "performanceCompliance": false,
+        "uiCompliance": false,
+        "blockersFree": false,
+        "completionPercentage": 0,
+        "notes": "Pending implementation"
+      },
+      "discord": {
+        "status": "not-started",
+        "appExists": false,
+        "rulesVerified": false,
+        "platformAdapter": false,
+        "performanceCompliance": false,
+        "uiCompliance": false,
+        "blockersFree": false,
+        "completionPercentage": 0,
+        "notes": "Pending implementation"
+      },
+      "telegram": {
+        "status": "not-started",
+        "appExists": false,
+        "rulesVerified": false,
+        "platformAdapter": false,
+        "performanceCompliance": false,
+        "uiCompliance": false,
+        "blockersFree": false,
+        "completionPercentage": 0,
+        "notes": "Pending implementation"
+      },
+      "steam": {
+        "status": "not-started",
+        "appExists": false,
+        "rulesVerified": false,
+        "platformAdapter": false,
+        "performanceCompliance": false,
+        "uiCompliance": false,
+        "blockersFree": false,
+        "completionPercentage": 0,
+        "notes": "Pending implementation"
+      }
     },
     "liars-dice": {
-      "status": "passing",
-      "hardTimeMs": 0.005,
-      "timestamp": "2026-04-02T00:45:37.102Z"
+      "web": {
+        "status": "not-started",
+        "appExists": false,
+        "rulesVerified": false,
+        "platformAdapter": false,
+        "performanceCompliance": false,
+        "uiCompliance": false,
+        "blockersFree": false,
+        "completionPercentage": 0,
+        "notes": "Pending implementation"
+      },
+      "meta": {
+        "status": "not-started",
+        "appExists": false,
+        "rulesVerified": false,
+        "platformAdapter": false,
+        "performanceCompliance": false,
+        "uiCompliance": false,
+        "blockersFree": false,
+        "completionPercentage": 0,
+        "notes": "Pending implementation"
+      },
+      "ios": {
+        "status": "not-started",
+        "appExists": false,
+        "rulesVerified": false,
+        "platformAdapter": false,
+        "performanceCompliance": false,
+        "uiCompliance": false,
+        "blockersFree": false,
+        "completionPercentage": 0,
+        "notes": "Pending implementation"
+      },
+      "android": {
+        "status": "not-started",
+        "appExists": false,
+        "rulesVerified": false,
+        "platformAdapter": false,
+        "performanceCompliance": false,
+        "uiCompliance": false,
+        "blockersFree": false,
+        "completionPercentage": 0,
+        "notes": "Pending implementation"
+      },
+      "electron": {
+        "status": "not-started",
+        "appExists": false,
+        "rulesVerified": false,
+        "platformAdapter": false,
+        "performanceCompliance": false,
+        "uiCompliance": false,
+        "blockersFree": false,
+        "completionPercentage": 0,
+        "notes": "Pending implementation"
+      },
+      "itch": {
+        "status": "not-started",
+        "appExists": false,
+        "rulesVerified": false,
+        "platformAdapter": false,
+        "performanceCompliance": false,
+        "uiCompliance": false,
+        "blockersFree": false,
+        "completionPercentage": 0,
+        "notes": "Pending implementation"
+      },
+      "crazygames": {
+        "status": "not-started",
+        "appExists": false,
+        "rulesVerified": false,
+        "platformAdapter": false,
+        "performanceCompliance": false,
+        "uiCompliance": false,
+        "blockersFree": false,
+        "completionPercentage": 0,
+        "notes": "Pending implementation"
+      },
+      "discord": {
+        "status": "not-started",
+        "appExists": false,
+        "rulesVerified": false,
+        "platformAdapter": false,
+        "performanceCompliance": false,
+        "uiCompliance": false,
+        "blockersFree": false,
+        "completionPercentage": 0,
+        "notes": "Pending implementation"
+      },
+      "telegram": {
+        "status": "not-started",
+        "appExists": false,
+        "rulesVerified": false,
+        "platformAdapter": false,
+        "performanceCompliance": false,
+        "uiCompliance": false,
+        "blockersFree": false,
+        "completionPercentage": 0,
+        "notes": "Pending implementation"
+      },
+      "steam": {
+        "status": "not-started",
+        "appExists": false,
+        "rulesVerified": false,
+        "platformAdapter": false,
+        "performanceCompliance": false,
+        "uiCompliance": false,
+        "blockersFree": false,
+        "completionPercentage": 0,
+        "notes": "Pending implementation"
+      }
     },
     "lights-out": {
-      "status": "passing",
-      "hardTimeMs": 0.005,
-      "timestamp": "2026-04-02T00:45:37.102Z"
+      "web": {
+        "status": "not-started",
+        "appExists": false,
+        "rulesVerified": false,
+        "platformAdapter": false,
+        "performanceCompliance": false,
+        "uiCompliance": false,
+        "blockersFree": false,
+        "completionPercentage": 0,
+        "notes": "Pending implementation"
+      },
+      "meta": {
+        "status": "not-started",
+        "appExists": false,
+        "rulesVerified": false,
+        "platformAdapter": false,
+        "performanceCompliance": false,
+        "uiCompliance": false,
+        "blockersFree": false,
+        "completionPercentage": 0,
+        "notes": "Pending implementation"
+      },
+      "ios": {
+        "status": "not-started",
+        "appExists": false,
+        "rulesVerified": false,
+        "platformAdapter": false,
+        "performanceCompliance": false,
+        "uiCompliance": false,
+        "blockersFree": false,
+        "completionPercentage": 0,
+        "notes": "Pending implementation"
+      },
+      "android": {
+        "status": "not-started",
+        "appExists": false,
+        "rulesVerified": false,
+        "platformAdapter": false,
+        "performanceCompliance": false,
+        "uiCompliance": false,
+        "blockersFree": false,
+        "completionPercentage": 0,
+        "notes": "Pending implementation"
+      },
+      "electron": {
+        "status": "not-started",
+        "appExists": false,
+        "rulesVerified": false,
+        "platformAdapter": false,
+        "performanceCompliance": false,
+        "uiCompliance": false,
+        "blockersFree": false,
+        "completionPercentage": 0,
+        "notes": "Pending implementation"
+      },
+      "itch": {
+        "status": "not-started",
+        "appExists": false,
+        "rulesVerified": false,
+        "platformAdapter": false,
+        "performanceCompliance": false,
+        "uiCompliance": false,
+        "blockersFree": false,
+        "completionPercentage": 0,
+        "notes": "Pending implementation"
+      },
+      "crazygames": {
+        "status": "not-started",
+        "appExists": false,
+        "rulesVerified": false,
+        "platformAdapter": false,
+        "performanceCompliance": false,
+        "uiCompliance": false,
+        "blockersFree": false,
+        "completionPercentage": 0,
+        "notes": "Pending implementation"
+      },
+      "discord": {
+        "status": "not-started",
+        "appExists": false,
+        "rulesVerified": false,
+        "platformAdapter": false,
+        "performanceCompliance": false,
+        "uiCompliance": false,
+        "blockersFree": false,
+        "completionPercentage": 0,
+        "notes": "Pending implementation"
+      },
+      "telegram": {
+        "status": "not-started",
+        "appExists": false,
+        "rulesVerified": false,
+        "platformAdapter": false,
+        "performanceCompliance": false,
+        "uiCompliance": false,
+        "blockersFree": false,
+        "completionPercentage": 0,
+        "notes": "Pending implementation"
+      },
+      "steam": {
+        "status": "not-started",
+        "appExists": false,
+        "rulesVerified": false,
+        "platformAdapter": false,
+        "performanceCompliance": false,
+        "uiCompliance": false,
+        "blockersFree": false,
+        "completionPercentage": 0,
+        "notes": "Pending implementation"
+      }
     },
     "mancala": {
-      "status": "passing",
-      "hardTimeMs": 0.5,
-      "timestamp": "2026-04-02T00:45:37.102Z"
+      "web": {
+        "status": "not-started",
+        "appExists": false,
+        "rulesVerified": false,
+        "platformAdapter": false,
+        "performanceCompliance": false,
+        "uiCompliance": false,
+        "blockersFree": false,
+        "completionPercentage": 0,
+        "notes": "Pending implementation"
+      },
+      "meta": {
+        "status": "not-started",
+        "appExists": false,
+        "rulesVerified": false,
+        "platformAdapter": false,
+        "performanceCompliance": false,
+        "uiCompliance": false,
+        "blockersFree": false,
+        "completionPercentage": 0,
+        "notes": "Pending implementation"
+      },
+      "ios": {
+        "status": "not-started",
+        "appExists": false,
+        "rulesVerified": false,
+        "platformAdapter": false,
+        "performanceCompliance": false,
+        "uiCompliance": false,
+        "blockersFree": false,
+        "completionPercentage": 0,
+        "notes": "Pending implementation"
+      },
+      "android": {
+        "status": "not-started",
+        "appExists": false,
+        "rulesVerified": false,
+        "platformAdapter": false,
+        "performanceCompliance": false,
+        "uiCompliance": false,
+        "blockersFree": false,
+        "completionPercentage": 0,
+        "notes": "Pending implementation"
+      },
+      "electron": {
+        "status": "not-started",
+        "appExists": false,
+        "rulesVerified": false,
+        "platformAdapter": false,
+        "performanceCompliance": false,
+        "uiCompliance": false,
+        "blockersFree": false,
+        "completionPercentage": 0,
+        "notes": "Pending implementation"
+      },
+      "itch": {
+        "status": "not-started",
+        "appExists": false,
+        "rulesVerified": false,
+        "platformAdapter": false,
+        "performanceCompliance": false,
+        "uiCompliance": false,
+        "blockersFree": false,
+        "completionPercentage": 0,
+        "notes": "Pending implementation"
+      },
+      "crazygames": {
+        "status": "not-started",
+        "appExists": false,
+        "rulesVerified": false,
+        "platformAdapter": false,
+        "performanceCompliance": false,
+        "uiCompliance": false,
+        "blockersFree": false,
+        "completionPercentage": 0,
+        "notes": "Pending implementation"
+      },
+      "discord": {
+        "status": "not-started",
+        "appExists": false,
+        "rulesVerified": false,
+        "platformAdapter": false,
+        "performanceCompliance": false,
+        "uiCompliance": false,
+        "blockersFree": false,
+        "completionPercentage": 0,
+        "notes": "Pending implementation"
+      },
+      "telegram": {
+        "status": "not-started",
+        "appExists": false,
+        "rulesVerified": false,
+        "platformAdapter": false,
+        "performanceCompliance": false,
+        "uiCompliance": false,
+        "blockersFree": false,
+        "completionPercentage": 0,
+        "notes": "Pending implementation"
+      },
+      "steam": {
+        "status": "not-started",
+        "appExists": false,
+        "rulesVerified": false,
+        "platformAdapter": false,
+        "performanceCompliance": false,
+        "uiCompliance": false,
+        "blockersFree": false,
+        "completionPercentage": 0,
+        "notes": "Pending implementation"
+      }
     },
     "memory-game": {
-      "status": "passing",
-      "hardTimeMs": 0.005,
-      "timestamp": "2026-04-02T00:45:37.102Z"
+      "web": {
+        "status": "not-started",
+        "appExists": false,
+        "rulesVerified": false,
+        "platformAdapter": false,
+        "performanceCompliance": false,
+        "uiCompliance": false,
+        "blockersFree": false,
+        "completionPercentage": 0,
+        "notes": "Pending implementation"
+      },
+      "meta": {
+        "status": "not-started",
+        "appExists": false,
+        "rulesVerified": false,
+        "platformAdapter": false,
+        "performanceCompliance": false,
+        "uiCompliance": false,
+        "blockersFree": false,
+        "completionPercentage": 0,
+        "notes": "Pending implementation"
+      },
+      "ios": {
+        "status": "not-started",
+        "appExists": false,
+        "rulesVerified": false,
+        "platformAdapter": false,
+        "performanceCompliance": false,
+        "uiCompliance": false,
+        "blockersFree": false,
+        "completionPercentage": 0,
+        "notes": "Pending implementation"
+      },
+      "android": {
+        "status": "not-started",
+        "appExists": false,
+        "rulesVerified": false,
+        "platformAdapter": false,
+        "performanceCompliance": false,
+        "uiCompliance": false,
+        "blockersFree": false,
+        "completionPercentage": 0,
+        "notes": "Pending implementation"
+      },
+      "electron": {
+        "status": "not-started",
+        "appExists": false,
+        "rulesVerified": false,
+        "platformAdapter": false,
+        "performanceCompliance": false,
+        "uiCompliance": false,
+        "blockersFree": false,
+        "completionPercentage": 0,
+        "notes": "Pending implementation"
+      },
+      "itch": {
+        "status": "not-started",
+        "appExists": false,
+        "rulesVerified": false,
+        "platformAdapter": false,
+        "performanceCompliance": false,
+        "uiCompliance": false,
+        "blockersFree": false,
+        "completionPercentage": 0,
+        "notes": "Pending implementation"
+      },
+      "crazygames": {
+        "status": "not-started",
+        "appExists": false,
+        "rulesVerified": false,
+        "platformAdapter": false,
+        "performanceCompliance": false,
+        "uiCompliance": false,
+        "blockersFree": false,
+        "completionPercentage": 0,
+        "notes": "Pending implementation"
+      },
+      "discord": {
+        "status": "not-started",
+        "appExists": false,
+        "rulesVerified": false,
+        "platformAdapter": false,
+        "performanceCompliance": false,
+        "uiCompliance": false,
+        "blockersFree": false,
+        "completionPercentage": 0,
+        "notes": "Pending implementation"
+      },
+      "telegram": {
+        "status": "not-started",
+        "appExists": false,
+        "rulesVerified": false,
+        "platformAdapter": false,
+        "performanceCompliance": false,
+        "uiCompliance": false,
+        "blockersFree": false,
+        "completionPercentage": 0,
+        "notes": "Pending implementation"
+      },
+      "steam": {
+        "status": "not-started",
+        "appExists": false,
+        "rulesVerified": false,
+        "platformAdapter": false,
+        "performanceCompliance": false,
+        "uiCompliance": false,
+        "blockersFree": false,
+        "completionPercentage": 0,
+        "notes": "Pending implementation"
+      }
     },
     "mexico": {
-      "status": "passing",
-      "hardTimeMs": 0.005,
-      "timestamp": "2026-04-02T00:45:37.102Z"
+      "web": {
+        "status": "not-started",
+        "appExists": false,
+        "rulesVerified": false,
+        "platformAdapter": false,
+        "performanceCompliance": false,
+        "uiCompliance": false,
+        "blockersFree": false,
+        "completionPercentage": 0,
+        "notes": "Pending implementation"
+      },
+      "meta": {
+        "status": "not-started",
+        "appExists": false,
+        "rulesVerified": false,
+        "platformAdapter": false,
+        "performanceCompliance": false,
+        "uiCompliance": false,
+        "blockersFree": false,
+        "completionPercentage": 0,
+        "notes": "Pending implementation"
+      },
+      "ios": {
+        "status": "not-started",
+        "appExists": false,
+        "rulesVerified": false,
+        "platformAdapter": false,
+        "performanceCompliance": false,
+        "uiCompliance": false,
+        "blockersFree": false,
+        "completionPercentage": 0,
+        "notes": "Pending implementation"
+      },
+      "android": {
+        "status": "not-started",
+        "appExists": false,
+        "rulesVerified": false,
+        "platformAdapter": false,
+        "performanceCompliance": false,
+        "uiCompliance": false,
+        "blockersFree": false,
+        "completionPercentage": 0,
+        "notes": "Pending implementation"
+      },
+      "electron": {
+        "status": "not-started",
+        "appExists": false,
+        "rulesVerified": false,
+        "platformAdapter": false,
+        "performanceCompliance": false,
+        "uiCompliance": false,
+        "blockersFree": false,
+        "completionPercentage": 0,
+        "notes": "Pending implementation"
+      },
+      "itch": {
+        "status": "not-started",
+        "appExists": false,
+        "rulesVerified": false,
+        "platformAdapter": false,
+        "performanceCompliance": false,
+        "uiCompliance": false,
+        "blockersFree": false,
+        "completionPercentage": 0,
+        "notes": "Pending implementation"
+      },
+      "crazygames": {
+        "status": "not-started",
+        "appExists": false,
+        "rulesVerified": false,
+        "platformAdapter": false,
+        "performanceCompliance": false,
+        "uiCompliance": false,
+        "blockersFree": false,
+        "completionPercentage": 0,
+        "notes": "Pending implementation"
+      },
+      "discord": {
+        "status": "not-started",
+        "appExists": false,
+        "rulesVerified": false,
+        "platformAdapter": false,
+        "performanceCompliance": false,
+        "uiCompliance": false,
+        "blockersFree": false,
+        "completionPercentage": 0,
+        "notes": "Pending implementation"
+      },
+      "telegram": {
+        "status": "not-started",
+        "appExists": false,
+        "rulesVerified": false,
+        "platformAdapter": false,
+        "performanceCompliance": false,
+        "uiCompliance": false,
+        "blockersFree": false,
+        "completionPercentage": 0,
+        "notes": "Pending implementation"
+      },
+      "steam": {
+        "status": "not-started",
+        "appExists": false,
+        "rulesVerified": false,
+        "platformAdapter": false,
+        "performanceCompliance": false,
+        "uiCompliance": false,
+        "blockersFree": false,
+        "completionPercentage": 0,
+        "notes": "Pending implementation"
+      }
     },
     "minesweeper": {
-      "status": "passing",
-      "hardTimeMs": 0.45,
-      "timestamp": "2026-04-02T00:45:37.102Z"
+      "web": {
+        "status": "not-started",
+        "appExists": false,
+        "rulesVerified": false,
+        "platformAdapter": false,
+        "performanceCompliance": false,
+        "uiCompliance": false,
+        "blockersFree": false,
+        "completionPercentage": 0,
+        "notes": "Pending implementation"
+      },
+      "meta": {
+        "status": "not-started",
+        "appExists": false,
+        "rulesVerified": false,
+        "platformAdapter": false,
+        "performanceCompliance": false,
+        "uiCompliance": false,
+        "blockersFree": false,
+        "completionPercentage": 0,
+        "notes": "Pending implementation"
+      },
+      "ios": {
+        "status": "not-started",
+        "appExists": false,
+        "rulesVerified": false,
+        "platformAdapter": false,
+        "performanceCompliance": false,
+        "uiCompliance": false,
+        "blockersFree": false,
+        "completionPercentage": 0,
+        "notes": "Pending implementation"
+      },
+      "android": {
+        "status": "not-started",
+        "appExists": false,
+        "rulesVerified": false,
+        "platformAdapter": false,
+        "performanceCompliance": false,
+        "uiCompliance": false,
+        "blockersFree": false,
+        "completionPercentage": 0,
+        "notes": "Pending implementation"
+      },
+      "electron": {
+        "status": "not-started",
+        "appExists": false,
+        "rulesVerified": false,
+        "platformAdapter": false,
+        "performanceCompliance": false,
+        "uiCompliance": false,
+        "blockersFree": false,
+        "completionPercentage": 0,
+        "notes": "Pending implementation"
+      },
+      "itch": {
+        "status": "not-started",
+        "appExists": false,
+        "rulesVerified": false,
+        "platformAdapter": false,
+        "performanceCompliance": false,
+        "uiCompliance": false,
+        "blockersFree": false,
+        "completionPercentage": 0,
+        "notes": "Pending implementation"
+      },
+      "crazygames": {
+        "status": "not-started",
+        "appExists": false,
+        "rulesVerified": false,
+        "platformAdapter": false,
+        "performanceCompliance": false,
+        "uiCompliance": false,
+        "blockersFree": false,
+        "completionPercentage": 0,
+        "notes": "Pending implementation"
+      },
+      "discord": {
+        "status": "not-started",
+        "appExists": false,
+        "rulesVerified": false,
+        "platformAdapter": false,
+        "performanceCompliance": false,
+        "uiCompliance": false,
+        "blockersFree": false,
+        "completionPercentage": 0,
+        "notes": "Pending implementation"
+      },
+      "telegram": {
+        "status": "not-started",
+        "appExists": false,
+        "rulesVerified": false,
+        "platformAdapter": false,
+        "performanceCompliance": false,
+        "uiCompliance": false,
+        "blockersFree": false,
+        "completionPercentage": 0,
+        "notes": "Pending implementation"
+      },
+      "steam": {
+        "status": "not-started",
+        "appExists": false,
+        "rulesVerified": false,
+        "platformAdapter": false,
+        "performanceCompliance": false,
+        "uiCompliance": false,
+        "blockersFree": false,
+        "completionPercentage": 0,
+        "notes": "Pending implementation"
+      }
+    },
+    "mini-sudoku": {
+      "web": {
+        "status": "not-started",
+        "appExists": false,
+        "rulesVerified": false,
+        "platformAdapter": false,
+        "performanceCompliance": false,
+        "uiCompliance": false,
+        "blockersFree": false,
+        "completionPercentage": 0,
+        "notes": "Pending implementation"
+      },
+      "meta": {
+        "status": "not-started",
+        "appExists": false,
+        "rulesVerified": false,
+        "platformAdapter": false,
+        "performanceCompliance": false,
+        "uiCompliance": false,
+        "blockersFree": false,
+        "completionPercentage": 0,
+        "notes": "Pending implementation"
+      },
+      "ios": {
+        "status": "not-started",
+        "appExists": false,
+        "rulesVerified": false,
+        "platformAdapter": false,
+        "performanceCompliance": false,
+        "uiCompliance": false,
+        "blockersFree": false,
+        "completionPercentage": 0,
+        "notes": "Pending implementation"
+      },
+      "android": {
+        "status": "not-started",
+        "appExists": false,
+        "rulesVerified": false,
+        "platformAdapter": false,
+        "performanceCompliance": false,
+        "uiCompliance": false,
+        "blockersFree": false,
+        "completionPercentage": 0,
+        "notes": "Pending implementation"
+      },
+      "electron": {
+        "status": "not-started",
+        "appExists": false,
+        "rulesVerified": false,
+        "platformAdapter": false,
+        "performanceCompliance": false,
+        "uiCompliance": false,
+        "blockersFree": false,
+        "completionPercentage": 0,
+        "notes": "Pending implementation"
+      },
+      "itch": {
+        "status": "not-started",
+        "appExists": false,
+        "rulesVerified": false,
+        "platformAdapter": false,
+        "performanceCompliance": false,
+        "uiCompliance": false,
+        "blockersFree": false,
+        "completionPercentage": 0,
+        "notes": "Pending implementation"
+      },
+      "crazygames": {
+        "status": "not-started",
+        "appExists": false,
+        "rulesVerified": false,
+        "platformAdapter": false,
+        "performanceCompliance": false,
+        "uiCompliance": false,
+        "blockersFree": false,
+        "completionPercentage": 0,
+        "notes": "Pending implementation"
+      },
+      "discord": {
+        "status": "not-started",
+        "appExists": false,
+        "rulesVerified": false,
+        "platformAdapter": false,
+        "performanceCompliance": false,
+        "uiCompliance": false,
+        "blockersFree": false,
+        "completionPercentage": 0,
+        "notes": "Pending implementation"
+      },
+      "telegram": {
+        "status": "not-started",
+        "appExists": false,
+        "rulesVerified": false,
+        "platformAdapter": false,
+        "performanceCompliance": false,
+        "uiCompliance": false,
+        "blockersFree": false,
+        "completionPercentage": 0,
+        "notes": "Pending implementation"
+      },
+      "steam": {
+        "status": "not-started",
+        "appExists": false,
+        "rulesVerified": false,
+        "platformAdapter": false,
+        "performanceCompliance": false,
+        "uiCompliance": false,
+        "blockersFree": false,
+        "completionPercentage": 0,
+        "notes": "Pending implementation"
+      }
     },
     "monchola": {
-      "status": "passing",
-      "hardTimeMs": 0.005,
-      "timestamp": "2026-04-02T00:45:37.102Z"
+      "web": {
+        "status": "not-started",
+        "appExists": false,
+        "rulesVerified": false,
+        "platformAdapter": false,
+        "performanceCompliance": false,
+        "uiCompliance": false,
+        "blockersFree": false,
+        "completionPercentage": 0,
+        "notes": "Pending implementation"
+      },
+      "meta": {
+        "status": "not-started",
+        "appExists": false,
+        "rulesVerified": false,
+        "platformAdapter": false,
+        "performanceCompliance": false,
+        "uiCompliance": false,
+        "blockersFree": false,
+        "completionPercentage": 0,
+        "notes": "Pending implementation"
+      },
+      "ios": {
+        "status": "not-started",
+        "appExists": false,
+        "rulesVerified": false,
+        "platformAdapter": false,
+        "performanceCompliance": false,
+        "uiCompliance": false,
+        "blockersFree": false,
+        "completionPercentage": 0,
+        "notes": "Pending implementation"
+      },
+      "android": {
+        "status": "not-started",
+        "appExists": false,
+        "rulesVerified": false,
+        "platformAdapter": false,
+        "performanceCompliance": false,
+        "uiCompliance": false,
+        "blockersFree": false,
+        "completionPercentage": 0,
+        "notes": "Pending implementation"
+      },
+      "electron": {
+        "status": "not-started",
+        "appExists": false,
+        "rulesVerified": false,
+        "platformAdapter": false,
+        "performanceCompliance": false,
+        "uiCompliance": false,
+        "blockersFree": false,
+        "completionPercentage": 0,
+        "notes": "Pending implementation"
+      },
+      "itch": {
+        "status": "not-started",
+        "appExists": false,
+        "rulesVerified": false,
+        "platformAdapter": false,
+        "performanceCompliance": false,
+        "uiCompliance": false,
+        "blockersFree": false,
+        "completionPercentage": 0,
+        "notes": "Pending implementation"
+      },
+      "crazygames": {
+        "status": "not-started",
+        "appExists": false,
+        "rulesVerified": false,
+        "platformAdapter": false,
+        "performanceCompliance": false,
+        "uiCompliance": false,
+        "blockersFree": false,
+        "completionPercentage": 0,
+        "notes": "Pending implementation"
+      },
+      "discord": {
+        "status": "not-started",
+        "appExists": false,
+        "rulesVerified": false,
+        "platformAdapter": false,
+        "performanceCompliance": false,
+        "uiCompliance": false,
+        "blockersFree": false,
+        "completionPercentage": 0,
+        "notes": "Pending implementation"
+      },
+      "telegram": {
+        "status": "not-started",
+        "appExists": false,
+        "rulesVerified": false,
+        "platformAdapter": false,
+        "performanceCompliance": false,
+        "uiCompliance": false,
+        "blockersFree": false,
+        "completionPercentage": 0,
+        "notes": "Pending implementation"
+      },
+      "steam": {
+        "status": "not-started",
+        "appExists": false,
+        "rulesVerified": false,
+        "platformAdapter": false,
+        "performanceCompliance": false,
+        "uiCompliance": false,
+        "blockersFree": false,
+        "completionPercentage": 0,
+        "notes": "Pending implementation"
+      }
     },
     "nim": {
-      "status": "passing",
-      "hardTimeMs": 0.05,
-      "timestamp": "2026-04-02T00:45:37.102Z"
+      "web": {
+        "status": "not-started",
+        "appExists": false,
+        "rulesVerified": false,
+        "platformAdapter": false,
+        "performanceCompliance": false,
+        "uiCompliance": false,
+        "blockersFree": false,
+        "completionPercentage": 0,
+        "notes": "Pending implementation"
+      },
+      "meta": {
+        "status": "not-started",
+        "appExists": false,
+        "rulesVerified": false,
+        "platformAdapter": false,
+        "performanceCompliance": false,
+        "uiCompliance": false,
+        "blockersFree": false,
+        "completionPercentage": 0,
+        "notes": "Pending implementation"
+      },
+      "ios": {
+        "status": "not-started",
+        "appExists": false,
+        "rulesVerified": false,
+        "platformAdapter": false,
+        "performanceCompliance": false,
+        "uiCompliance": false,
+        "blockersFree": false,
+        "completionPercentage": 0,
+        "notes": "Pending implementation"
+      },
+      "android": {
+        "status": "not-started",
+        "appExists": false,
+        "rulesVerified": false,
+        "platformAdapter": false,
+        "performanceCompliance": false,
+        "uiCompliance": false,
+        "blockersFree": false,
+        "completionPercentage": 0,
+        "notes": "Pending implementation"
+      },
+      "electron": {
+        "status": "not-started",
+        "appExists": false,
+        "rulesVerified": false,
+        "platformAdapter": false,
+        "performanceCompliance": false,
+        "uiCompliance": false,
+        "blockersFree": false,
+        "completionPercentage": 0,
+        "notes": "Pending implementation"
+      },
+      "itch": {
+        "status": "not-started",
+        "appExists": false,
+        "rulesVerified": false,
+        "platformAdapter": false,
+        "performanceCompliance": false,
+        "uiCompliance": false,
+        "blockersFree": false,
+        "completionPercentage": 0,
+        "notes": "Pending implementation"
+      },
+      "crazygames": {
+        "status": "not-started",
+        "appExists": false,
+        "rulesVerified": false,
+        "platformAdapter": false,
+        "performanceCompliance": false,
+        "uiCompliance": false,
+        "blockersFree": false,
+        "completionPercentage": 0,
+        "notes": "Pending implementation"
+      },
+      "discord": {
+        "status": "not-started",
+        "appExists": false,
+        "rulesVerified": false,
+        "platformAdapter": false,
+        "performanceCompliance": false,
+        "uiCompliance": false,
+        "blockersFree": false,
+        "completionPercentage": 0,
+        "notes": "Pending implementation"
+      },
+      "telegram": {
+        "status": "not-started",
+        "appExists": false,
+        "rulesVerified": false,
+        "platformAdapter": false,
+        "performanceCompliance": false,
+        "uiCompliance": false,
+        "blockersFree": false,
+        "completionPercentage": 0,
+        "notes": "Pending implementation"
+      },
+      "steam": {
+        "status": "not-started",
+        "appExists": false,
+        "rulesVerified": false,
+        "platformAdapter": false,
+        "performanceCompliance": false,
+        "uiCompliance": false,
+        "blockersFree": false,
+        "completionPercentage": 0,
+        "notes": "Pending implementation"
+      }
     },
     "pig": {
-      "status": "passing",
-      "hardTimeMs": 0.005,
-      "timestamp": "2026-04-02T00:45:37.102Z"
+      "web": {
+        "status": "not-started",
+        "appExists": false,
+        "rulesVerified": false,
+        "platformAdapter": false,
+        "performanceCompliance": false,
+        "uiCompliance": false,
+        "blockersFree": false,
+        "completionPercentage": 0,
+        "notes": "Pending implementation"
+      },
+      "meta": {
+        "status": "not-started",
+        "appExists": false,
+        "rulesVerified": false,
+        "platformAdapter": false,
+        "performanceCompliance": false,
+        "uiCompliance": false,
+        "blockersFree": false,
+        "completionPercentage": 0,
+        "notes": "Pending implementation"
+      },
+      "ios": {
+        "status": "not-started",
+        "appExists": false,
+        "rulesVerified": false,
+        "platformAdapter": false,
+        "performanceCompliance": false,
+        "uiCompliance": false,
+        "blockersFree": false,
+        "completionPercentage": 0,
+        "notes": "Pending implementation"
+      },
+      "android": {
+        "status": "not-started",
+        "appExists": false,
+        "rulesVerified": false,
+        "platformAdapter": false,
+        "performanceCompliance": false,
+        "uiCompliance": false,
+        "blockersFree": false,
+        "completionPercentage": 0,
+        "notes": "Pending implementation"
+      },
+      "electron": {
+        "status": "not-started",
+        "appExists": false,
+        "rulesVerified": false,
+        "platformAdapter": false,
+        "performanceCompliance": false,
+        "uiCompliance": false,
+        "blockersFree": false,
+        "completionPercentage": 0,
+        "notes": "Pending implementation"
+      },
+      "itch": {
+        "status": "not-started",
+        "appExists": false,
+        "rulesVerified": false,
+        "platformAdapter": false,
+        "performanceCompliance": false,
+        "uiCompliance": false,
+        "blockersFree": false,
+        "completionPercentage": 0,
+        "notes": "Pending implementation"
+      },
+      "crazygames": {
+        "status": "not-started",
+        "appExists": false,
+        "rulesVerified": false,
+        "platformAdapter": false,
+        "performanceCompliance": false,
+        "uiCompliance": false,
+        "blockersFree": false,
+        "completionPercentage": 0,
+        "notes": "Pending implementation"
+      },
+      "discord": {
+        "status": "not-started",
+        "appExists": false,
+        "rulesVerified": false,
+        "platformAdapter": false,
+        "performanceCompliance": false,
+        "uiCompliance": false,
+        "blockersFree": false,
+        "completionPercentage": 0,
+        "notes": "Pending implementation"
+      },
+      "telegram": {
+        "status": "not-started",
+        "appExists": false,
+        "rulesVerified": false,
+        "platformAdapter": false,
+        "performanceCompliance": false,
+        "uiCompliance": false,
+        "blockersFree": false,
+        "completionPercentage": 0,
+        "notes": "Pending implementation"
+      },
+      "steam": {
+        "status": "not-started",
+        "appExists": false,
+        "rulesVerified": false,
+        "platformAdapter": false,
+        "performanceCompliance": false,
+        "uiCompliance": false,
+        "blockersFree": false,
+        "completionPercentage": 0,
+        "notes": "Pending implementation"
+      }
+    },
+    "pinpoint": {
+      "web": {
+        "status": "not-started",
+        "appExists": false,
+        "rulesVerified": false,
+        "platformAdapter": false,
+        "performanceCompliance": false,
+        "uiCompliance": false,
+        "blockersFree": false,
+        "completionPercentage": 0,
+        "notes": "Pending implementation"
+      },
+      "meta": {
+        "status": "not-started",
+        "appExists": false,
+        "rulesVerified": false,
+        "platformAdapter": false,
+        "performanceCompliance": false,
+        "uiCompliance": false,
+        "blockersFree": false,
+        "completionPercentage": 0,
+        "notes": "Pending implementation"
+      },
+      "ios": {
+        "status": "not-started",
+        "appExists": false,
+        "rulesVerified": false,
+        "platformAdapter": false,
+        "performanceCompliance": false,
+        "uiCompliance": false,
+        "blockersFree": false,
+        "completionPercentage": 0,
+        "notes": "Pending implementation"
+      },
+      "android": {
+        "status": "not-started",
+        "appExists": false,
+        "rulesVerified": false,
+        "platformAdapter": false,
+        "performanceCompliance": false,
+        "uiCompliance": false,
+        "blockersFree": false,
+        "completionPercentage": 0,
+        "notes": "Pending implementation"
+      },
+      "electron": {
+        "status": "not-started",
+        "appExists": false,
+        "rulesVerified": false,
+        "platformAdapter": false,
+        "performanceCompliance": false,
+        "uiCompliance": false,
+        "blockersFree": false,
+        "completionPercentage": 0,
+        "notes": "Pending implementation"
+      },
+      "itch": {
+        "status": "not-started",
+        "appExists": false,
+        "rulesVerified": false,
+        "platformAdapter": false,
+        "performanceCompliance": false,
+        "uiCompliance": false,
+        "blockersFree": false,
+        "completionPercentage": 0,
+        "notes": "Pending implementation"
+      },
+      "crazygames": {
+        "status": "not-started",
+        "appExists": false,
+        "rulesVerified": false,
+        "platformAdapter": false,
+        "performanceCompliance": false,
+        "uiCompliance": false,
+        "blockersFree": false,
+        "completionPercentage": 0,
+        "notes": "Pending implementation"
+      },
+      "discord": {
+        "status": "not-started",
+        "appExists": false,
+        "rulesVerified": false,
+        "platformAdapter": false,
+        "performanceCompliance": false,
+        "uiCompliance": false,
+        "blockersFree": false,
+        "completionPercentage": 0,
+        "notes": "Pending implementation"
+      },
+      "telegram": {
+        "status": "not-started",
+        "appExists": false,
+        "rulesVerified": false,
+        "platformAdapter": false,
+        "performanceCompliance": false,
+        "uiCompliance": false,
+        "blockersFree": false,
+        "completionPercentage": 0,
+        "notes": "Pending implementation"
+      },
+      "steam": {
+        "status": "not-started",
+        "appExists": false,
+        "rulesVerified": false,
+        "platformAdapter": false,
+        "performanceCompliance": false,
+        "uiCompliance": false,
+        "blockersFree": false,
+        "completionPercentage": 0,
+        "notes": "Pending implementation"
+      }
+    },
+    "queens": {
+      "web": {
+        "status": "not-started",
+        "appExists": false,
+        "rulesVerified": false,
+        "platformAdapter": false,
+        "performanceCompliance": false,
+        "uiCompliance": false,
+        "blockersFree": false,
+        "completionPercentage": 0,
+        "notes": "Pending implementation"
+      },
+      "meta": {
+        "status": "not-started",
+        "appExists": false,
+        "rulesVerified": false,
+        "platformAdapter": false,
+        "performanceCompliance": false,
+        "uiCompliance": false,
+        "blockersFree": false,
+        "completionPercentage": 0,
+        "notes": "Pending implementation"
+      },
+      "ios": {
+        "status": "not-started",
+        "appExists": false,
+        "rulesVerified": false,
+        "platformAdapter": false,
+        "performanceCompliance": false,
+        "uiCompliance": false,
+        "blockersFree": false,
+        "completionPercentage": 0,
+        "notes": "Pending implementation"
+      },
+      "android": {
+        "status": "not-started",
+        "appExists": false,
+        "rulesVerified": false,
+        "platformAdapter": false,
+        "performanceCompliance": false,
+        "uiCompliance": false,
+        "blockersFree": false,
+        "completionPercentage": 0,
+        "notes": "Pending implementation"
+      },
+      "electron": {
+        "status": "not-started",
+        "appExists": false,
+        "rulesVerified": false,
+        "platformAdapter": false,
+        "performanceCompliance": false,
+        "uiCompliance": false,
+        "blockersFree": false,
+        "completionPercentage": 0,
+        "notes": "Pending implementation"
+      },
+      "itch": {
+        "status": "not-started",
+        "appExists": false,
+        "rulesVerified": false,
+        "platformAdapter": false,
+        "performanceCompliance": false,
+        "uiCompliance": false,
+        "blockersFree": false,
+        "completionPercentage": 0,
+        "notes": "Pending implementation"
+      },
+      "crazygames": {
+        "status": "not-started",
+        "appExists": false,
+        "rulesVerified": false,
+        "platformAdapter": false,
+        "performanceCompliance": false,
+        "uiCompliance": false,
+        "blockersFree": false,
+        "completionPercentage": 0,
+        "notes": "Pending implementation"
+      },
+      "discord": {
+        "status": "not-started",
+        "appExists": false,
+        "rulesVerified": false,
+        "platformAdapter": false,
+        "performanceCompliance": false,
+        "uiCompliance": false,
+        "blockersFree": false,
+        "completionPercentage": 0,
+        "notes": "Pending implementation"
+      },
+      "telegram": {
+        "status": "not-started",
+        "appExists": false,
+        "rulesVerified": false,
+        "platformAdapter": false,
+        "performanceCompliance": false,
+        "uiCompliance": false,
+        "blockersFree": false,
+        "completionPercentage": 0,
+        "notes": "Pending implementation"
+      },
+      "steam": {
+        "status": "not-started",
+        "appExists": false,
+        "rulesVerified": false,
+        "platformAdapter": false,
+        "performanceCompliance": false,
+        "uiCompliance": false,
+        "blockersFree": false,
+        "completionPercentage": 0,
+        "notes": "Pending implementation"
+      }
     },
     "reversi": {
-      "status": "passing",
-      "hardTimeMs": 52.42,
-      "timestamp": "2026-04-02T00:45:37.102Z"
+      "web": {
+        "status": "not-started",
+        "appExists": false,
+        "rulesVerified": false,
+        "platformAdapter": false,
+        "performanceCompliance": false,
+        "uiCompliance": false,
+        "blockersFree": false,
+        "completionPercentage": 0,
+        "notes": "Pending implementation"
+      },
+      "meta": {
+        "status": "not-started",
+        "appExists": false,
+        "rulesVerified": false,
+        "platformAdapter": false,
+        "performanceCompliance": false,
+        "uiCompliance": false,
+        "blockersFree": false,
+        "completionPercentage": 0,
+        "notes": "Pending implementation"
+      },
+      "ios": {
+        "status": "not-started",
+        "appExists": false,
+        "rulesVerified": false,
+        "platformAdapter": false,
+        "performanceCompliance": false,
+        "uiCompliance": false,
+        "blockersFree": false,
+        "completionPercentage": 0,
+        "notes": "Pending implementation"
+      },
+      "android": {
+        "status": "not-started",
+        "appExists": false,
+        "rulesVerified": false,
+        "platformAdapter": false,
+        "performanceCompliance": false,
+        "uiCompliance": false,
+        "blockersFree": false,
+        "completionPercentage": 0,
+        "notes": "Pending implementation"
+      },
+      "electron": {
+        "status": "not-started",
+        "appExists": false,
+        "rulesVerified": false,
+        "platformAdapter": false,
+        "performanceCompliance": false,
+        "uiCompliance": false,
+        "blockersFree": false,
+        "completionPercentage": 0,
+        "notes": "Pending implementation"
+      },
+      "itch": {
+        "status": "not-started",
+        "appExists": false,
+        "rulesVerified": false,
+        "platformAdapter": false,
+        "performanceCompliance": false,
+        "uiCompliance": false,
+        "blockersFree": false,
+        "completionPercentage": 0,
+        "notes": "Pending implementation"
+      },
+      "crazygames": {
+        "status": "not-started",
+        "appExists": false,
+        "rulesVerified": false,
+        "platformAdapter": false,
+        "performanceCompliance": false,
+        "uiCompliance": false,
+        "blockersFree": false,
+        "completionPercentage": 0,
+        "notes": "Pending implementation"
+      },
+      "discord": {
+        "status": "not-started",
+        "appExists": false,
+        "rulesVerified": false,
+        "platformAdapter": false,
+        "performanceCompliance": false,
+        "uiCompliance": false,
+        "blockersFree": false,
+        "completionPercentage": 0,
+        "notes": "Pending implementation"
+      },
+      "telegram": {
+        "status": "not-started",
+        "appExists": false,
+        "rulesVerified": false,
+        "platformAdapter": false,
+        "performanceCompliance": false,
+        "uiCompliance": false,
+        "blockersFree": false,
+        "completionPercentage": 0,
+        "notes": "Pending implementation"
+      },
+      "steam": {
+        "status": "not-started",
+        "appExists": false,
+        "rulesVerified": false,
+        "platformAdapter": false,
+        "performanceCompliance": false,
+        "uiCompliance": false,
+        "blockersFree": false,
+        "completionPercentage": 0,
+        "notes": "Pending implementation"
+      }
     },
     "rock-paper-scissors": {
-      "status": "passing",
-      "hardTimeMs": 0.02,
-      "timestamp": "2026-04-02T00:45:37.102Z"
+      "web": {
+        "status": "not-started",
+        "appExists": false,
+        "rulesVerified": false,
+        "platformAdapter": false,
+        "performanceCompliance": false,
+        "uiCompliance": false,
+        "blockersFree": false,
+        "completionPercentage": 0,
+        "notes": "Pending implementation"
+      },
+      "meta": {
+        "status": "not-started",
+        "appExists": false,
+        "rulesVerified": false,
+        "platformAdapter": false,
+        "performanceCompliance": false,
+        "uiCompliance": false,
+        "blockersFree": false,
+        "completionPercentage": 0,
+        "notes": "Pending implementation"
+      },
+      "ios": {
+        "status": "not-started",
+        "appExists": false,
+        "rulesVerified": false,
+        "platformAdapter": false,
+        "performanceCompliance": false,
+        "uiCompliance": false,
+        "blockersFree": false,
+        "completionPercentage": 0,
+        "notes": "Pending implementation"
+      },
+      "android": {
+        "status": "not-started",
+        "appExists": false,
+        "rulesVerified": false,
+        "platformAdapter": false,
+        "performanceCompliance": false,
+        "uiCompliance": false,
+        "blockersFree": false,
+        "completionPercentage": 0,
+        "notes": "Pending implementation"
+      },
+      "electron": {
+        "status": "not-started",
+        "appExists": false,
+        "rulesVerified": false,
+        "platformAdapter": false,
+        "performanceCompliance": false,
+        "uiCompliance": false,
+        "blockersFree": false,
+        "completionPercentage": 0,
+        "notes": "Pending implementation"
+      },
+      "itch": {
+        "status": "not-started",
+        "appExists": false,
+        "rulesVerified": false,
+        "platformAdapter": false,
+        "performanceCompliance": false,
+        "uiCompliance": false,
+        "blockersFree": false,
+        "completionPercentage": 0,
+        "notes": "Pending implementation"
+      },
+      "crazygames": {
+        "status": "not-started",
+        "appExists": false,
+        "rulesVerified": false,
+        "platformAdapter": false,
+        "performanceCompliance": false,
+        "uiCompliance": false,
+        "blockersFree": false,
+        "completionPercentage": 0,
+        "notes": "Pending implementation"
+      },
+      "discord": {
+        "status": "not-started",
+        "appExists": false,
+        "rulesVerified": false,
+        "platformAdapter": false,
+        "performanceCompliance": false,
+        "uiCompliance": false,
+        "blockersFree": false,
+        "completionPercentage": 0,
+        "notes": "Pending implementation"
+      },
+      "telegram": {
+        "status": "not-started",
+        "appExists": false,
+        "rulesVerified": false,
+        "platformAdapter": false,
+        "performanceCompliance": false,
+        "uiCompliance": false,
+        "blockersFree": false,
+        "completionPercentage": 0,
+        "notes": "Pending implementation"
+      },
+      "steam": {
+        "status": "not-started",
+        "appExists": false,
+        "rulesVerified": false,
+        "platformAdapter": false,
+        "performanceCompliance": false,
+        "uiCompliance": false,
+        "blockersFree": false,
+        "completionPercentage": 0,
+        "notes": "Pending implementation"
+      }
     },
     "ship-captain-crew": {
-      "status": "passing",
-      "hardTimeMs": 0.005,
-      "timestamp": "2026-04-02T00:45:37.102Z"
+      "web": {
+        "status": "not-started",
+        "appExists": false,
+        "rulesVerified": false,
+        "platformAdapter": false,
+        "performanceCompliance": false,
+        "uiCompliance": false,
+        "blockersFree": false,
+        "completionPercentage": 0,
+        "notes": "Pending implementation"
+      },
+      "meta": {
+        "status": "not-started",
+        "appExists": false,
+        "rulesVerified": false,
+        "platformAdapter": false,
+        "performanceCompliance": false,
+        "uiCompliance": false,
+        "blockersFree": false,
+        "completionPercentage": 0,
+        "notes": "Pending implementation"
+      },
+      "ios": {
+        "status": "not-started",
+        "appExists": false,
+        "rulesVerified": false,
+        "platformAdapter": false,
+        "performanceCompliance": false,
+        "uiCompliance": false,
+        "blockersFree": false,
+        "completionPercentage": 0,
+        "notes": "Pending implementation"
+      },
+      "android": {
+        "status": "not-started",
+        "appExists": false,
+        "rulesVerified": false,
+        "platformAdapter": false,
+        "performanceCompliance": false,
+        "uiCompliance": false,
+        "blockersFree": false,
+        "completionPercentage": 0,
+        "notes": "Pending implementation"
+      },
+      "electron": {
+        "status": "not-started",
+        "appExists": false,
+        "rulesVerified": false,
+        "platformAdapter": false,
+        "performanceCompliance": false,
+        "uiCompliance": false,
+        "blockersFree": false,
+        "completionPercentage": 0,
+        "notes": "Pending implementation"
+      },
+      "itch": {
+        "status": "not-started",
+        "appExists": false,
+        "rulesVerified": false,
+        "platformAdapter": false,
+        "performanceCompliance": false,
+        "uiCompliance": false,
+        "blockersFree": false,
+        "completionPercentage": 0,
+        "notes": "Pending implementation"
+      },
+      "crazygames": {
+        "status": "not-started",
+        "appExists": false,
+        "rulesVerified": false,
+        "platformAdapter": false,
+        "performanceCompliance": false,
+        "uiCompliance": false,
+        "blockersFree": false,
+        "completionPercentage": 0,
+        "notes": "Pending implementation"
+      },
+      "discord": {
+        "status": "not-started",
+        "appExists": false,
+        "rulesVerified": false,
+        "platformAdapter": false,
+        "performanceCompliance": false,
+        "uiCompliance": false,
+        "blockersFree": false,
+        "completionPercentage": 0,
+        "notes": "Pending implementation"
+      },
+      "telegram": {
+        "status": "not-started",
+        "appExists": false,
+        "rulesVerified": false,
+        "platformAdapter": false,
+        "performanceCompliance": false,
+        "uiCompliance": false,
+        "blockersFree": false,
+        "completionPercentage": 0,
+        "notes": "Pending implementation"
+      },
+      "steam": {
+        "status": "not-started",
+        "appExists": false,
+        "rulesVerified": false,
+        "platformAdapter": false,
+        "performanceCompliance": false,
+        "uiCompliance": false,
+        "blockersFree": false,
+        "completionPercentage": 0,
+        "notes": "Pending implementation"
+      }
     },
     "shut-the-box": {
-      "status": "passing",
-      "hardTimeMs": 0.005,
-      "timestamp": "2026-04-02T00:45:37.102Z"
+      "web": {
+        "status": "not-started",
+        "appExists": false,
+        "rulesVerified": false,
+        "platformAdapter": false,
+        "performanceCompliance": false,
+        "uiCompliance": false,
+        "blockersFree": false,
+        "completionPercentage": 0,
+        "notes": "Pending implementation"
+      },
+      "meta": {
+        "status": "not-started",
+        "appExists": false,
+        "rulesVerified": false,
+        "platformAdapter": false,
+        "performanceCompliance": false,
+        "uiCompliance": false,
+        "blockersFree": false,
+        "completionPercentage": 0,
+        "notes": "Pending implementation"
+      },
+      "ios": {
+        "status": "not-started",
+        "appExists": false,
+        "rulesVerified": false,
+        "platformAdapter": false,
+        "performanceCompliance": false,
+        "uiCompliance": false,
+        "blockersFree": false,
+        "completionPercentage": 0,
+        "notes": "Pending implementation"
+      },
+      "android": {
+        "status": "not-started",
+        "appExists": false,
+        "rulesVerified": false,
+        "platformAdapter": false,
+        "performanceCompliance": false,
+        "uiCompliance": false,
+        "blockersFree": false,
+        "completionPercentage": 0,
+        "notes": "Pending implementation"
+      },
+      "electron": {
+        "status": "not-started",
+        "appExists": false,
+        "rulesVerified": false,
+        "platformAdapter": false,
+        "performanceCompliance": false,
+        "uiCompliance": false,
+        "blockersFree": false,
+        "completionPercentage": 0,
+        "notes": "Pending implementation"
+      },
+      "itch": {
+        "status": "not-started",
+        "appExists": false,
+        "rulesVerified": false,
+        "platformAdapter": false,
+        "performanceCompliance": false,
+        "uiCompliance": false,
+        "blockersFree": false,
+        "completionPercentage": 0,
+        "notes": "Pending implementation"
+      },
+      "crazygames": {
+        "status": "not-started",
+        "appExists": false,
+        "rulesVerified": false,
+        "platformAdapter": false,
+        "performanceCompliance": false,
+        "uiCompliance": false,
+        "blockersFree": false,
+        "completionPercentage": 0,
+        "notes": "Pending implementation"
+      },
+      "discord": {
+        "status": "not-started",
+        "appExists": false,
+        "rulesVerified": false,
+        "platformAdapter": false,
+        "performanceCompliance": false,
+        "uiCompliance": false,
+        "blockersFree": false,
+        "completionPercentage": 0,
+        "notes": "Pending implementation"
+      },
+      "telegram": {
+        "status": "not-started",
+        "appExists": false,
+        "rulesVerified": false,
+        "platformAdapter": false,
+        "performanceCompliance": false,
+        "uiCompliance": false,
+        "blockersFree": false,
+        "completionPercentage": 0,
+        "notes": "Pending implementation"
+      },
+      "steam": {
+        "status": "not-started",
+        "appExists": false,
+        "rulesVerified": false,
+        "platformAdapter": false,
+        "performanceCompliance": false,
+        "uiCompliance": false,
+        "blockersFree": false,
+        "completionPercentage": 0,
+        "notes": "Pending implementation"
+      }
     },
     "simon-says": {
-      "status": "passing",
-      "hardTimeMs": 0.005,
-      "timestamp": "2026-04-02T00:45:37.102Z"
+      "web": {
+        "status": "not-started",
+        "appExists": false,
+        "rulesVerified": false,
+        "platformAdapter": false,
+        "performanceCompliance": false,
+        "uiCompliance": false,
+        "blockersFree": false,
+        "completionPercentage": 0,
+        "notes": "Pending implementation"
+      },
+      "meta": {
+        "status": "not-started",
+        "appExists": false,
+        "rulesVerified": false,
+        "platformAdapter": false,
+        "performanceCompliance": false,
+        "uiCompliance": false,
+        "blockersFree": false,
+        "completionPercentage": 0,
+        "notes": "Pending implementation"
+      },
+      "ios": {
+        "status": "not-started",
+        "appExists": false,
+        "rulesVerified": false,
+        "platformAdapter": false,
+        "performanceCompliance": false,
+        "uiCompliance": false,
+        "blockersFree": false,
+        "completionPercentage": 0,
+        "notes": "Pending implementation"
+      },
+      "android": {
+        "status": "not-started",
+        "appExists": false,
+        "rulesVerified": false,
+        "platformAdapter": false,
+        "performanceCompliance": false,
+        "uiCompliance": false,
+        "blockersFree": false,
+        "completionPercentage": 0,
+        "notes": "Pending implementation"
+      },
+      "electron": {
+        "status": "not-started",
+        "appExists": false,
+        "rulesVerified": false,
+        "platformAdapter": false,
+        "performanceCompliance": false,
+        "uiCompliance": false,
+        "blockersFree": false,
+        "completionPercentage": 0,
+        "notes": "Pending implementation"
+      },
+      "itch": {
+        "status": "not-started",
+        "appExists": false,
+        "rulesVerified": false,
+        "platformAdapter": false,
+        "performanceCompliance": false,
+        "uiCompliance": false,
+        "blockersFree": false,
+        "completionPercentage": 0,
+        "notes": "Pending implementation"
+      },
+      "crazygames": {
+        "status": "not-started",
+        "appExists": false,
+        "rulesVerified": false,
+        "platformAdapter": false,
+        "performanceCompliance": false,
+        "uiCompliance": false,
+        "blockersFree": false,
+        "completionPercentage": 0,
+        "notes": "Pending implementation"
+      },
+      "discord": {
+        "status": "not-started",
+        "appExists": false,
+        "rulesVerified": false,
+        "platformAdapter": false,
+        "performanceCompliance": false,
+        "uiCompliance": false,
+        "blockersFree": false,
+        "completionPercentage": 0,
+        "notes": "Pending implementation"
+      },
+      "telegram": {
+        "status": "not-started",
+        "appExists": false,
+        "rulesVerified": false,
+        "platformAdapter": false,
+        "performanceCompliance": false,
+        "uiCompliance": false,
+        "blockersFree": false,
+        "completionPercentage": 0,
+        "notes": "Pending implementation"
+      },
+      "steam": {
+        "status": "not-started",
+        "appExists": false,
+        "rulesVerified": false,
+        "platformAdapter": false,
+        "performanceCompliance": false,
+        "uiCompliance": false,
+        "blockersFree": false,
+        "completionPercentage": 0,
+        "notes": "Pending implementation"
+      }
     },
     "snake": {
-      "status": "passing",
-      "hardTimeMs": 0.05,
-      "timestamp": "2026-04-02T00:45:37.102Z"
+      "web": {
+        "status": "not-started",
+        "appExists": false,
+        "rulesVerified": false,
+        "platformAdapter": false,
+        "performanceCompliance": false,
+        "uiCompliance": false,
+        "blockersFree": false,
+        "completionPercentage": 0,
+        "notes": "Pending implementation"
+      },
+      "meta": {
+        "status": "not-started",
+        "appExists": false,
+        "rulesVerified": false,
+        "platformAdapter": false,
+        "performanceCompliance": false,
+        "uiCompliance": false,
+        "blockersFree": false,
+        "completionPercentage": 0,
+        "notes": "Pending implementation"
+      },
+      "ios": {
+        "status": "not-started",
+        "appExists": false,
+        "rulesVerified": false,
+        "platformAdapter": false,
+        "performanceCompliance": false,
+        "uiCompliance": false,
+        "blockersFree": false,
+        "completionPercentage": 0,
+        "notes": "Pending implementation"
+      },
+      "android": {
+        "status": "not-started",
+        "appExists": false,
+        "rulesVerified": false,
+        "platformAdapter": false,
+        "performanceCompliance": false,
+        "uiCompliance": false,
+        "blockersFree": false,
+        "completionPercentage": 0,
+        "notes": "Pending implementation"
+      },
+      "electron": {
+        "status": "not-started",
+        "appExists": false,
+        "rulesVerified": false,
+        "platformAdapter": false,
+        "performanceCompliance": false,
+        "uiCompliance": false,
+        "blockersFree": false,
+        "completionPercentage": 0,
+        "notes": "Pending implementation"
+      },
+      "itch": {
+        "status": "not-started",
+        "appExists": false,
+        "rulesVerified": false,
+        "platformAdapter": false,
+        "performanceCompliance": false,
+        "uiCompliance": false,
+        "blockersFree": false,
+        "completionPercentage": 0,
+        "notes": "Pending implementation"
+      },
+      "crazygames": {
+        "status": "not-started",
+        "appExists": false,
+        "rulesVerified": false,
+        "platformAdapter": false,
+        "performanceCompliance": false,
+        "uiCompliance": false,
+        "blockersFree": false,
+        "completionPercentage": 0,
+        "notes": "Pending implementation"
+      },
+      "discord": {
+        "status": "not-started",
+        "appExists": false,
+        "rulesVerified": false,
+        "platformAdapter": false,
+        "performanceCompliance": false,
+        "uiCompliance": false,
+        "blockersFree": false,
+        "completionPercentage": 0,
+        "notes": "Pending implementation"
+      },
+      "telegram": {
+        "status": "not-started",
+        "appExists": false,
+        "rulesVerified": false,
+        "platformAdapter": false,
+        "performanceCompliance": false,
+        "uiCompliance": false,
+        "blockersFree": false,
+        "completionPercentage": 0,
+        "notes": "Pending implementation"
+      },
+      "steam": {
+        "status": "not-started",
+        "appExists": false,
+        "rulesVerified": false,
+        "platformAdapter": false,
+        "performanceCompliance": false,
+        "uiCompliance": false,
+        "blockersFree": false,
+        "completionPercentage": 0,
+        "notes": "Pending implementation"
+      }
+    },
+    "snakes-and-ladders": {
+      "web": {
+        "status": "not-started",
+        "appExists": false,
+        "rulesVerified": false,
+        "platformAdapter": false,
+        "performanceCompliance": false,
+        "uiCompliance": false,
+        "blockersFree": false,
+        "completionPercentage": 0,
+        "notes": "Pending implementation"
+      },
+      "meta": {
+        "status": "not-started",
+        "appExists": false,
+        "rulesVerified": false,
+        "platformAdapter": false,
+        "performanceCompliance": false,
+        "uiCompliance": false,
+        "blockersFree": false,
+        "completionPercentage": 0,
+        "notes": "Pending implementation"
+      },
+      "ios": {
+        "status": "not-started",
+        "appExists": false,
+        "rulesVerified": false,
+        "platformAdapter": false,
+        "performanceCompliance": false,
+        "uiCompliance": false,
+        "blockersFree": false,
+        "completionPercentage": 0,
+        "notes": "Pending implementation"
+      },
+      "android": {
+        "status": "not-started",
+        "appExists": false,
+        "rulesVerified": false,
+        "platformAdapter": false,
+        "performanceCompliance": false,
+        "uiCompliance": false,
+        "blockersFree": false,
+        "completionPercentage": 0,
+        "notes": "Pending implementation"
+      },
+      "electron": {
+        "status": "not-started",
+        "appExists": false,
+        "rulesVerified": false,
+        "platformAdapter": false,
+        "performanceCompliance": false,
+        "uiCompliance": false,
+        "blockersFree": false,
+        "completionPercentage": 0,
+        "notes": "Pending implementation"
+      },
+      "itch": {
+        "status": "not-started",
+        "appExists": false,
+        "rulesVerified": false,
+        "platformAdapter": false,
+        "performanceCompliance": false,
+        "uiCompliance": false,
+        "blockersFree": false,
+        "completionPercentage": 0,
+        "notes": "Pending implementation"
+      },
+      "crazygames": {
+        "status": "not-started",
+        "appExists": false,
+        "rulesVerified": false,
+        "platformAdapter": false,
+        "performanceCompliance": false,
+        "uiCompliance": false,
+        "blockersFree": false,
+        "completionPercentage": 0,
+        "notes": "Pending implementation"
+      },
+      "discord": {
+        "status": "not-started",
+        "appExists": false,
+        "rulesVerified": false,
+        "platformAdapter": false,
+        "performanceCompliance": false,
+        "uiCompliance": false,
+        "blockersFree": false,
+        "completionPercentage": 0,
+        "notes": "Pending implementation"
+      },
+      "telegram": {
+        "status": "not-started",
+        "appExists": false,
+        "rulesVerified": false,
+        "platformAdapter": false,
+        "performanceCompliance": false,
+        "uiCompliance": false,
+        "blockersFree": false,
+        "completionPercentage": 0,
+        "notes": "Pending implementation"
+      },
+      "steam": {
+        "status": "not-started",
+        "appExists": false,
+        "rulesVerified": false,
+        "platformAdapter": false,
+        "performanceCompliance": false,
+        "uiCompliance": false,
+        "blockersFree": false,
+        "completionPercentage": 0,
+        "notes": "Pending implementation"
+      }
+    },
+    "sudoku": {
+      "web": {
+        "status": "not-started",
+        "appExists": false,
+        "rulesVerified": false,
+        "platformAdapter": false,
+        "performanceCompliance": false,
+        "uiCompliance": false,
+        "blockersFree": false,
+        "completionPercentage": 0,
+        "notes": "Pending implementation"
+      },
+      "meta": {
+        "status": "not-started",
+        "appExists": false,
+        "rulesVerified": false,
+        "platformAdapter": false,
+        "performanceCompliance": false,
+        "uiCompliance": false,
+        "blockersFree": false,
+        "completionPercentage": 0,
+        "notes": "Pending implementation"
+      },
+      "ios": {
+        "status": "not-started",
+        "appExists": false,
+        "rulesVerified": false,
+        "platformAdapter": false,
+        "performanceCompliance": false,
+        "uiCompliance": false,
+        "blockersFree": false,
+        "completionPercentage": 0,
+        "notes": "Pending implementation"
+      },
+      "android": {
+        "status": "not-started",
+        "appExists": false,
+        "rulesVerified": false,
+        "platformAdapter": false,
+        "performanceCompliance": false,
+        "uiCompliance": false,
+        "blockersFree": false,
+        "completionPercentage": 0,
+        "notes": "Pending implementation"
+      },
+      "electron": {
+        "status": "not-started",
+        "appExists": false,
+        "rulesVerified": false,
+        "platformAdapter": false,
+        "performanceCompliance": false,
+        "uiCompliance": false,
+        "blockersFree": false,
+        "completionPercentage": 0,
+        "notes": "Pending implementation"
+      },
+      "itch": {
+        "status": "not-started",
+        "appExists": false,
+        "rulesVerified": false,
+        "platformAdapter": false,
+        "performanceCompliance": false,
+        "uiCompliance": false,
+        "blockersFree": false,
+        "completionPercentage": 0,
+        "notes": "Pending implementation"
+      },
+      "crazygames": {
+        "status": "not-started",
+        "appExists": false,
+        "rulesVerified": false,
+        "platformAdapter": false,
+        "performanceCompliance": false,
+        "uiCompliance": false,
+        "blockersFree": false,
+        "completionPercentage": 0,
+        "notes": "Pending implementation"
+      },
+      "discord": {
+        "status": "not-started",
+        "appExists": false,
+        "rulesVerified": false,
+        "platformAdapter": false,
+        "performanceCompliance": false,
+        "uiCompliance": false,
+        "blockersFree": false,
+        "completionPercentage": 0,
+        "notes": "Pending implementation"
+      },
+      "telegram": {
+        "status": "not-started",
+        "appExists": false,
+        "rulesVerified": false,
+        "platformAdapter": false,
+        "performanceCompliance": false,
+        "uiCompliance": false,
+        "blockersFree": false,
+        "completionPercentage": 0,
+        "notes": "Pending implementation"
+      },
+      "steam": {
+        "status": "not-started",
+        "appExists": false,
+        "rulesVerified": false,
+        "platformAdapter": false,
+        "performanceCompliance": false,
+        "uiCompliance": false,
+        "blockersFree": false,
+        "completionPercentage": 0,
+        "notes": "Pending implementation"
+      }
+    },
+    "tango": {
+      "web": {
+        "status": "not-started",
+        "appExists": false,
+        "rulesVerified": false,
+        "platformAdapter": false,
+        "performanceCompliance": false,
+        "uiCompliance": false,
+        "blockersFree": false,
+        "completionPercentage": 0,
+        "notes": "Pending implementation"
+      },
+      "meta": {
+        "status": "not-started",
+        "appExists": false,
+        "rulesVerified": false,
+        "platformAdapter": false,
+        "performanceCompliance": false,
+        "uiCompliance": false,
+        "blockersFree": false,
+        "completionPercentage": 0,
+        "notes": "Pending implementation"
+      },
+      "ios": {
+        "status": "not-started",
+        "appExists": false,
+        "rulesVerified": false,
+        "platformAdapter": false,
+        "performanceCompliance": false,
+        "uiCompliance": false,
+        "blockersFree": false,
+        "completionPercentage": 0,
+        "notes": "Pending implementation"
+      },
+      "android": {
+        "status": "not-started",
+        "appExists": false,
+        "rulesVerified": false,
+        "platformAdapter": false,
+        "performanceCompliance": false,
+        "uiCompliance": false,
+        "blockersFree": false,
+        "completionPercentage": 0,
+        "notes": "Pending implementation"
+      },
+      "electron": {
+        "status": "not-started",
+        "appExists": false,
+        "rulesVerified": false,
+        "platformAdapter": false,
+        "performanceCompliance": false,
+        "uiCompliance": false,
+        "blockersFree": false,
+        "completionPercentage": 0,
+        "notes": "Pending implementation"
+      },
+      "itch": {
+        "status": "not-started",
+        "appExists": false,
+        "rulesVerified": false,
+        "platformAdapter": false,
+        "performanceCompliance": false,
+        "uiCompliance": false,
+        "blockersFree": false,
+        "completionPercentage": 0,
+        "notes": "Pending implementation"
+      },
+      "crazygames": {
+        "status": "not-started",
+        "appExists": false,
+        "rulesVerified": false,
+        "platformAdapter": false,
+        "performanceCompliance": false,
+        "uiCompliance": false,
+        "blockersFree": false,
+        "completionPercentage": 0,
+        "notes": "Pending implementation"
+      },
+      "discord": {
+        "status": "not-started",
+        "appExists": false,
+        "rulesVerified": false,
+        "platformAdapter": false,
+        "performanceCompliance": false,
+        "uiCompliance": false,
+        "blockersFree": false,
+        "completionPercentage": 0,
+        "notes": "Pending implementation"
+      },
+      "telegram": {
+        "status": "not-started",
+        "appExists": false,
+        "rulesVerified": false,
+        "platformAdapter": false,
+        "performanceCompliance": false,
+        "uiCompliance": false,
+        "blockersFree": false,
+        "completionPercentage": 0,
+        "notes": "Pending implementation"
+      },
+      "steam": {
+        "status": "not-started",
+        "appExists": false,
+        "rulesVerified": false,
+        "platformAdapter": false,
+        "performanceCompliance": false,
+        "uiCompliance": false,
+        "blockersFree": false,
+        "completionPercentage": 0,
+        "notes": "Pending implementation"
+      }
     },
     "tictactoe": {
-      "status": "passing",
-      "hardTimeMs": 0.15,
-      "timestamp": "2026-04-02T00:45:37.102Z"
+      "web": {
+        "status": "not-started",
+        "appExists": false,
+        "rulesVerified": false,
+        "platformAdapter": false,
+        "performanceCompliance": false,
+        "uiCompliance": false,
+        "blockersFree": false,
+        "completionPercentage": 0,
+        "notes": "Pending implementation"
+      },
+      "meta": {
+        "status": "not-started",
+        "appExists": false,
+        "rulesVerified": false,
+        "platformAdapter": false,
+        "performanceCompliance": false,
+        "uiCompliance": false,
+        "blockersFree": false,
+        "completionPercentage": 0,
+        "notes": "Pending implementation"
+      },
+      "ios": {
+        "status": "not-started",
+        "appExists": false,
+        "rulesVerified": false,
+        "platformAdapter": false,
+        "performanceCompliance": false,
+        "uiCompliance": false,
+        "blockersFree": false,
+        "completionPercentage": 0,
+        "notes": "Pending implementation"
+      },
+      "android": {
+        "status": "not-started",
+        "appExists": false,
+        "rulesVerified": false,
+        "platformAdapter": false,
+        "performanceCompliance": false,
+        "uiCompliance": false,
+        "blockersFree": false,
+        "completionPercentage": 0,
+        "notes": "Pending implementation"
+      },
+      "electron": {
+        "status": "not-started",
+        "appExists": false,
+        "rulesVerified": false,
+        "platformAdapter": false,
+        "performanceCompliance": false,
+        "uiCompliance": false,
+        "blockersFree": false,
+        "completionPercentage": 0,
+        "notes": "Pending implementation"
+      },
+      "itch": {
+        "status": "not-started",
+        "appExists": false,
+        "rulesVerified": false,
+        "platformAdapter": false,
+        "performanceCompliance": false,
+        "uiCompliance": false,
+        "blockersFree": false,
+        "completionPercentage": 0,
+        "notes": "Pending implementation"
+      },
+      "crazygames": {
+        "status": "not-started",
+        "appExists": false,
+        "rulesVerified": false,
+        "platformAdapter": false,
+        "performanceCompliance": false,
+        "uiCompliance": false,
+        "blockersFree": false,
+        "completionPercentage": 0,
+        "notes": "Pending implementation"
+      },
+      "discord": {
+        "status": "not-started",
+        "appExists": false,
+        "rulesVerified": false,
+        "platformAdapter": false,
+        "performanceCompliance": false,
+        "uiCompliance": false,
+        "blockersFree": false,
+        "completionPercentage": 0,
+        "notes": "Pending implementation"
+      },
+      "telegram": {
+        "status": "not-started",
+        "appExists": false,
+        "rulesVerified": false,
+        "platformAdapter": false,
+        "performanceCompliance": false,
+        "uiCompliance": false,
+        "blockersFree": false,
+        "completionPercentage": 0,
+        "notes": "Pending implementation"
+      },
+      "steam": {
+        "status": "not-started",
+        "appExists": false,
+        "rulesVerified": false,
+        "platformAdapter": false,
+        "performanceCompliance": false,
+        "uiCompliance": false,
+        "blockersFree": false,
+        "completionPercentage": 0,
+        "notes": "Pending implementation"
+      }
+    },
+    "ui": {
+      "web": {
+        "status": "not-started",
+        "appExists": false,
+        "rulesVerified": false,
+        "platformAdapter": false,
+        "performanceCompliance": false,
+        "uiCompliance": false,
+        "blockersFree": false,
+        "completionPercentage": 0,
+        "notes": "Pending implementation"
+      },
+      "meta": {
+        "status": "not-started",
+        "appExists": false,
+        "rulesVerified": false,
+        "platformAdapter": false,
+        "performanceCompliance": false,
+        "uiCompliance": false,
+        "blockersFree": false,
+        "completionPercentage": 0,
+        "notes": "Pending implementation"
+      },
+      "ios": {
+        "status": "not-started",
+        "appExists": false,
+        "rulesVerified": false,
+        "platformAdapter": false,
+        "performanceCompliance": false,
+        "uiCompliance": false,
+        "blockersFree": false,
+        "completionPercentage": 0,
+        "notes": "Pending implementation"
+      },
+      "android": {
+        "status": "not-started",
+        "appExists": false,
+        "rulesVerified": false,
+        "platformAdapter": false,
+        "performanceCompliance": false,
+        "uiCompliance": false,
+        "blockersFree": false,
+        "completionPercentage": 0,
+        "notes": "Pending implementation"
+      },
+      "electron": {
+        "status": "not-started",
+        "appExists": false,
+        "rulesVerified": false,
+        "platformAdapter": false,
+        "performanceCompliance": false,
+        "uiCompliance": false,
+        "blockersFree": false,
+        "completionPercentage": 0,
+        "notes": "Pending implementation"
+      },
+      "itch": {
+        "status": "not-started",
+        "appExists": false,
+        "rulesVerified": false,
+        "platformAdapter": false,
+        "performanceCompliance": false,
+        "uiCompliance": false,
+        "blockersFree": false,
+        "completionPercentage": 0,
+        "notes": "Pending implementation"
+      },
+      "crazygames": {
+        "status": "not-started",
+        "appExists": false,
+        "rulesVerified": false,
+        "platformAdapter": false,
+        "performanceCompliance": false,
+        "uiCompliance": false,
+        "blockersFree": false,
+        "completionPercentage": 0,
+        "notes": "Pending implementation"
+      },
+      "discord": {
+        "status": "not-started",
+        "appExists": false,
+        "rulesVerified": false,
+        "platformAdapter": false,
+        "performanceCompliance": false,
+        "uiCompliance": false,
+        "blockersFree": false,
+        "completionPercentage": 0,
+        "notes": "Pending implementation"
+      },
+      "telegram": {
+        "status": "not-started",
+        "appExists": false,
+        "rulesVerified": false,
+        "platformAdapter": false,
+        "performanceCompliance": false,
+        "uiCompliance": false,
+        "blockersFree": false,
+        "completionPercentage": 0,
+        "notes": "Pending implementation"
+      },
+      "steam": {
+        "status": "not-started",
+        "appExists": false,
+        "rulesVerified": false,
+        "platformAdapter": false,
+        "performanceCompliance": false,
+        "uiCompliance": false,
+        "blockersFree": false,
+        "completionPercentage": 0,
+        "notes": "Pending implementation"
+      }
+    },
+    "war": {
+      "web": {
+        "status": "not-started",
+        "appExists": false,
+        "rulesVerified": false,
+        "platformAdapter": false,
+        "performanceCompliance": false,
+        "uiCompliance": false,
+        "blockersFree": false,
+        "completionPercentage": 0,
+        "notes": "Pending implementation"
+      },
+      "meta": {
+        "status": "not-started",
+        "appExists": false,
+        "rulesVerified": false,
+        "platformAdapter": false,
+        "performanceCompliance": false,
+        "uiCompliance": false,
+        "blockersFree": false,
+        "completionPercentage": 0,
+        "notes": "Pending implementation"
+      },
+      "ios": {
+        "status": "not-started",
+        "appExists": false,
+        "rulesVerified": false,
+        "platformAdapter": false,
+        "performanceCompliance": false,
+        "uiCompliance": false,
+        "blockersFree": false,
+        "completionPercentage": 0,
+        "notes": "Pending implementation"
+      },
+      "android": {
+        "status": "not-started",
+        "appExists": false,
+        "rulesVerified": false,
+        "platformAdapter": false,
+        "performanceCompliance": false,
+        "uiCompliance": false,
+        "blockersFree": false,
+        "completionPercentage": 0,
+        "notes": "Pending implementation"
+      },
+      "electron": {
+        "status": "not-started",
+        "appExists": false,
+        "rulesVerified": false,
+        "platformAdapter": false,
+        "performanceCompliance": false,
+        "uiCompliance": false,
+        "blockersFree": false,
+        "completionPercentage": 0,
+        "notes": "Pending implementation"
+      },
+      "itch": {
+        "status": "not-started",
+        "appExists": false,
+        "rulesVerified": false,
+        "platformAdapter": false,
+        "performanceCompliance": false,
+        "uiCompliance": false,
+        "blockersFree": false,
+        "completionPercentage": 0,
+        "notes": "Pending implementation"
+      },
+      "crazygames": {
+        "status": "not-started",
+        "appExists": false,
+        "rulesVerified": false,
+        "platformAdapter": false,
+        "performanceCompliance": false,
+        "uiCompliance": false,
+        "blockersFree": false,
+        "completionPercentage": 0,
+        "notes": "Pending implementation"
+      },
+      "discord": {
+        "status": "not-started",
+        "appExists": false,
+        "rulesVerified": false,
+        "platformAdapter": false,
+        "performanceCompliance": false,
+        "uiCompliance": false,
+        "blockersFree": false,
+        "completionPercentage": 0,
+        "notes": "Pending implementation"
+      },
+      "telegram": {
+        "status": "not-started",
+        "appExists": false,
+        "rulesVerified": false,
+        "platformAdapter": false,
+        "performanceCompliance": false,
+        "uiCompliance": false,
+        "blockersFree": false,
+        "completionPercentage": 0,
+        "notes": "Pending implementation"
+      },
+      "steam": {
+        "status": "not-started",
+        "appExists": false,
+        "rulesVerified": false,
+        "platformAdapter": false,
+        "performanceCompliance": false,
+        "uiCompliance": false,
+        "blockersFree": false,
+        "completionPercentage": 0,
+        "notes": "Pending implementation"
+      }
+    },
+    "zip": {
+      "web": {
+        "status": "not-started",
+        "appExists": false,
+        "rulesVerified": false,
+        "platformAdapter": false,
+        "performanceCompliance": false,
+        "uiCompliance": false,
+        "blockersFree": false,
+        "completionPercentage": 0,
+        "notes": "Pending implementation"
+      },
+      "meta": {
+        "status": "not-started",
+        "appExists": false,
+        "rulesVerified": false,
+        "platformAdapter": false,
+        "performanceCompliance": false,
+        "uiCompliance": false,
+        "blockersFree": false,
+        "completionPercentage": 0,
+        "notes": "Pending implementation"
+      },
+      "ios": {
+        "status": "not-started",
+        "appExists": false,
+        "rulesVerified": false,
+        "platformAdapter": false,
+        "performanceCompliance": false,
+        "uiCompliance": false,
+        "blockersFree": false,
+        "completionPercentage": 0,
+        "notes": "Pending implementation"
+      },
+      "android": {
+        "status": "not-started",
+        "appExists": false,
+        "rulesVerified": false,
+        "platformAdapter": false,
+        "performanceCompliance": false,
+        "uiCompliance": false,
+        "blockersFree": false,
+        "completionPercentage": 0,
+        "notes": "Pending implementation"
+      },
+      "electron": {
+        "status": "not-started",
+        "appExists": false,
+        "rulesVerified": false,
+        "platformAdapter": false,
+        "performanceCompliance": false,
+        "uiCompliance": false,
+        "blockersFree": false,
+        "completionPercentage": 0,
+        "notes": "Pending implementation"
+      },
+      "itch": {
+        "status": "not-started",
+        "appExists": false,
+        "rulesVerified": false,
+        "platformAdapter": false,
+        "performanceCompliance": false,
+        "uiCompliance": false,
+        "blockersFree": false,
+        "completionPercentage": 0,
+        "notes": "Pending implementation"
+      },
+      "crazygames": {
+        "status": "not-started",
+        "appExists": false,
+        "rulesVerified": false,
+        "platformAdapter": false,
+        "performanceCompliance": false,
+        "uiCompliance": false,
+        "blockersFree": false,
+        "completionPercentage": 0,
+        "notes": "Pending implementation"
+      },
+      "discord": {
+        "status": "not-started",
+        "appExists": false,
+        "rulesVerified": false,
+        "platformAdapter": false,
+        "performanceCompliance": false,
+        "uiCompliance": false,
+        "blockersFree": false,
+        "completionPercentage": 0,
+        "notes": "Pending implementation"
+      },
+      "telegram": {
+        "status": "not-started",
+        "appExists": false,
+        "rulesVerified": false,
+        "platformAdapter": false,
+        "performanceCompliance": false,
+        "uiCompliance": false,
+        "blockersFree": false,
+        "completionPercentage": 0,
+        "notes": "Pending implementation"
+      },
+      "steam": {
+        "status": "not-started",
+        "appExists": false,
+        "rulesVerified": false,
+        "platformAdapter": false,
+        "performanceCompliance": false,
+        "uiCompliance": false,
+        "blockersFree": false,
+        "completionPercentage": 0,
+        "notes": "Pending implementation"
+      }
+    }
+  },
+  "compliance": {
+    "metadata": {
+      "version": "1.0.0",
+      "generatedAt": "2026-04-03T03:17:13.177Z",
+      "description": "Quality and compliance metrics for all 25 game apps",
+      "totalGames": 32,
+      "overallStatus": {
+        "green": 1,
+        "amber": 7,
+        "red": 24,
+        "completionPercentage": 3
+      }
+    },
+    "games": {
+      "battleship": {
+        "buildStatus": "green",
+        "testStatus": "red",
+        "keyboardNavigation": "green",
+        "accessibility": "green",
+        "sharedSystems": "green",
+        "responsiveDesign": "green",
+        "featureCompleteness": "green",
+        "overallStatus": "red",
+        "completionPercentage": 100,
+        "lastScanned": "2026-04-03T03:17:17.495Z"
+      },
+      "bunco": {
+        "buildStatus": "green",
+        "testStatus": "red",
+        "keyboardNavigation": "green",
+        "accessibility": "green",
+        "sharedSystems": "green",
+        "responsiveDesign": "green",
+        "featureCompleteness": "green",
+        "overallStatus": "red",
+        "completionPercentage": 100,
+        "lastScanned": "2026-04-03T03:17:22.145Z"
+      },
+      "cee-lo": {
+        "buildStatus": "green",
+        "testStatus": "red",
+        "keyboardNavigation": "green",
+        "accessibility": "green",
+        "sharedSystems": "green",
+        "responsiveDesign": "green",
+        "featureCompleteness": "green",
+        "overallStatus": "red",
+        "completionPercentage": 100,
+        "lastScanned": "2026-04-03T03:17:26.438Z"
+      },
+      "checkers": {
+        "buildStatus": "red",
+        "testStatus": "amber",
+        "keyboardNavigation": "green",
+        "accessibility": "green",
+        "sharedSystems": "green",
+        "responsiveDesign": "green",
+        "featureCompleteness": "green",
+        "overallStatus": "red",
+        "completionPercentage": 83.33333333333334,
+        "lastScanned": "2026-04-03T03:17:32.111Z"
+      },
+      "chicago": {
+        "buildStatus": "green",
+        "testStatus": "red",
+        "keyboardNavigation": "green",
+        "accessibility": "green",
+        "sharedSystems": "green",
+        "responsiveDesign": "green",
+        "featureCompleteness": "green",
+        "overallStatus": "red",
+        "completionPercentage": 100,
+        "lastScanned": "2026-04-03T03:17:36.909Z"
+      },
+      "cho-han": {
+        "buildStatus": "green",
+        "testStatus": "red",
+        "keyboardNavigation": "green",
+        "accessibility": "green",
+        "sharedSystems": "green",
+        "responsiveDesign": "green",
+        "featureCompleteness": "green",
+        "overallStatus": "red",
+        "completionPercentage": 100,
+        "lastScanned": "2026-04-03T03:17:42.303Z"
+      },
+      "connect-four": {
+        "buildStatus": "green",
+        "testStatus": "amber",
+        "keyboardNavigation": "green",
+        "accessibility": "green",
+        "sharedSystems": "green",
+        "responsiveDesign": "green",
+        "featureCompleteness": "green",
+        "overallStatus": "amber",
+        "completionPercentage": 100,
+        "lastScanned": "2026-04-03T03:17:47.210Z"
+      },
+      "crossclimb": {
+        "buildStatus": "red",
+        "testStatus": "amber",
+        "keyboardNavigation": "amber",
+        "accessibility": "green",
+        "sharedSystems": "red",
+        "responsiveDesign": "green",
+        "featureCompleteness": "green",
+        "overallStatus": "red",
+        "completionPercentage": 50,
+        "lastScanned": "2026-04-03T03:17:51.900Z"
+      },
+      "farkle": {
+        "buildStatus": "green",
+        "testStatus": "red",
+        "keyboardNavigation": "green",
+        "accessibility": "green",
+        "sharedSystems": "green",
+        "responsiveDesign": "green",
+        "featureCompleteness": "green",
+        "overallStatus": "red",
+        "completionPercentage": 100,
+        "lastScanned": "2026-04-03T03:17:57.198Z"
+      },
+      "hangman": {
+        "buildStatus": "green",
+        "testStatus": "red",
+        "keyboardNavigation": "green",
+        "accessibility": "green",
+        "sharedSystems": "green",
+        "responsiveDesign": "green",
+        "featureCompleteness": "green",
+        "overallStatus": "red",
+        "completionPercentage": 100,
+        "lastScanned": "2026-04-03T03:18:02.753Z"
+      },
+      "liars-dice": {
+        "buildStatus": "green",
+        "testStatus": "red",
+        "keyboardNavigation": "green",
+        "accessibility": "green",
+        "sharedSystems": "green",
+        "responsiveDesign": "green",
+        "featureCompleteness": "green",
+        "overallStatus": "red",
+        "completionPercentage": 100,
+        "lastScanned": "2026-04-03T03:18:07.287Z"
+      },
+      "lights-out": {
+        "buildStatus": "green",
+        "testStatus": "red",
+        "keyboardNavigation": "green",
+        "accessibility": "green",
+        "sharedSystems": "green",
+        "responsiveDesign": "green",
+        "featureCompleteness": "green",
+        "overallStatus": "red",
+        "completionPercentage": 100,
+        "lastScanned": "2026-04-03T03:18:18.423Z"
+      },
+      "mancala": {
+        "buildStatus": "green",
+        "testStatus": "amber",
+        "keyboardNavigation": "amber",
+        "accessibility": "green",
+        "sharedSystems": "green",
+        "responsiveDesign": "green",
+        "featureCompleteness": "green",
+        "overallStatus": "amber",
+        "completionPercentage": 83.33333333333334,
+        "lastScanned": "2026-04-03T03:18:23.924Z"
+      },
+      "memory-game": {
+        "buildStatus": "green",
+        "testStatus": "red",
+        "keyboardNavigation": "green",
+        "accessibility": "green",
+        "sharedSystems": "green",
+        "responsiveDesign": "green",
+        "featureCompleteness": "green",
+        "overallStatus": "red",
+        "completionPercentage": 100,
+        "lastScanned": "2026-04-03T03:18:28.221Z"
+      },
+      "mexico": {
+        "buildStatus": "green",
+        "testStatus": "red",
+        "keyboardNavigation": "green",
+        "accessibility": "green",
+        "sharedSystems": "green",
+        "responsiveDesign": "green",
+        "featureCompleteness": "green",
+        "overallStatus": "red",
+        "completionPercentage": 100,
+        "lastScanned": "2026-04-03T03:18:32.770Z"
+      },
+      "minesweeper": {
+        "buildStatus": "green",
+        "testStatus": "green",
+        "keyboardNavigation": "green",
+        "accessibility": "green",
+        "sharedSystems": "green",
+        "responsiveDesign": "green",
+        "featureCompleteness": "green",
+        "overallStatus": "green",
+        "completionPercentage": 133.33333333333331,
+        "lastScanned": "2026-04-03T03:18:40.483Z"
+      },
+      "mini-sudoku": {
+        "buildStatus": "green",
+        "testStatus": "amber",
+        "keyboardNavigation": "amber",
+        "accessibility": "amber",
+        "sharedSystems": "green",
+        "responsiveDesign": "green",
+        "featureCompleteness": "green",
+        "overallStatus": "amber",
+        "completionPercentage": 66.66666666666666,
+        "lastScanned": "2026-04-03T03:18:45.548Z"
+      },
+      "monchola": {
+        "buildStatus": "green",
+        "testStatus": "red",
+        "keyboardNavigation": "green",
+        "accessibility": "amber",
+        "sharedSystems": "green",
+        "responsiveDesign": "amber",
+        "featureCompleteness": "green",
+        "overallStatus": "red",
+        "completionPercentage": 66.66666666666666,
+        "lastScanned": "2026-04-03T03:18:49.560Z"
+      },
+      "nim": {
+        "buildStatus": "green",
+        "testStatus": "amber",
+        "keyboardNavigation": "green",
+        "accessibility": "green",
+        "sharedSystems": "green",
+        "responsiveDesign": "green",
+        "featureCompleteness": "green",
+        "overallStatus": "amber",
+        "completionPercentage": 100,
+        "lastScanned": "2026-04-03T03:18:56.112Z"
+      },
+      "pig": {
+        "buildStatus": "green",
+        "testStatus": "red",
+        "keyboardNavigation": "green",
+        "accessibility": "green",
+        "sharedSystems": "green",
+        "responsiveDesign": "green",
+        "featureCompleteness": "green",
+        "overallStatus": "red",
+        "completionPercentage": 100,
+        "lastScanned": "2026-04-03T03:18:59.877Z"
+      },
+      "pinpoint": {
+        "buildStatus": "red",
+        "testStatus": "red",
+        "keyboardNavigation": "green",
+        "accessibility": "green",
+        "sharedSystems": "red",
+        "responsiveDesign": "green",
+        "featureCompleteness": "green",
+        "overallStatus": "red",
+        "completionPercentage": 66.66666666666666,
+        "lastScanned": "2026-04-03T03:19:03.395Z"
+      },
+      "queens": {
+        "buildStatus": "red",
+        "testStatus": "amber",
+        "keyboardNavigation": "amber",
+        "accessibility": "green",
+        "sharedSystems": "red",
+        "responsiveDesign": "green",
+        "featureCompleteness": "green",
+        "overallStatus": "red",
+        "completionPercentage": 50,
+        "lastScanned": "2026-04-03T03:19:07.378Z"
+      },
+      "reversi": {
+        "buildStatus": "green",
+        "testStatus": "red",
+        "keyboardNavigation": "green",
+        "accessibility": "green",
+        "sharedSystems": "green",
+        "responsiveDesign": "green",
+        "featureCompleteness": "green",
+        "overallStatus": "red",
+        "completionPercentage": 100,
+        "lastScanned": "2026-04-03T03:19:11.400Z"
+      },
+      "rock-paper-scissors": {
+        "buildStatus": "green",
+        "testStatus": "red",
+        "keyboardNavigation": "green",
+        "accessibility": "green",
+        "sharedSystems": "green",
+        "responsiveDesign": "green",
+        "featureCompleteness": "green",
+        "overallStatus": "red",
+        "completionPercentage": 100,
+        "lastScanned": "2026-04-03T03:19:16.767Z"
+      },
+      "ship-captain-crew": {
+        "buildStatus": "green",
+        "testStatus": "red",
+        "keyboardNavigation": "green",
+        "accessibility": "green",
+        "sharedSystems": "green",
+        "responsiveDesign": "green",
+        "featureCompleteness": "green",
+        "overallStatus": "red",
+        "completionPercentage": 100,
+        "lastScanned": "2026-04-03T03:19:23.054Z"
+      },
+      "shut-the-box": {
+        "buildStatus": "green",
+        "testStatus": "red",
+        "keyboardNavigation": "green",
+        "accessibility": "green",
+        "sharedSystems": "green",
+        "responsiveDesign": "green",
+        "featureCompleteness": "green",
+        "overallStatus": "red",
+        "completionPercentage": 100,
+        "lastScanned": "2026-04-03T03:19:29.553Z"
+      },
+      "simon-says": {
+        "buildStatus": "green",
+        "testStatus": "red",
+        "keyboardNavigation": "green",
+        "accessibility": "green",
+        "sharedSystems": "green",
+        "responsiveDesign": "green",
+        "featureCompleteness": "green",
+        "overallStatus": "red",
+        "completionPercentage": 100,
+        "lastScanned": "2026-04-03T03:19:34.784Z"
+      },
+      "snake": {
+        "buildStatus": "green",
+        "testStatus": "amber",
+        "keyboardNavigation": "green",
+        "accessibility": "green",
+        "sharedSystems": "green",
+        "responsiveDesign": "green",
+        "featureCompleteness": "green",
+        "overallStatus": "amber",
+        "completionPercentage": 100,
+        "lastScanned": "2026-04-03T03:19:41.449Z"
+      },
+      "sudoku": {
+        "buildStatus": "green",
+        "testStatus": "amber",
+        "keyboardNavigation": "green",
+        "accessibility": "green",
+        "sharedSystems": "green",
+        "responsiveDesign": "green",
+        "featureCompleteness": "green",
+        "overallStatus": "amber",
+        "completionPercentage": 100,
+        "lastScanned": "2026-04-03T03:19:45.904Z"
+      },
+      "tango": {
+        "buildStatus": "red",
+        "testStatus": "amber",
+        "keyboardNavigation": "green",
+        "accessibility": "green",
+        "sharedSystems": "red",
+        "responsiveDesign": "green",
+        "featureCompleteness": "green",
+        "overallStatus": "red",
+        "completionPercentage": 66.66666666666666,
+        "lastScanned": "2026-04-03T03:19:49.682Z"
+      },
+      "tictactoe": {
+        "buildStatus": "green",
+        "testStatus": "amber",
+        "keyboardNavigation": "green",
+        "accessibility": "green",
+        "sharedSystems": "green",
+        "responsiveDesign": "green",
+        "featureCompleteness": "green",
+        "overallStatus": "amber",
+        "completionPercentage": 100,
+        "lastScanned": "2026-04-03T03:19:56.170Z"
+      },
+      "zip": {
+        "buildStatus": "green",
+        "testStatus": "amber",
+        "keyboardNavigation": "green",
+        "accessibility": "green",
+        "sharedSystems": "red",
+        "responsiveDesign": "green",
+        "featureCompleteness": "green",
+        "overallStatus": "red",
+        "completionPercentage": 83.33333333333334,
+        "lastScanned": "2026-04-03T03:20:00.202Z"
+      }
     }
   }
 }

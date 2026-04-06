@@ -1,0 +1,47 @@
+
+╔════════════════════════════════════════════════════════════════╗
+║         GAME PLATFORM APP STATUS REPORT                        ║
+║         Generated: 2026-04-05                              ║
+╚════════════════════════════════════════════════════════════════╝
+
+📊 DISTRIBUTION BY TIER
+════════════════════════════════════════════════════════════
+  Template:               1 apps   10%
+  Web-Complete:          9 apps   90%
+  Platform-Complete:     0 apps    0%
+  Production-Ready:      0 apps    0%
+
+🔒 SECURITY BASELINE
+════════════════════════════════════════════════════════════
+  Average Score:         27/100
+  Critical Issues:      10 ⚠️ URGENT
+  
+  Module Adoption:
+    • Input Validators:   0%
+    • HTML Sanitizers:    0%
+    • Env Config:         0%
+    • API Client:         0%
+    • Logger:             0%
+
+🧪 TESTING COVERAGE
+════════════════════════════════════════════════════════════
+  Apps with Tests:      2/10  20%
+  With setup.ts:        10/10  100%
+  With Security Tests:  0/10  0%
+  With E2E Tests:       0/10  0%
+
+✨ PROMOTION READINESS
+════════════════════════════════════════════════════════════
+  Ready for Promotion:  0/10  0%
+  By Tier:
+    • Web-Complete →
+      Platform-Complete: 0 apps ready
+    • Platform-Complete →
+      Production-Ready:  0 apps ready
+
+
+
+
+💾 Data source: /mnt/c/Users/scott/game-platform/compliance/app-status.json
+🔄 To refresh: node scripts/audit-app-status.mjs
+
