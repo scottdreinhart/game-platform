@@ -1,0 +1,624 @@
+{
+  "metadata": {
+    "version": "1.0.0",
+    "lastUpdated": "2026-03-19",
+    "source": "Wikipedia Game Rules Ingestion",
+    "totalGames": 5,
+    "categories": [
+      "grid-based",
+      "information-hiding",
+      "tile-based",
+      "dice-games",
+      "card-games",
+      "strategy"
+    ]
+  },
+  "games": [
+    {
+      "id": "tictactoe",
+      "name": "Tic-Tac-Toe",
+      "aliases": ["Noughts and Crosses", "X's and O's"],
+      "category": "grid-based",
+      "description": "Two players mark spaces on a 3x3 grid, trying to get three in a row",
+      "players": {
+        "min": 2,
+        "max": 2,
+        "ideal": 2
+      },
+      "gameLength": {
+        "min": 1,
+        "max": 10,
+        "average": 5,
+        "unit": "minutes"
+      },
+      "ageRange": "4+",
+      "boardSize": "3x3",
+      "setupTime": "Minimal (< 1 minute)",
+      "difficulty": ["easy", "medium", "hard"],
+      "coreRules": {
+        "objective": "Get three of your marks in a row (horizontal, vertical, or diagonal)",
+        "turns": "Players alternate placing X or O on empty squares",
+        "winCondition": "Three in a row wins immediately",
+        "drawCondition": "Board fills with no winner"
+      },
+      "gameFlow": [
+        "Player 1 (X) places mark",
+        "Player 2 (O) places mark",
+        "Repeat until win or draw",
+        "Check win conditions after each move"
+      ],
+      "winConditions": [
+        "Top row: cells [0,1,2]",
+        "Middle row: cells [3,4,5]",
+        "Bottom row: cells [6,7,8]",
+        "Left column: cells [0,3,6]",
+        "Middle column: cells [1,4,7]",
+        "Right column: cells [2,5,8]",
+        "Diagonal (top-left): cells [0,4,8]",
+        "Diagonal (top-right): cells [2,4,6]"
+      ],
+      "boardStates": {
+        "cellCount": 9,
+        "statesPerCell": 3,
+        "possibleConfigurations": 5478
+      },
+      "variants": [
+        {
+          "name": "4x4 Variant",
+          "boardSize": "4x4",
+          "winCondition": "Four in a row",
+          "complexity": "medium"
+        },
+        {
+          "name": "5x5 Variant",
+          "boardSize": "5x5",
+          "winCondition": "Five in a row (Gomoku)",
+          "complexity": "hard"
+        },
+        {
+          "name": "3D Tic-Tac-Toe",
+          "boardSize": "4x4x4",
+          "winCondition": "Four in a line (any direction)",
+          "complexity": "very-hard"
+        },
+        {
+          "name": "Quantum Tic-Tac-Toe",
+          "boardSize": "3x3",
+          "complexity": "expert",
+          "specialMechanics": "Multiple quantum states per cell"
+        }
+      ],
+      "aiDifficulty": [
+        {
+          "level": "easy",
+          "description": "Random valid move selection"
+        },
+        {
+          "level": "medium",
+          "description": "Basic strategy: win if possible, block opponent"
+        },
+        {
+          "level": "hard",
+          "description": "Minimax algorithm, perfect play"
+        }
+      ],
+      "platforms": ["web", "electron", "capacitor"],
+      "responsiveSupport": "Full (5-tier)",
+      "accessibilityLevel": "WCAG 2.1 AA"
+    },
+    {
+      "id": "minesweeper",
+      "name": "Minesweeper",
+      "category": "information-hiding",
+      "description": "Single-player puzzle: reveal all non-mine cells without hitting any mines",
+      "players": {
+        "min": 1,
+        "max": 1,
+        "ideal": 1
+      },
+      "gameLength": {
+        "min": 1,
+        "max": 30,
+        "average": 10,
+        "unit": "minutes"
+      },
+      "ageRange": "6+",
+      "difficulty": ["beginner", "intermediate", "expert", "custom"],
+      "difficultyLevels": [
+        {
+          "name": "Beginner",
+          "boardSize": "8x8",
+          "mineCount": 10,
+          "totalCells": 64,
+          "minePercentage": "15.6%"
+        },
+        {
+          "name": "Intermediate",
+          "boardSize": "16x16",
+          "mineCount": 40,
+          "totalCells": 256,
+          "minePercentage": "15.6%"
+        },
+        {
+          "name": "Expert",
+          "boardSize": "30x16",
+          "mineCount": 99,
+          "totalCells": 480,
+          "minePercentage": "20.6%"
+        }
+      ],
+      "coreRules": {
+        "objective": "Reveal all non-mine cells without hitting any mines",
+        "cellStates": ["unopened", "opened", "flagged"],
+        "openCell": "Displays number (0-8) of adjacent mines or blank (0)",
+        "blankCell": "Auto-expands all adjacent non-mined cells",
+        "flagging": "Marks suspected mine locations",
+        "gameEnd": {
+          "win": "All non-mines revealed",
+          "loss": "Mine clicked"
+        }
+      },
+      "advancedMechanics": {
+        "chording": "When flagged mines = adjacent mines, auto-open surrounding cells",
+        "firstClickGuarantee": "First click safe + adjacent cells safe (in some variants)",
+        "minecount": "Total mines - flagged cells (can be negative)"
+      },
+      "computationalProperties": {
+        "npComplete": true,
+        "npCompleteReference": "Kaye, 2000",
+        "phaseTransition": "25% mine density threshold",
+        "infiniteVersion": "Turing-complete"
+      },
+      "variants": [
+        {
+          "name": "Hexagonal Grid",
+          "boardShape": "hexagonal",
+          "adjacencyCount": 6
+        },
+        {
+          "name": "Triangular Tiles",
+          "boardShape": "triangular",
+          "adjacencyCount": 3
+        },
+        {
+          "name": "3D Minesweeper",
+          "dimensions": 3,
+          "complexity": "expert"
+        },
+        {
+          "name": "Multiple Mines Per Cell",
+          "mines": "1-4 per cell",
+          "complexity": "expert"
+        },
+        {
+          "name": "Logic Puzzle Variant",
+          "format": "paper-based",
+          "preRevealed": "Some cells pre-revealed",
+          "noPicking": "Mark mines, don't reveal"
+        }
+      ],
+      "platforms": ["web", "electron", "capacitor"],
+      "responsiveSupport": "Full (5-tier)",
+      "accessibilityLevel": "WCAG 2.1 AA"
+    },
+    {
+      "id": "battleship",
+      "name": "Battleship",
+      "aliases": ["Battleships", "Sea Battle"],
+      "category": "information-hiding",
+      "description": "Two-player strategy: sink opponent's fleet by calling grid coordinates",
+      "players": {
+        "min": 2,
+        "max": 2,
+        "ideal": 2
+      },
+      "gameLength": {
+        "min": 10,
+        "max": 60,
+        "average": 20,
+        "unit": "minutes"
+      },
+      "ageRange": "8+",
+      "boardSize": "10x10",
+      "gridNotation": "Letters (A-J) for columns, Numbers (1-10) for rows",
+      "fleetConfiguration": [
+        {
+          "shipType": "Carrier",
+          "size": 5,
+          "quantity": 1
+        },
+        {
+          "shipType": "Battleship",
+          "size": 4,
+          "quantity": 1
+        },
+        {
+          "shipType": "Destroyer",
+          "size": 3,
+          "quantity": 1
+        },
+        {
+          "shipType": "Submarine",
+          "size": 3,
+          "quantity": 1
+        },
+        {
+          "shipType": "Patrol Boat",
+          "size": 2,
+          "quantity": 1
+        }
+      ],
+      "totalShipCells": 17,
+      "totalBoardCells": 100,
+      "coveragePercentage": "17%",
+      "coreRules": {
+        "placement": {
+          "orientation": "Horizontal or vertical only (no diagonal)",
+          "noOverlap": "Only one ship per cell",
+          "hidden": "Ships concealed from opponent"
+        },
+        "gameplay": {
+          "turns": "Players alternate calling target squares",
+          "hit": "Ship occupies target cell, announce ship name",
+          "miss": "No ship at target",
+          "sunk": "All cells of ship hit, announce sinking",
+          "tracking": "Attackers track own shots on separate grid"
+        },
+        "winCondition": "All opponent ships sunk"
+      },
+      "gameFlow": [
+        "Phase 1: Placement (both players secretly place fleet)",
+        "Phase 2: Turns (alternating coordinate calls)",
+        "Each turn: Call target, receive response (hit/miss), mark tracking grid",
+        "Announce ship names on hits",
+        "Announce sinking when ship destroyed",
+        "Continue until one fleet completely sunk"
+      ],
+      "variants": [
+        {
+          "name": "Salvo Variant",
+          "shots": "Multiple simultaneous shots (5 initially, decreases as ships sink)",
+          "complexity": "hard"
+        },
+        {
+          "name": "Hexagonal Tiles (2008)",
+          "boardSize": "custom with islands",
+          "shipPlacement": "Around islands only",
+          "mechanics": "Captured figures on islands"
+        },
+        {
+          "name": "Electronic Battleship",
+          "introduced": "1977",
+          "features": "AI opponent, microprocessor-based",
+          "variant": "Electronic Talking Battleship (1989)"
+        },
+        {
+          "name": "Sub Search (3D)",
+          "introduced": "1973",
+          "mechanics": "Multi-level board, depth charges",
+          "complexity": "very-hard"
+        },
+        {
+          "name": "Grid Attack (Nintendo DS)",
+          "boardSize": "7x7",
+          "features": "4-player, variable ships, special shot missiles"
+        }
+      ],
+      "platforms": ["web", "electron", "capacitor"],
+      "responsiveSupport": "Full (5-tier)",
+      "accessibilityLevel": "WCAG 2.1 AA"
+    },
+    {
+      "id": "dominoes",
+      "name": "Dominoes",
+      "aliases": ["Dominos", "Bones"],
+      "category": "tile-based",
+      "description": "Tile placement game where players match domino ends to form lines of play",
+      "players": {
+        "min": 2,
+        "max": 4,
+        "ideal": 2,
+        "scalable": "With larger sets: 2-8+ players"
+      },
+      "gameLength": {
+        "min": 10,
+        "max": 60,
+        "average": 20,
+        "unit": "minutes"
+      },
+      "ageRange": "6+",
+      "equipment": {
+        "standard": {
+          "setName": "Double-six",
+          "tileCount": 28,
+          "pipRange": "0-6",
+          "compositions": 28
+        },
+        "extended": [
+          {
+            "setName": "Double-nine",
+            "tileCount": 55
+          },
+          {
+            "setName": "Double-twelve",
+            "tileCount": 91
+          },
+          {
+            "setName": "Double-fifteen",
+            "tileCount": 136
+          },
+          {
+            "setName": "Double-eighteen",
+            "tileCount": 190
+          }
+        ]
+      },
+      "tileStructure": {
+        "format": "Rectangular tile with two square ends",
+        "dividerLine": "Separates visual halves",
+        "endValues": "0-6 pips (dots) per end",
+        "tileTypes": {
+          "doubles": "Same number on both ends",
+          "singles": "Different numbers on each end"
+        }
+      },
+      "gameTypes": [
+        {
+          "name": "Blocking Game",
+          "objective": "Empty hand while blocking opponents",
+          "mechanics": {
+            "setup": "Each player draws 7 tiles",
+            "firstTile": "One player 'downs' first tile",
+            "lineOfPlay": "Players extend by matching end values",
+            "noPlay": "Draw from boneyard until playable tile",
+            "endRound": "First empty hand or board blocked",
+            "scoring": "Sum of loser's pips"
+          }
+        },
+        {
+          "name": "Draw Game",
+          "objective": "Score points continuously",
+          "mechanics": {
+            "setup": "Similar to blocking game",
+            "drawPhase": "Players can draw as many tiles as desired",
+            "scoring": "Loser pips + remaining stock pips"
+          }
+        },
+        {
+          "name": "Scoring Game",
+          "objective": "Score points during play",
+          "variants": [
+            {
+              "name": "Fives (Muggins/All Fives)",
+              "scoring": "Score when open ends = multiple of 5"
+            },
+            {
+              "name": "5s-and-3s",
+              "scoring": "Score multiples of 5 or 3",
+              "region": "British pub game"
+            },
+            {
+              "name": "42 (Texas)",
+              "format": "Trick-taking variant",
+              "scoring": "Points for multiples of 5"
+            }
+          ]
+        },
+        {
+          "name": "Specialized Variants",
+          "games": [
+            {
+              "name": "Mexican Train",
+              "mechanics": "Branching play from spinner"
+            },
+            {
+              "name": "Chicken Foot",
+              "mechanics": "All spinner sides occupied before branching"
+            }
+          ]
+        }
+      ],
+      "lineOfPlay": {
+        "start": "Single tile",
+        "growth": "Typically two opposite directions",
+        "tableLayout": "Right-angle play near edges",
+        "spinners": "Doubles playable on all 4 sides (variant-dependent)",
+        "branchingRules": "Varies by game type"
+      },
+      "platforms": ["web", "electron", "capacitor"],
+      "responsiveSupport": "Full (5-tier)",
+      "accessibilityLevel": "WCAG 2.1 AA"
+    },
+    {
+      "id": "bunco",
+      "name": "Bunco",
+      "aliases": ["Bunko", "Bonko", "Buncko"],
+      "category": "dice-games",
+      "description": "Fast-paced dice game with 12+ players in teams, rolling for scores in six rounds",
+      "players": {
+        "min": 12,
+        "max": "Unlimited",
+        "ideal": 12,
+        "teamSize": 2,
+        "groupSize": 4
+      },
+      "gameLength": {
+        "min": 30,
+        "max": 180,
+        "average": 60,
+        "unit": "minutes"
+      },
+      "ageRange": "4+",
+      "equipment": {
+        "dice": 3,
+        "diceSets": "One per table",
+        "scorecards": "Yes"
+      },
+      "gameStructure": {
+        "roundCount": 6,
+        "roundNumbers": [1, 2, 3, 4, 5, 6],
+        "roundTarget": "Match round number on dice",
+        "winTarget": 21,
+        "winMethod": "First to 21 points in round"
+      },
+      "scoringRules": {
+        "singleMatch": {
+          "points": 1,
+          "description": "Each die matching round number"
+        },
+        "tripleMatch": {
+          "points": 5,
+          "description": "All three dice matching (not round number)"
+        },
+        "bunco": {
+          "points": 21,
+          "description": "All three dice matching round number (instant win)"
+        },
+        "noMatch": {
+          "points": 0,
+          "description": "No match, turn ends"
+        }
+      },
+      "turnMechanics": {
+        "rolling": "Roll 3 dice",
+        "keepRolling": "Continue if points scored",
+        "endTurn": "0 points = pass dice to next player",
+        "nextPlayer": "Player to the left (or other direction)"
+      },
+      "roundFlow": [
+        "Announce round number (1-6)",
+        "Players roll dice in turn sequence",
+        "Score points (1, 5, or 21)",
+        "First to 21 wins round",
+        "Announce round winner",
+        "Reset scores, move to next round"
+      ],
+      "tournamentFormat": {
+        "tableRanking": "Head table (highest) to lowest",
+        "afterRound": {
+          "winners": "Move to next-highest-ranked table",
+          "headTableLoser": "Moves to lowest-ranked table"
+        },
+        "finalWinner": "Most rounds won after 6 rounds",
+        "tiebreaker": "Total points scored"
+      },
+      "variants": [
+        {
+          "name": "Team Play",
+          "teams": 2,
+          "mechanics": "Teammates sit opposite"
+        },
+        {
+          "name": "Individual Play",
+          "teams": 0,
+          "mechanics": "Each player for themselves"
+        }
+      ],
+      "history": {
+        "origin": "19th-century England (eight dice cloth)",
+        "americanAdoption": "San Francisco 1855 (confidence game)",
+        "familiarization": "1980s resurgence as family game",
+        "popularity": "2006: 59M women claimed to have played, 27M play regularly"
+      },
+      "culturalNotes": [
+        "Resurgence in early 21st century USA",
+        "Popular as 'housewife's drinking game'",
+        "Tradition of rotating host duties"
+      ],
+      "platforms": ["web", "electron", "capacitor"],
+      "responsiveSupport": "Full (5-tier)",
+      "accessibilityLevel": "WCAG 2.1 AA"
+    }
+  ],
+  "ruleSets": {
+    "coreInputActions": [
+      "moveUp",
+      "moveDown",
+      "moveLeft",
+      "moveRight",
+      "confirm",
+      "cancel",
+      "primaryAction",
+      "secondaryAction",
+      "nextTab",
+      "prevTab",
+      "openMenu",
+      "closeMenu"
+    ],
+    "platformMappings": {
+      "desktop": {
+        "moveUp": ["ArrowUp", "KeyW"],
+        "moveDown": ["ArrowDown", "KeyS"],
+        "moveLeft": ["ArrowLeft", "KeyA"],
+        "moveRight": ["ArrowRight", "KeyD"],
+        "confirm": ["Enter", "Space"],
+        "cancel": ["Escape"]
+      },
+      "mobile": {
+        "moveUp": ["swipeUp", "tapUp"],
+        "moveDown": ["swipeDown", "tapDown"],
+        "moveLeft": ["swipeLeft", "tapLeft"],
+        "moveRight": ["swipeRight", "tapRight"],
+        "confirm": ["tap"],
+        "cancel": ["backButton"]
+      },
+      "tv": {
+        "moveUp": ["DPadUp"],
+        "moveDown": ["DPadDown"],
+        "moveLeft": ["DPadLeft"],
+        "moveRight": ["DPadRight"],
+        "confirm": ["OKButton"],
+        "cancel": ["BackButton"]
+      }
+    }
+  },
+  "accessibility": {
+    "standardRequired": "WCAG 2.1 AA",
+    "requirements": [
+      "Keyboard navigation",
+      "Screen reader compatibility",
+      "Contrast ratio 4.5:1 (text), 3:1 (graphics)",
+      "Focus indicators (visible, clear)",
+      "Reduced motion support"
+    ]
+  },
+  "responsiveDesign": {
+    "tiers": [
+      {
+        "name": "Mobile",
+        "range": "xs/sm: <600px",
+        "devices": "Phones",
+        "layout": "Single-column, touch-optimized",
+        "contentDensity": "compact"
+      },
+      {
+        "name": "Tablet",
+        "range": "md: 600-899px",
+        "devices": "Tablets, large phones",
+        "layout": "Multi-column with spacing",
+        "contentDensity": "comfortable"
+      },
+      {
+        "name": "Desktop",
+        "range": "lg: 900-1199px",
+        "devices": "Laptops, monitors",
+        "layout": "Full-featured layouts",
+        "contentDensity": "comfortable"
+      },
+      {
+        "name": "Widescreen",
+        "range": "xl: 1200-1799px",
+        "devices": "Large monitors",
+        "layout": "Extra spacing, generous UI",
+        "contentDensity": "spacious"
+      },
+      {
+        "name": "Ultrawide",
+        "range": "xxl: 1800px+",
+        "devices": "Curved/multi-monitor",
+        "layout": "Maximum refinement",
+        "contentDensity": "spacious"
+      }
+    ]
+  }
+}
