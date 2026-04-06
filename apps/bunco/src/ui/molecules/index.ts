@@ -3,3 +3,4 @@
  */
 
 export { DiceArea } from './DiceArea'
+export { HamburgerMenu, type HamburgerMenuProps } from './HamburgerMenu'

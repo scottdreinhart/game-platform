@@ -91,9 +91,3 @@ export const logGameEvent = (
 
   console.debug(`[Checkers Event: ${event}]`, data || '')
 }
-
-    setOpponent,
-    updateSetup,
-    setup,
-  }
-}

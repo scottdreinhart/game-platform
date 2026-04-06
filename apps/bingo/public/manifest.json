@@ -1,0 +1,31 @@
+{
+    "name": "Bingo",
+    "short_name": "Bingo",
+    "description": "Classic Bingo lottery game",
+    "start_url": "./",
+    "scope": "./",
+    "display": "standalone",
+    "orientation": "portrait-primary",
+    "theme_color": "#667eea",
+    "background_color": "#1a1a2e",
+    "icons": [
+        {
+            "src": "./icon.svg",
+            "sizes": "any",
+            "type": "image/svg+xml",
+            "purpose": "any"
+        }
+    ],
+    "screenshots": [
+        {
+            "src": "./icon.svg",
+            "sizes": "540x720",
+            "type": "image/svg+xml",
+            "form_factor": "narrow"
+        }
+    ],
+    "categories": [
+        "games"
+    ],
+    "prefer_related_applications": false
+}

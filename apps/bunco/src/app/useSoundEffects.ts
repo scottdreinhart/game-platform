@@ -5,7 +5,7 @@
 
 import { useCallback } from 'react'
 
-import { useSoundContext } from './SoundContext'
+import { useSoundContext } from '@games/sound-context'
 import {
   playBunco,
   playClick,

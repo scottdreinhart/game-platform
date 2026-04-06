@@ -1,10 +1,11 @@
-import { useGame } from '@/app'
+import { useGame, useSoundContext } from '@/app'
+import { HamburgerMenu, PileToggle } from '@/ui/molecules'
 import { useResponsiveState } from '@games/app-hook-utils'
-import { PileToggle } from '@/ui/molecules'
 import { useEffect, useState } from 'react'
 
 export default function App() {
   const { isMobile, isTablet } = useResponsiveState()
+  const { soundEnabled, toggleSound } = useSoundContext()
   const {
     state,
     selectedPileId,
@@ -83,14 +84,20 @@ export default function App() {
           boxShadow: isMobile ? 'none' : '0 20px 50px rgba(0,0,0,0.1)',
         }}
       >
-        <h1 className="game-landing__title" style={{ fontSize: '3rem', color: '#1a237e', marginBottom: '0.5rem' }}>
+        <h1
+          className="game-landing__title"
+          style={{ fontSize: '3rem', color: '#1a237e', marginBottom: '0.5rem' }}
+        >
           Game of Nim
         </h1>
         <p className="game-landing__subtitle" style={{ color: '#666', marginBottom: '3rem' }}>
           A classic strategy game
         </p>
 
-        <div className="game-landing__actions" style={{ display: 'flex', flexDirection: 'column', gap: '1rem', width: '100%' }}>
+        <div
+          className="game-landing__actions"
+          style={{ display: 'flex', flexDirection: 'column', gap: '1rem', width: '100%' }}
+        >
           <button
             onClick={() => setView('game')}
             style={{
@@ -124,7 +131,10 @@ export default function App() {
           </button>
         </div>
 
-        <p className="game-landing__footer" style={{ marginTop: '3rem', fontSize: '0.9rem', color: '#999', lineHeight: '1.5' }}>
+        <p
+          className="game-landing__footer"
+          style={{ marginTop: '3rem', fontSize: '0.9rem', color: '#999', lineHeight: '1.5' }}
+        >
           Remove objects from heaps.
           <br />
           Choose Normal or Misère rules in Settings.
@@ -316,21 +326,16 @@ export default function App() {
           marginBottom: '2rem',
         }}
       >
-        <button
-          onClick={() => setView('menu')}
-          style={{
-            background: 'none',
-            border: 'none',
-            color: '#fff',
-            fontSize: '1.5rem',
-            cursor: 'pointer',
-          }}
-        >
-          ✕
-        </button>
+        <HamburgerMenu
+          onExit={() => setView('menu')}
+          onToggleSound={toggleSound}
+          soundEnabled={soundEnabled}
+        />
         <h2
           style={{
+            flex: 1,
             margin: 0,
+            textAlign: 'center',
             letterSpacing: '2px',
             textTransform: 'uppercase',
             fontSize: '1.8rem',
@@ -338,7 +343,7 @@ export default function App() {
         >
           Nim
         </h2>
-        <div style={{ width: '32px' }}></div>
+        <div style={{ width: '44px' }}></div>
       </div>
 
       <div

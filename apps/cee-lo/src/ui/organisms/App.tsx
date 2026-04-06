@@ -1,10 +1,11 @@
-import { useGame } from '@/app'
+import { useGame, useSoundContext } from '@/app'
 import { useResponsiveState } from '@games/app-hook-utils'
-import { PileToggle } from '@/ui/molecules'
+import { PileToggle, HamburgerMenu } from '@/ui/molecules'
 import { useEffect, useState } from 'react'
 
 export default function App() {
   const { isMobile, isTablet } = useResponsiveState()
+  const { soundEnabled, toggleSound } = useSoundContext()
   const {
     state,
     selectedPileId,
@@ -316,21 +317,16 @@ export default function App() {
           marginBottom: '2rem',
         }}
       >
-        <button
-          onClick={() => setView('menu')}
-          style={{
-            background: 'none',
-            border: 'none',
-            color: '#fff',
-            fontSize: '1.5rem',
-            cursor: 'pointer',
-          }}
-        >
-          ✕
-        </button>
+        <HamburgerMenu 
+          onExit={() => setView('menu')} 
+          onToggleSound={toggleSound} 
+          soundEnabled={soundEnabled} 
+        />
         <h2
           style={{
+            flex: 1,
             margin: 0,
+            textAlign: 'center',
             letterSpacing: '2px',
             textTransform: 'uppercase',
             fontSize: '1.8rem',
@@ -338,7 +334,7 @@ export default function App() {
         >
           Nim
         </h2>
-        <div style={{ width: '32px' }}></div>
+        <div style={{ width: '44px' }}></div>
       </div>
 
       <div

@@ -8,7 +8,7 @@
 export * from './aiService'
 export * from './haptics'
 export * from './crashLogger'
-export { SoundProvider, useSoundContext } from './SoundContext'
+export { SoundProvider, useSoundContext } from '@games/sound-context'
 export * from './storageService'
 export { ThemeProvider, useThemeContext } from './ThemeContext'
 export * from './useGame'

@@ -1,0 +1,85 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --bingo-primary: #667eea;
+  --bingo-secondary: #764ba2;
+  --bg-dark: #1a1a2e;
+  --bg-light: #f5f5f5;
+  --text-light: #e0e0e0;
+  --text-dark: #1a1a2e;
+  --win-highlight: #00ff88;
+  --border-radius: 12px;
+
+  /* Theme variables */
+  --background: var(--bg-dark);
+  --text: var(--text-light);
+  --text-light: var(--text-light);
+  --primary: var(--bingo-primary);
+  --primary-hover: #5a67d8;
+  --primary-dark: #5a67d8;
+  --secondary: #6b7280;
+  --secondary-hover: #4b5563;
+  --border: #404040;
+  --text-secondary: #a0a0a0;
+  --surface: rgba(255, 255, 255, 0.05);
+
+  /* Cell styling variables (for tile hover and keyboard navigation) */
+  --cell-bg: #bdbdbd;
+  --cell-hover-bg: #c9c9c9;
+  --cell-hover-shadow: rgba(0, 0, 0, 0.15);
+  --cell-selected-outline: #71ffd6;
+  --cell-selected-glow: rgba(113, 255, 214, 0.3);
+  --cell-selected-bg: rgba(113, 255, 214, 0.15);
+  --hint-color: #ffc857;
+  --cell-hint-bg: rgba(255, 204, 0, 0.1);
+  --cell-hint-glow: rgba(255, 200, 87, 0.3);
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  background: #1a1a2e;
+  color: #e0e0e0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 1rem;
+}
+
+#root {
+  width: 100%;
+  max-width: 1200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    --background: var(--bg-light);
+    --text: var(--text-dark);
+    --text-secondary: #666666;
+    --surface: rgba(0, 0, 0, 0.02);
+    --border: #e0e0e0;
+    --primary-dark: #3c47a8;
+  }
+
+  body {
+    background: #f5f5f5;
+    color: #1a1a2e;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}

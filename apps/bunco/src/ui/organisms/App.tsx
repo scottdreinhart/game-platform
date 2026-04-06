@@ -1,7 +1,6 @@
-import { useSoundContext } from '@/app'
+import { useGame, useGameEvents, useSoundContext } from '@/app'
+import { DiceArea, HamburgerMenu } from '@/ui/molecules'
 import { useResponsiveState } from '@games/app-hook-utils'
-import { useGame, useGameEvents } from '@/app'
-import { DiceArea } from '@/ui/molecules'
 import { useEffect, useState } from 'react'
 
 export default function App() {
@@ -92,7 +91,10 @@ export default function App() {
         >
           Bunco
         </h1>
-        <p className="bunco-landing__subtitle" style={{ color: '#666', marginBottom: short ? '1.5rem' : '3rem' }}>
+        <p
+          className="bunco-landing__subtitle"
+          style={{ color: '#666', marginBottom: short ? '1.5rem' : '3rem' }}
+        >
           The classic dice game
         </p>
 
@@ -325,7 +327,7 @@ export default function App() {
         boxShadow: cardShadow,
       }}
     >
-      {/* Header */}
+      {/* Header with HamburgerMenu */}
       <div
         style={{
           display: 'flex',
@@ -334,49 +336,25 @@ export default function App() {
           marginBottom: short ? '0.5rem' : '1rem',
         }}
       >
-        <button
-          onClick={() => setView('menu')}
-          style={{
-            background: 'none',
-            border: 'none',
-            color: '#fff',
-            fontSize: '1.5rem',
-            cursor: 'pointer',
-            padding: touch ? '8px' : '4px',
-            minWidth: touch ? '44px' : 'auto',
-            minHeight: touch ? '44px' : 'auto',
-          }}
-          aria-label="Exit to menu"
-        >
-          ✕
-        </button>
+        <HamburgerMenu
+          onExit={() => setView('menu')}
+          onToggleSound={toggleSound}
+          soundEnabled={soundEnabled}
+        />
         <h2
           style={{
             margin: 0,
             letterSpacing: '2px',
             textTransform: 'uppercase',
             fontSize: compact ? '1.1rem' : '1.4rem',
+            flex: 1,
+            textAlign: 'center',
           }}
         >
           Round {state.round} of 6
         </h2>
-        <button
-          onClick={toggleSound}
-          aria-label={soundEnabled ? 'Mute sounds' : 'Enable sounds'}
-          style={{
-            background: 'none',
-            border: 'none',
-            color: '#fff',
-            fontSize: '1.2rem',
-            cursor: 'pointer',
-            opacity: 0.6,
-            padding: touch ? '8px' : '4px',
-            minWidth: touch ? '44px' : 'auto',
-            minHeight: touch ? '44px' : 'auto',
-          }}
-        >
-          {soundEnabled ? '🔊' : '🔇'}
-        </button>
+        <div style={{ width: '44px' }} /* Spacer to balance layout */></div>
+        <div style={{ width: '44px' }} /* Spacer to balance layout */></div>
       </div>
 
       {/* Target number */}

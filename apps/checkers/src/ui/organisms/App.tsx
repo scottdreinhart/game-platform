@@ -2,9 +2,7 @@ import { useCallback, useEffect, useMemo, useState } from 'react'
 
 import {
   computeAiMoveAsync,
-  enableGameVerboseLogging,
   load,
-  logGameEvent,
   save,
   useGameDebug,
   useKeyboardControls,
@@ -34,8 +32,10 @@ import {
   type Player,
   type Position,
 } from '@/domain'
-import { OfflineIndicator, SplashScreen } from '@/ui/atoms'
-import { BoardView, ControlPanel } from '@/ui/molecules'
+import { OfflineIndicator } from '@/ui/atoms'
+import { SplashScreen } from '@games/common'
+import { BoardView, ControlPanel, HamburgerMenu } from '@/ui/molecules'
+import { HelpModal, RulesModal, SettingsModal } from './modals'
 
 import styles from './App.module.css'
 
@@ -57,6 +57,13 @@ export default function App() {
   const [lastMove, setLastMove] = useState<Move | null>(null)
   const [history, setHistory] = useState<string[]>([])
   const [keyboardFocus, setKeyboardFocus] = useState<Position | null>(null)
+
+  // ============================================================================
+  // Modal State
+  // ============================================================================
+  const [showRulesModal, setShowRulesModal] = useState(false)
+  const [showHelpModal, setShowHelpModal] = useState(false)
+  const [showSettingsModal, setShowSettingsModal] = useState(false)
 
   const { stats, recordLoss, recordWin, resetStats } = useStats()
   const { soundEnabled, toggleSound } = useSoundContext()
@@ -362,11 +369,9 @@ export default function App() {
   )
 
   useKeyboardControls(keyboardBindings)
+    ? // ============================================================================
 
-  // ============================================================================
-
-
-    ? opponentMode === 'cpu'
+      opponentMode === 'cpu'
       ? winner === HUMAN_PLAYER
         ? 'You cleared the board. Victory.'
         : 'The CPU locked you out. Defeat.'
@@ -409,6 +414,14 @@ export default function App() {
               <h1 className={styles.title}>Checkers</h1>
               {instructions() && <p className={styles.instructions}>{instructions()}</p>}
             </div>
+            <HamburgerMenu
+              onRules={() => setShowRulesModal(true)}
+              onHelp={() => setShowHelpModal(true)}
+              onSettings={() => setShowSettingsModal(true)}
+              onToggleSound={toggleSound}
+              onExit={handleNewGame}
+              soundEnabled={soundEnabled}
+            />
           </header>
 
           <div
@@ -436,8 +449,6 @@ export default function App() {
                 contentDensity={responsive.contentDensity}
                 onSquarePress={handleSquarePress}
               />
-
-
             </section>
 
             <ControlPanel
@@ -472,6 +483,11 @@ export default function App() {
           </div>
         </main>
       </div>
+
+      {/* Modal Adapters */}
+      <RulesModal isOpen={showRulesModal} onClose={() => setShowRulesModal(false)} />
+      <HelpModal isOpen={showHelpModal} onClose={() => setShowHelpModal(false)} />
+      <SettingsModal isOpen={showSettingsModal} onClose={() => setShowSettingsModal(false)} />
     </>
   )
 }
