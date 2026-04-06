@@ -4,3 +4,4 @@ export { playClick, playConfirm, playCpuMove, playLose, playSelect, playWin } fr
 export * from './diagnostics'
 export { haptics } from './haptics'
 export { clear, load, remove, save } from './storage'
+export * from './wasm/wasm-service'
