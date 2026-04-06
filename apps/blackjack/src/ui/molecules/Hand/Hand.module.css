@@ -1,0 +1,122 @@
+/**
+ * Hand molecule styles — displays a hand of cards
+ */
+
+.root {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 12px;
+  border-radius: 8px;
+  background: rgba(0, 0, 0, 0.05);
+}
+
+.label {
+  font-weight: bold;
+  font-size: 14px;
+  color: #333;
+}
+
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  align-items: flex-start;
+  min-height: 120px;
+  justify-content: center;
+}
+
+.cardWrapper {
+  flex: 0 0 auto;
+}
+
+.placeholder {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #999;
+  font-style: italic;
+  min-height: 120px;
+}
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  font-size: 14px;
+}
+
+.value {
+  font-weight: bold;
+  padding: 4px 8px;
+  border-radius: 4px;
+  min-width: 50px;
+  text-align: center;
+}
+
+.value.initial {
+  color: #333;
+  background: rgba(100, 200, 255, 0.2);
+}
+
+.value.playing {
+  color: #1565c0;
+  background: rgba(21, 101, 192, 0.15);
+}
+
+.value.stand {
+  color: #388e3c;
+  background: rgba(56, 142, 60, 0.15);
+}
+
+.value.bust {
+  color: #d32f2f;
+  background: rgba(211, 47, 47, 0.2);
+  font-weight: bold;
+}
+
+.value.blackjack {
+  color: #fab005;
+  background: rgba(250, 176, 5, 0.2);
+  font-weight: bold;
+}
+
+.value.settled {
+  color: #666;
+  background: rgba(100, 100, 100, 0.1);
+}
+
+.bet {
+  color: #666;
+  font-size: 13px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 599px) {
+  .root {
+    padding: 8px;
+    gap: 8px;
+  }
+
+  .cards {
+    gap: 6px;
+    min-height: 100px;
+  }
+
+  .label {
+    font-size: 12px;
+  }
+
+  .footer {
+    font-size: 12px;
+  }
+}
+
+/* Content density adjustments */
+@media (prefers-reduced-motion: reduce) {
+  .value {
+    transition: none;
+  }
+}

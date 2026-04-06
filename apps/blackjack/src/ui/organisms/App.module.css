@@ -1,0 +1,218 @@
+.container {
+  width: 100%;
+  height: 100%;
+}
+
+.gameLayout {
+  display: flex;
+  gap: 20px;
+  padding: 20px;
+  min-height: 100vh;
+  background: linear-gradient(to bottom, #0d5e3f, #1a7d56);
+}
+
+.mainContent {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.sidePanels {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 300px;
+  min-width: 300px;
+}
+
+.helpScreen {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background: linear-gradient(to bottom, #0d5e3f, #1a7d56);
+  padding: 20px;
+}
+
+.helpContent {
+  background: white;
+  border-radius: 12px;
+  padding: 40px;
+  max-width: 600px;
+  color: #333;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+}
+
+.helpContent h1 {
+  margin: 0 0 30px 0;
+  font-size: 28px;
+  color: #0d5e3f;
+}
+
+.rule {
+  margin-bottom: 25px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #eee;
+}
+
+.rule:last-child {
+  border-bottom: none;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+.rule h2 {
+  font-size: 16px;
+  margin: 0 0 10px 0;
+  color: #0d5e3f;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.rule p,
+.rule li {
+  margin: 8px 0;
+  line-height: 1.6;
+  font-size: 14px;
+}
+
+.rule ul,
+.rule ol {
+  margin: 10px 0;
+  padding-left: 25px;
+}
+
+.backButton {
+  margin-top: 30px;
+  width: 100%;
+  padding: 14px;
+  background: #0d5e3f;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.backButton:hover {
+  background: #0a4a31;
+}
+
+.backButton:active {
+  transform: scale(0.98);
+}
+
+/* Strategy Controls */
+.strategyControls {
+  margin-top: 20px;
+  padding: 15px;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 8px;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  flex-wrap: wrap;
+  color: white;
+}
+
+.strategyControls label {
+  font-size: 14px;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.strategyControls select {
+  flex: 1;
+  min-width: 150px;
+  padding: 8px 12px;
+  background: rgba(255, 255, 255, 0.95);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 6px;
+  font-size: 13px;
+  font-weight: 500;
+  color: #0d5e3f;
+  cursor: pointer;
+}
+
+.strategyControls select:hover {
+  background: white;
+}
+
+.strategyControls button {
+  padding: 8px 16px;
+  background: rgba(255, 255, 255, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  color: white;
+  border-radius: 6px;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: all 0.2s ease;
+}
+
+.strategyControls button:hover {
+  background: rgba(255, 255, 255, 0.3);
+}
+
+.strategyControls .activeButton {
+  background: rgba(76, 175, 80, 0.6);
+  border-color: rgba(76, 175, 80, 0.8);
+}
+
+.strategyControls .activeButton:hover {
+  background: rgba(76, 175, 80, 0.8);
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .helpContent {
+    padding: 25px;
+  }
+
+  .helpContent h1 {
+    font-size: 22px;
+  }
+
+  .rule h2 {
+    font-size: 14px;
+  }
+
+  .rule p,
+  .rule li {
+    font-size: 13px;
+  }
+}
+
+/* Game layout responsive */
+@media (max-width: 900px) {
+  .gameLayout {
+    flex-direction: column;
+    gap: 15px;
+    padding: 15px;
+  }
+
+  .sidePanels {
+    flex-direction: row;
+    width: 100%;
+    min-width: unset;
+    gap: 15px;
+  }
+}
+
+@media (max-width: 600px) {
+  .gameLayout {
+    padding: 10px;
+    gap: 10px;
+  }
+
+  .sidePanels {
+    flex-direction: column;
+    gap: 10px;
+  }
+}

@@ -1,0 +1,49 @@
+.root {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  justify-content: center;
+  user-select: none;
+}
+
+.cardSlot {
+  flex: 0 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Mobile: <600px */
+@media (max-width: 599px) {
+  .root {
+    gap: 8px;
+  }
+}
+
+/* Tablet: 600–899px */
+@media (min-width: 600px) and (max-width: 899px) {
+  .root {
+    gap: 10px;
+  }
+}
+
+/* Desktop: 900–1199px */
+@media (min-width: 900px) {
+  .root {
+    gap: 12px;
+  }
+}
+
+/* Widescreen: 1200–1799px */
+@media (min-width: 1200px) {
+  .root {
+    gap: 14px;
+  }
+}
+
+/* Ultrawide: ≥1800px */
+@media (min-width: 1800px) {
+  .root {
+    gap: 16px;
+  }
+}

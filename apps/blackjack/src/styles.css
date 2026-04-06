@@ -1,0 +1,246 @@
+/* Base Styles */
+:root {
+  color-scheme: light dark;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell,
+    'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#root {
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.app {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #2c5f2d 0%, #1a3a1b 100%);
+  color: white;
+}
+
+/* Game Header */
+.game-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  max-width: 600px;
+  margin-bottom: 20px;
+  padding: 0 20px;
+}
+
+.game-header h1 {
+  margin: 0;
+  font-size: 2rem;
+}
+
+.balance {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+/* Betting Phase */
+.betting-phase {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.betting-phase h2 {
+  margin-bottom: 20px;
+}
+
+.bet-buttons {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+}
+
+.bet-buttons button {
+  padding: 10px 20px;
+  font-size: 1.1rem;
+  background: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.bet-buttons button:hover {
+  background: #45a049;
+}
+
+/* Game Board */
+.game-board {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  align-items: center;
+  width: 100%;
+  max-width: 600px;
+}
+
+.dealer-section,
+.player-section {
+  text-align: center;
+  width: 100%;
+}
+
+.dealer-section h3,
+.player-section h3 {
+  margin-bottom: 15px;
+  font-size: 1.4rem;
+}
+
+/* Card Hands */
+.hand {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+
+.card {
+  width: 60px;
+  height: 90px;
+  background: white;
+  color: black;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  font-weight: bold;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.hand-value {
+  font-size: 1.1rem;
+  margin-top: 10px;
+}
+
+/* Action Buttons */
+.action-buttons {
+  display: flex;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.action-buttons button {
+  padding: 12px 24px;
+  font-size: 1.1rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.action-buttons button:first-child {
+  background: #2196F3;
+  color: white;
+}
+
+.action-buttons button:first-child:hover {
+  background: #1976D2;
+}
+
+.action-buttons button:last-child {
+  background: #FF9800;
+  color: white;
+}
+
+.action-buttons button:last-child:hover {
+  background: #F57C00;
+}
+
+/* Results */
+.results {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.results h3 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.results p {
+  margin: 5px 0;
+}
+
+.results button {
+  padding: 10px 20px;
+  font-size: 1.1rem;
+  background: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-top: 15px;
+}
+
+.results button:hover {
+  background: #45a049;
+}
+
+/* Help Screen */
+.help-screen {
+  text-align: center;
+  max-width: 500px;
+  padding: 20px;
+}
+
+.help-screen h2 {
+  margin-bottom: 20px;
+}
+
+.help-screen p {
+  margin: 10px 0;
+  line-height: 1.6;
+}
+
+.help-screen button {
+  padding: 10px 20px;
+  font-size: 1.1rem;
+  background: #2196F3;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-top: 20px;
+}
+
+.help-screen button:hover {
+  background: #1976D2;
+}
+
+/* Dealer Turn Animation */
+.dealer-turn {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.dealer-turn p {
+  font-size: 1.2rem;
+  animation: pulse 1s infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.5; }
+}

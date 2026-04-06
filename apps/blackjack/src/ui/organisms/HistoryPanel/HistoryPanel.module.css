@@ -1,0 +1,157 @@
+/* HistoryPanel.module.css - Game history display styling */
+
+.container {
+  background: var(--panel-bg, #ffffff);
+  border: 1px solid var(--panel-border, #e0e0e0);
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  max-width: 400px;
+}
+
+.title {
+  margin: 0 0 1.5rem 0;
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--text-primary, #333333);
+  text-align: center;
+}
+
+.empty {
+  text-align: center;
+  color: var(--text-secondary, #666666);
+  padding: 2rem 1rem;
+}
+
+.empty p {
+  margin: 0.5rem 0;
+  font-size: 0.875rem;
+}
+
+.historyList {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.gameItem {
+  background: var(--history-item-bg, #f8f9fa);
+  border: 1px solid var(--history-item-border, #e9ecef);
+  border-radius: 8px;
+  padding: 1rem;
+  transition: background-color 0.2s ease;
+}
+
+.gameItem:hover {
+  background: var(--history-item-hover-bg, #e9ecef);
+}
+
+.gameHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.75rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid var(--divider-color, #dee2e6);
+}
+
+.gameNumber {
+  font-weight: 600;
+  color: var(--text-primary, #333333);
+  font-size: 0.875rem;
+}
+
+.gameDate {
+  color: var(--text-secondary, #666666);
+  font-size: 0.75rem;
+}
+
+.gameDetails {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.detail {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.label {
+  font-size: 0.875rem;
+  color: var(--text-secondary, #666666);
+  font-weight: 500;
+}
+
+.value {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--text-primary, #333333);
+}
+
+.outcome {
+  text-transform: capitalize;
+  font-weight: 700;
+}
+
+.outcome.win {
+  color: var(--success-color, #28a745);
+}
+
+.outcome.loss {
+  color: var(--error-color, #dc3545);
+}
+
+.outcome.push {
+  color: var(--warning-color, #ffc107);
+}
+
+.positive {
+  color: var(--success-color, #28a745);
+}
+
+.negative {
+  color: var(--error-color, #dc3545);
+}
+
+.moreIndicator {
+  text-align: center;
+  color: var(--text-secondary, #666666);
+  font-size: 0.75rem;
+  margin-top: 1rem;
+  padding-top: 0.75rem;
+  border-top: 1px solid var(--divider-color, #dee2e6);
+}
+
+/* Mobile responsive adjustments */
+@media (max-width: 599px) {
+  .container {
+    padding: 1rem;
+    max-width: 100%;
+  }
+
+  .gameItem {
+    padding: 0.75rem;
+  }
+
+  .title {
+    font-size: 1.125rem;
+    margin-bottom: 1rem;
+  }
+}
+
+/* Touch device optimizations */
+@media (pointer: coarse) {
+  .gameItem {
+    padding: 1.25rem;
+  }
+
+  .detail {
+    padding: 0.25rem 0;
+  }
+
+  .value {
+    font-size: 1rem;
+  }
+}

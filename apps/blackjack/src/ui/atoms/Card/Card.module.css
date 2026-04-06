@@ -1,0 +1,285 @@
+/**
+ * Card Atom Styles — High-quality SVG playing card display
+ *
+ * Renders professional cards from public/cards/ SVG assets.
+ * Supports interactive states, multiple sizes, and 5-tier responsive design.
+ */
+
+/* BASE: Card Container */
+.card {
+  /* Layout & Dimensions */
+  position: relative;
+  aspect-ratio: 2.5 / 3.5; /* Standard poker card proportion */
+  overflow: hidden;
+  background: transparent;
+  border: none;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  user-select: none;
+  cursor: default;
+  flex-shrink: 0;
+}
+
+/* SVG Image Rendering */
+.cardImage {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  pointer-events: none; /* Allow clicks to pass to container */
+  display: block;
+}
+
+/* SIZE VARIANTS (default: md) */
+/* Mobile: xs/sm */
+.sm {
+  width: 56px; /* 2.5in × 72dpi ≈ 180px, sm = 56px */
+}
+
+/* Tablet boundary: md */
+.md {
+  width: 72px; /* Standard hand card size */
+}
+
+/* Desktop+: lg */
+.lg {
+  width: 96px; /* Suited for larger screens and dropzones */
+}
+
+/* INTERACTIVE STATES */
+/* Selectable but not selected */
+.selectable {
+  cursor: pointer;
+  transition: transform 200ms cubic-bezier(0.34, 1.56, 0.64, 1), 
+              box-shadow 200ms ease,
+              filter 200ms ease;
+}
+
+.selectable:hover {
+  transform: translateY(-8px);
+  filter: drop-shadow(0 8px 16px rgba(0, 0, 0, 0.25));
+}
+
+.selectable:focus-visible {
+  outline: 3px solid #0066cc;
+  outline-offset: 2px;
+}
+
+/* Touch device: disable hover animations */
+@media (pointer: coarse) {
+  .selectable:hover {
+    transform: none;
+    filter: none;
+  }
+}
+
+/* Selected state */
+.selected {
+  filter: drop-shadow(0 0 12px rgba(0, 102, 204, 0.6));
+  transform: translateY(-12px);
+}
+
+@media (pointer: coarse) {
+  .selected {
+    transform: none;
+  }
+}
+
+/* Disabled state */
+.disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+/* Hidden/Face-down state */
+.hidden {
+  /* Card back already rendered in SVG, no additional styling needed */
+}
+
+/* ANIMATION STATES */
+/* Dealing animation - card slides in from right */
+.dealing {
+  animation: dealIn 600ms cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+  transform: translateX(200px) rotateY(90deg);
+  opacity: 0;
+}
+
+@keyframes dealIn {
+  0% {
+    transform: translateX(200px) rotateY(90deg);
+    opacity: 0;
+  }
+  50% {
+    transform: translateX(50px) rotateY(45deg);
+    opacity: 0.8;
+  }
+  100% {
+    transform: translateX(0) rotateY(0deg);
+    opacity: 1;
+  }
+}
+
+/* Dealt state - card is in final position */
+.dealt {
+  /* No special styling, card is in normal position */
+}
+
+/* Flipping animation - card rotates to reveal face */
+.flipping {
+  animation: flipCard 800ms cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+}
+
+@keyframes flipCard {
+  0% {
+    transform: rotateY(0deg);
+  }
+  50% {
+    transform: rotateY(90deg);
+  }
+  100% {
+    transform: rotateY(0deg);
+  }
+}
+
+/* Flipped state - card is face up */
+.flipped {
+  /* No special styling, card is revealed */
+}
+
+/* Respect reduced motion preferences */
+@media (prefers-reduced-motion: reduce) {
+  .dealing,
+  .flipping {
+    animation: none;
+    transform: none;
+    opacity: 1;
+  }
+}
+
+/* RESPONSIVE DESIGN — 5 TIER ARCHITECTURE */
+
+/* Mobile: <600px (xs/sm) */
+@media (max-width: 599px) {
+  .sm {
+    width: 48px;
+  }
+
+  .md {
+    width: 60px;
+  }
+
+  .lg {
+    width: 80px;
+  }
+
+  .selectable:hover {
+    transform: none; /* Touch-optimized */
+  }
+
+  .selected {
+    transform: none; /* Touch-optimized */
+  }
+}
+
+/* Tablet: 600–899px (md) */
+@media (min-width: 600px) and (max-width: 899px) {
+  .sm {
+    width: 56px;
+  }
+
+  .md {
+    width: 72px;
+  }
+
+  .lg {
+    width: 96px;
+  }
+}
+
+/* Desktop: 900–1199px (lg) */
+@media (min-width: 900px) {
+  .sm {
+    width: 64px;
+  }
+
+  .md {
+    width: 80px;
+  }
+
+  .lg {
+    width: 112px;
+  }
+
+  .selectable:hover {
+    transform: translateY(-8px);
+  }
+
+  .selected {
+    transform: translateY(-10px);
+  }
+}
+
+/* Widescreen: 1200–1799px (xl) */
+@media (min-width: 1200px) and (max-width: 1799px) {
+  .sm {
+    width: 72px;
+  }
+
+  .md {
+    width: 88px;
+  }
+
+  .lg {
+    width: 120px;
+  }
+}
+
+/* Ultrawide: 1800px+ (xxl) */
+@media (min-width: 1800px) {
+  .sm {
+    width: 80px;
+  }
+
+  .md {
+    width: 100px;
+  }
+
+  .lg {
+    width: 132px;
+  }
+}
+
+/* ACCESSIBILITY */
+.card:focus-visible {
+  outline: 2px solid #0066cc;
+  outline-offset: 2px;
+}
+
+/* High Contrast Mode Support */
+@media (prefers-contrast: more) {
+  .selectable:hover {
+    filter: drop-shadow(0 0 8px #000);
+  }
+
+  .selected {
+    filter: drop-shadow(0 0 12px #000);
+  }
+}
+
+/* Reduced Motion Support */
+@media (prefers-reduced-motion: reduce) {
+  .selectable {
+    transition: none;
+  }
+
+  .selectable:hover {
+    transform: none;
+  }
+
+  .selected {
+    transform: none;
+  }
+}
+

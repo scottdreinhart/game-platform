@@ -1,0 +1,21 @@
+{
+  "name": "Blackjack",
+  "short_name": "Blackjack",
+  "description": "Classic Blackjack card game with strategy learning and card counting",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "theme_color": "#1a1a1a",
+  "background_color": "#ffffff",
+  "orientation": "portrait-primary",
+  "categories": ["games"],
+  "prefer_related_applications": false,
+  "shortcuts": [
+    {
+      "name": "New Game",
+      "short_name": "New Game",
+      "description": "Start a new game of Blackjack",
+      "url": "/?mode=new"
+    }
+  ]
+}

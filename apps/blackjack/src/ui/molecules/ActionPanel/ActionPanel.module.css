@@ -1,0 +1,174 @@
+.root {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  justify-content: center;
+  user-select: none;
+  flex-wrap: wrap;
+}
+
+.row {
+  flex-direction: row;
+}
+
+.column {
+  flex-direction: column;
+}
+
+.button {
+  padding: 12px 24px;
+  border: 2px solid #333;
+  border-radius: 8px;
+  background: white;
+  color: #333;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 200ms cubic-bezier(0.34, 1.56, 0.64, 1);
+  min-width: 120px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.button:focus-visible {
+  outline: 3px solid #0066cc;
+  outline-offset: 2px;
+}
+
+.available {
+  border-color: #0066cc;
+  color: white;
+  background: #0066cc;
+}
+
+.available:hover {
+  background: #0052a3;
+  border-color: #0052a3;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 102, 204, 0.3);
+}
+
+.available:active {
+  transform: translateY(0);
+  box-shadow: none;
+}
+
+.unavailable {
+  opacity: 0.5;
+  cursor: not-allowed;
+  border-color: #ccc;
+  color: #999;
+  background: #f0f0f0;
+}
+
+.undoRedo {
+  border-color: #666;
+  color: white;
+  background: #666;
+}
+
+.undoRedo:hover {
+  background: #555;
+  border-color: #555;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(102, 102, 102, 0.3);
+}
+
+/* Mobile: <600px */
+@media (max-width: 599px) {
+  .root {
+    gap: 8px;
+  }
+
+  .button {
+    padding: 10px 16px;
+    font-size: 0.9rem;
+    min-width: 100px;
+  }
+}
+
+/* Tablet: 600–899px */
+@media (min-width: 600px) and (max-width: 899px) {
+  .root {
+    gap: 10px;
+  }
+
+  .button {
+    padding: 11px 20px;
+    font-size: 0.95rem;
+    min-width: 110px;
+  }
+}
+
+/* Desktop: 900–1199px */
+@media (min-width: 900px) {
+  .root {
+    gap: 12px;
+  }
+
+  .button {
+    padding: 12px 24px;
+    font-size: 1rem;
+    min-width: 120px;
+  }
+}
+
+/* Widescreen: 1200–1799px */
+@media (min-width: 1200px) {
+  .root {
+    gap: 14px;
+  }
+
+  .button {
+    padding: 13px 28px;
+    font-size: 1.05rem;
+    min-width: 130px;
+  }
+}
+
+/* Ultrawide: ≥1800px */
+@media (min-width: 1800px) {
+  .root {
+    gap: 16px;
+  }
+
+  .button {
+    padding: 14px 32px;
+    font-size: 1.1rem;
+    min-width: 140px;
+  }
+}
+
+/* Touch optimization */
+@media (pointer: coarse) {
+  .available:hover {
+    transform: none;
+  }
+
+  .button {
+    min-width: 100px;
+    padding: 12px 24px;
+  }
+}
+
+/* Accessibility: reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .button {
+    transition: none;
+  }
+
+  .available:hover {
+    transform: none;
+  }
+}
+
+/* Accessibility: high contrast */
+@media (prefers-contrast: more) {
+  .button {
+    border-width: 3px;
+  }
+
+  .available:hover {
+    box-shadow: 0 6px 16px rgba(0, 102, 204, 0.5);
+  }
+}
