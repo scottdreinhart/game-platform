@@ -234,7 +234,7 @@
     "kill-port": "2.0.1",
     "leasot": "^14.4.0",
     "lighthouse": "13.0.3",
-    "nodemailer": "^6.9.13",
+    "nodemailer": "^8.0.5",
     "todo-cli": "^1.0.0",
     "playwright": "1.59.1",
     "prettier": "3.8.1",
